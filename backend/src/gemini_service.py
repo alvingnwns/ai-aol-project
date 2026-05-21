@@ -6,7 +6,7 @@ from google.genai import types
 load_dotenv(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".env"))
 
 _api_key    = os.getenv("GEMINI_API_KEY", "")
-_model_name = os.getenv("GEMINI_MODEL", "gemini-2.0-flash-exp")
+_model_name = os.getenv("GEMINI_MODEL", "gemini-3-flash-preview")
 
 _SYSTEM_PROMPT = """
 You are CropSense AI, an expert agricultural data analyst assistant.
