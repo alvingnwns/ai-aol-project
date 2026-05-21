@@ -8,9 +8,11 @@ BASE_DIR   = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MODEL_DIR  = os.path.join(BASE_DIR, "models")
 
 # Load once on startup
-_model   = joblib.load(os.path.join(MODEL_DIR, "xgboost_yield_model.pkl"))
-_le_area = joblib.load(os.path.join(MODEL_DIR, "le_area.pkl"))
-_le_item = joblib.load(os.path.join(MODEL_DIR, "le_item.pkl"))
+_model        = joblib.load(os.path.join(MODEL_DIR, "xgboost_yield_model.pkl"))
+_le_area      = joblib.load(os.path.join(MODEL_DIR, "le_area.pkl"))
+_le_item      = joblib.load(os.path.join(MODEL_DIR, "le_item.pkl"))
+_trend_params = joblib.load(os.path.join(MODEL_DIR, "trend_params.pkl"))
+_global_trend = joblib.load(os.path.join(MODEL_DIR, "global_trend.pkl"))
 
 with open(os.path.join(MODEL_DIR, "model_meta.json"), "r") as f:
     _meta = json.load(f)
@@ -101,9 +103,21 @@ def predict_yield(area: str, item: str, year: int,
     area_enc = _le_area.transform([area])[0]
     item_enc = _le_item.transform([item])[0]
 
-    X = np.array([[area_enc, item_enc, year, rainfall_mm, pesticides_tonnes, avg_temp]])
-    log_pred  = _model.predict(X)[0]
-    yield_val = float(np.expm1(log_pred))
+    # ── Hybrid prediction: linear trend(year) + XGBoost residual(climate) ────
+    key = (area, item)
+    if key in _trend_params:
+        intercept, slope = _trend_params[key]
+    else:
+        intercept = _global_trend["intercept"]
+        slope     = _global_trend["slope"]
+
+    trend_val = intercept + slope * year
+
+    # XGBoost features: no year (temporal trend is handled by linear component)
+    X = np.array([[area_enc, item_enc, rainfall_mm, pesticides_tonnes, avg_temp]])
+    residual  = _model.predict(X)[0]
+    log_pred  = trend_val + residual
+    yield_val = float(max(0.0, np.expm1(log_pred)))
 
     return {
         "predicted_yield_hg_ha"    : round(yield_val, 2),

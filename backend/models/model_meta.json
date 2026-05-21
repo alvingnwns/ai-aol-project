@@ -117,14 +117,15 @@
   "features": [
     "area_enc",
     "item_enc",
-    "year",
     "rainfall_mm",
     "pesticides_tonnes",
     "avg_temp"
   ],
+  "year_train_min": 1990,
+  "year_train_max": 2013,
   "metrics": {
-    "MAE": 7096.05,
-    "RMSE": 14502.94,
-    "R2": 0.971
+    "MAE": 6440.03,
+    "RMSE": 13493.06,
+    "R2": 0.9749
   }
 }
