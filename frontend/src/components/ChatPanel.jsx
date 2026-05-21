@@ -53,18 +53,18 @@ export default function ChatPanel({ predictionContext }) {
   }
 
   return (
-    <div className="bg-green-950/50 border border-green-800 rounded-2xl flex flex-col h-full min-h-96 max-h-[600px]">
+    <div className="bg-[#263333] border border-[#4a5e5e] rounded-2xl flex flex-col h-full min-h-96 max-h-[600px]">
       {/* Header */}
-      <div className="flex items-center gap-2 px-5 py-4 border-b border-green-800">
-        <div className="bg-green-600 rounded-lg p-1.5">
-          <Sparkles className="w-4 h-4 text-green-950" />
+      <div className="flex items-center gap-2 px-5 py-4 border-b border-[#4a5e5e]">
+        <div className="bg-[#a4b16d] rounded-lg p-1.5">
+          <Sparkles className="w-4 h-4 text-[#1a2626]" />
         </div>
         <div>
-          <h2 className="text-green-100 font-semibold text-sm">CropSense AI</h2>
-          <p className="text-green-600 text-xs">Powered by Gemini</p>
+          <h2 className="text-[#f0f5f1] font-semibold text-sm">CropSense AI</h2>
+          <p className="text-[#c9d1d3] text-xs">Powered by Gemini</p>
         </div>
         {predictionContext && (
-          <span className="ml-auto text-xs bg-green-800/50 text-green-400 px-2 py-0.5 rounded-full border border-green-700">
+          <span className="ml-auto text-xs bg-[#364747]/60 text-[#a4b16d] px-2 py-0.5 rounded-full border border-[#4a5e5e]">
             Prediction loaded
           </span>
         )}
@@ -74,8 +74,8 @@ export default function ChatPanel({ predictionContext }) {
       <div className="flex-1 overflow-y-auto scrollbar-thin px-4 py-4 space-y-4">
         {history.length === 0 && (
           <div className="text-center py-8">
-            <MessageSquare className="w-8 h-8 text-green-800 mx-auto mb-3" />
-            <p className="text-green-700 text-sm">Ask me anything about crop yield predictions!</p>
+            <MessageSquare className="w-8 h-8 text-[#4a5e5e] mx-auto mb-3" />
+            <p className="text-[#8a9e9e] text-sm">Ask me anything about crop yield predictions!</p>
             <div className="mt-4 space-y-2">
               {[
                 predictionContext
@@ -87,7 +87,7 @@ export default function ChatPanel({ predictionContext }) {
                 <button
                   key={suggestion}
                   onClick={() => setInput(suggestion)}
-                  className="block w-full text-left text-xs text-green-600 bg-green-950/60 hover:bg-green-900/60 border border-green-800 px-3 py-2 rounded-lg transition-colors"
+                  className="block w-full text-left text-xs text-[#c9d1d3] bg-[#1a2626]/60 hover:bg-[#364747]/60 border border-[#4a5e5e] px-3 py-2 rounded-lg transition-colors"
                 >
                   {suggestion}
                 </button>
@@ -101,12 +101,12 @@ export default function ChatPanel({ predictionContext }) {
             {/* Avatar */}
             <div
               className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center ${
-                msg.role === 'user' ? 'bg-green-600' : 'bg-emerald-700'
+                msg.role === 'user' ? 'bg-[#626c32]' : 'bg-[#4a5e5e]'
               }`}
             >
               {msg.role === 'user'
-                ? <User className="w-3.5 h-3.5 text-green-950" />
-                : <Bot className="w-3.5 h-3.5 text-green-100" />
+                ? <User className="w-3.5 h-3.5 text-[#f0f5f1]" />
+                : <Bot className="w-3.5 h-3.5 text-[#f0f5f1]" />
               }
             </div>
 
@@ -114,14 +114,14 @@ export default function ChatPanel({ predictionContext }) {
             <div
               className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${
                 msg.role === 'user'
-                  ? 'bg-green-700 text-green-50 rounded-tr-sm'
-                  : 'bg-green-900/70 border border-green-800 text-green-100 rounded-tl-sm prose prose-invert prose-sm max-w-none'
+                  ? 'bg-[#626c32] text-[#f0f5f1] rounded-tr-sm'
+                  : 'bg-[#364747]/70 border border-[#4a5e5e] text-[#f0f5f1] rounded-tl-sm prose prose-invert prose-sm max-w-none'
               }`}
             >
               {msg.role === 'model' ? (
                 <div className="prose prose-sm prose-invert max-w-none
                   prose-p:my-1 prose-ul:my-1 prose-li:my-0.5
-                  prose-strong:text-green-300 prose-code:text-green-300">
+                  prose-strong:text-[#a4b16d] prose-code:text-[#a4b16d]">
                   <SafeMarkdown>{msg.content}</SafeMarkdown>
                 </div>
               ) : (
@@ -133,11 +133,11 @@ export default function ChatPanel({ predictionContext }) {
 
         {loading && (
           <div className="flex gap-3">
-            <div className="w-7 h-7 rounded-full bg-emerald-700 flex items-center justify-center flex-shrink-0">
-              <Bot className="w-3.5 h-3.5 text-green-100" />
+            <div className="w-7 h-7 rounded-full bg-[#4a5e5e] flex items-center justify-center flex-shrink-0">
+              <Bot className="w-3.5 h-3.5 text-[#f0f5f1]" />
             </div>
-            <div className="bg-green-900/70 border border-green-800 rounded-2xl rounded-tl-sm px-4 py-2.5">
-              <Loader2 className="w-4 h-4 text-green-500 animate-spin" />
+            <div className="bg-[#364747]/70 border border-[#4a5e5e] rounded-2xl rounded-tl-sm px-4 py-2.5">
+              <Loader2 className="w-4 h-4 text-[#a4b16d] animate-spin" />
             </div>
           </div>
         )}
@@ -145,7 +145,7 @@ export default function ChatPanel({ predictionContext }) {
       </div>
 
       {/* Input */}
-      <div className="px-4 py-4 border-t border-green-800">
+      <div className="px-4 py-4 border-t border-[#4a5e5e]">
         <div className="flex gap-2">
           <textarea
             value={input}
@@ -157,18 +157,18 @@ export default function ChatPanel({ predictionContext }) {
                 : 'Ask about crop yield, agriculture, or predictions...'
             }
             rows={1}
-            className="flex-1 bg-green-950 border border-green-700 text-green-100 rounded-xl px-3 py-2.5 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-green-500 placeholder-green-700"
+            className="flex-1 bg-[#1a2626] border border-[#4a5e5e] text-[#f0f5f1] rounded-xl px-3 py-2.5 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-[#a4b16d] placeholder-[#4a5e5e]"
             style={{ minHeight: '40px', maxHeight: '120px' }}
           />
           <button
             onClick={handleSend}
             disabled={!input.trim() || loading}
-            className="bg-green-600 hover:bg-green-500 disabled:bg-green-900 disabled:text-green-700 text-green-950 rounded-xl px-3 transition-colors duration-200 flex-shrink-0"
+            className="bg-[#a4b16d] hover:bg-[#b5c27e] disabled:bg-[#364747] disabled:text-[#4a5e5e] text-[#1a2626] rounded-xl px-3 transition-colors duration-200 flex-shrink-0"
           >
             <Send className="w-4 h-4" />
           </button>
         </div>
-        <p className="text-green-800 text-xs mt-1.5 text-right">Enter to send · Shift+Enter for newline</p>
+        <p className="text-[#4a5e5e] text-xs mt-1.5 text-right">Enter to send · Shift+Enter for newline</p>
       </div>
     </div>
   )

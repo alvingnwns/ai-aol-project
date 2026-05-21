@@ -50,16 +50,16 @@ export default function PredictForm({ onPrediction }) {
   }
 
   const inputClass =
-    'w-full bg-green-950 border border-green-700 text-green-100 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent placeholder-green-700'
-  const labelClass = 'block text-green-400 text-xs font-semibold uppercase tracking-wider mb-1'
+    'w-full bg-[#1a2626] border border-[#4a5e5e] text-[#f0f5f1] rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#a4b16d] focus:border-transparent placeholder-[#4a5e5e]'
+  const labelClass = 'block text-[#c9d1d3] text-xs font-semibold uppercase tracking-wider mb-1'
   const selectClass =
-    'w-full bg-green-950 border border-green-700 text-green-100 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 cursor-pointer'
+    'w-full bg-[#1a2626] border border-[#4a5e5e] text-[#f0f5f1] rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#a4b16d] cursor-pointer'
 
   return (
-    <div className="bg-green-950/50 border border-green-800 rounded-2xl p-6">
+    <div className="bg-[#263333] border border-[#4a5e5e] rounded-2xl p-6">
       <div className="flex items-center gap-2 mb-6">
-        <TrendingUp className="w-5 h-5 text-green-400" />
-        <h2 className="text-green-100 font-semibold text-base">Predict Crop Yield</h2>
+        <TrendingUp className="w-5 h-5 text-[#a4b16d]" />
+        <h2 className="text-[#f0f5f1] font-semibold text-base">Predict Crop Yield</h2>
       </div>
 
       {error && (
@@ -79,7 +79,7 @@ export default function PredictForm({ onPrediction }) {
               ))}
             </select>
           ) : (
-            <div className="h-9 bg-green-900/40 rounded-lg animate-pulse" />
+            <div className="h-9 bg-[#364747]/40 rounded-lg animate-pulse" />
           )}
         </div>
 
@@ -93,7 +93,7 @@ export default function PredictForm({ onPrediction }) {
               ))}
             </select>
           ) : (
-            <div className="h-9 bg-green-900/40 rounded-lg animate-pulse" />
+            <div className="h-9 bg-[#364747]/40 rounded-lg animate-pulse" />
           )}
         </div>
 
@@ -120,6 +120,8 @@ export default function PredictForm({ onPrediction }) {
             name="rainfall_mm"
             value={form.rainfall_mm}
             onChange={handleChange}
+            min="0"
+            max="11500"
             step="0.1"
             placeholder="e.g. 1485"
             required
@@ -150,6 +152,8 @@ export default function PredictForm({ onPrediction }) {
             name="avg_temp"
             value={form.avg_temp}
             onChange={handleChange}
+            min="-30"
+            max="50"
             step="0.01"
             placeholder="e.g. 16.37"
             required
@@ -160,7 +164,7 @@ export default function PredictForm({ onPrediction }) {
         <button
           type="submit"
           disabled={loading || !meta}
-          className="w-full bg-green-600 hover:bg-green-500 disabled:bg-green-900 disabled:text-green-600 text-green-950 font-semibold py-2.5 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 text-sm mt-2"
+          className="w-full bg-[#a4b16d] hover:bg-[#b5c27e] disabled:bg-[#364747] disabled:text-[#4a5e5e] text-[#1a2626] font-semibold py-2.5 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 text-sm mt-2"
         >
           {loading ? (
             <>

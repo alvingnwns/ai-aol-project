@@ -30,6 +30,8 @@ def predict(req: PredictRequest):
             item=req.item,
             year=req.year,
             model_r2=result["model_r2"],
+            crop_failure=result["crop_failure"],
+            outlier_features=result["outlier_features"],
         )
     except ValueError as e:
         raise HTTPException(status_code=422, detail=str(e))

@@ -18,6 +18,8 @@ class PredictResponse(BaseModel):
     item: str
     year: int
     model_r2: float
+    crop_failure: bool = False
+    outlier_features: List[str] = []
 
 
 class ChatMessage(BaseModel):
