@@ -22,7 +22,7 @@ __pycache__/
 *.ipynb_checkpoints
 
 # Trained models & large binaries
-backend/models/*.pkl
+# *.pkl files in models/ ARE committed (needed for deployment)
 backend/models/*.joblib
 backend/models/*.h5
 backend/models/*.pt

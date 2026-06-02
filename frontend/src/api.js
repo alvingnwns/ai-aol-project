@@ -1,6 +1,8 @@
 import axios from 'axios'
 
-const api = axios.create({ baseURL: '/api' })
+// In dev: VITE_API_URL is not set → uses '/api' → Vite proxy forwards to localhost:8000
+// In production (Vercel): VITE_API_URL = https://your-app.onrender.com/api
+const api = axios.create({ baseURL: import.meta.env.VITE_API_URL ?? '/api' })
 
 export const getMeta = () => api.get('/meta').then(r => r.data)
 
