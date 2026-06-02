@@ -123,9 +123,10 @@
   ],
   "year_train_min": 1990,
   "year_train_max": 2013,
+  "split_year": 2010,
   "metrics": {
-    "MAE": 6440.03,
-    "RMSE": 13493.06,
-    "R2": 0.9749
+    "MAE": 11953.78,
+    "RMSE": 23387.71,
+    "R2": 0.9401
   }
 }
