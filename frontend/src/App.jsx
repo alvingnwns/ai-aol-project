@@ -3,52 +3,69 @@ import './index.css'
 import Header from './components/Header'
 import PredictForm from './components/PredictForm'
 import PredictionResult from './components/PredictionResult'
+import Calculator from './components/Calculator'
 import ChatPanel from './components/ChatPanel'
 
 function App() {
   const [prediction, setPrediction] = useState(null)
+  const [activeTab, setActiveTab] = useState('prediksi')
   const [sessionKey, setSessionKey] = useState(0)
 
   const handleNewSession = useCallback(() => {
     setPrediction(null)
+    setActiveTab('prediksi')
     setSessionKey(k => k + 1)
   }, [])
 
+  const handlePrediction = useCallback((result) => {
+    setPrediction(result)
+  }, [])
+
   return (
-    <div className="min-h-screen bg-[#1a2626] flex flex-col">
-      <Header onNewSession={handleNewSession} />
+    <div className="min-h-screen bg-[#0D1F1B] flex flex-col">
+      <Header
+        onNewSession={handleNewSession}
+        activeTab={activeTab}
+        onTabChange={setActiveTab}
+      />
 
       <main className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">
-        {/* Hero text */}
-        <div className="text-center mb-8">
-          <h1 className="text-3xl sm:text-4xl font-bold text-[#f0f5f1] mb-2">
-            Crop Yield Predictor
-          </h1>
-          <p className="text-[#c9d1d3] text-sm sm:text-base max-w-xl mx-auto">
-            Enter agricultural parameters to predict crop yield using AI, then ask our Gemini-powered assistant for insights.
-          </p>
-        </div>
 
-        {/* 3-column layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Left: Form */}
-          <div className="lg:col-span-1">
-            <PredictForm key={`form-${sessionKey}`} onPrediction={setPrediction} />
+        {/* Prediksi Tab */}
+        {activeTab === 'prediksi' && (
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 animate-fade-in">
+            <div className="lg:col-span-2">
+              <PredictForm
+                key={`form-${sessionKey}`}
+                onPrediction={handlePrediction}
+              />
+            </div>
+            <div className="lg:col-span-3">
+              <PredictionResult result={prediction} />
+            </div>
           </div>
+        )}
 
-          {/* Center + Right */}
-          <div className="lg:col-span-2 flex flex-col gap-6">
-            {/* Result card */}
-            <PredictionResult result={prediction} />
-
-            {/* Chat panel */}
-            <ChatPanel key={`chat-${sessionKey}`} predictionContext={prediction} />
+        {/* Kalkulator Tab */}
+        {activeTab === 'kalkulator' && (
+          <div className="max-w-2xl mx-auto animate-fade-in">
+            <Calculator prediction={prediction} />
           </div>
-        </div>
+        )}
+
+        {/* Chatbot Tab */}
+        {activeTab === 'chatbot' && (
+          <div className="max-w-3xl mx-auto h-[calc(100vh-180px)] animate-fade-in">
+            <ChatPanel
+              key={`chat-${sessionKey}`}
+              predictionContext={prediction}
+            />
+          </div>
+        )}
       </main>
 
-      <footer className="text-center text-[#4a5e5e] text-xs py-4 border-t border-[#364747]/60">
-        CropSense © 2026 · XGBoost Model (R² 0.971) · Gemini AI
+      <footer className="text-center text-[#2D5447] text-xs py-4 border-t border-[#1D3830]">
+        PanenAI © 2026 · XGBoost Model (R² 0.9887) · Gemini AI · Data BPS & BMKG Indonesia
       </footer>
     </div>
   )
