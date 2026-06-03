@@ -1,132 +1,8160 @@
 {
-  "area_classes": [
-    "Albania",
-    "Algeria",
-    "Angola",
-    "Argentina",
-    "Armenia",
-    "Australia",
-    "Austria",
-    "Azerbaijan",
-    "Bahamas",
-    "Bahrain",
-    "Bangladesh",
-    "Belarus",
-    "Belgium",
-    "Botswana",
-    "Brazil",
-    "Bulgaria",
-    "Burkina Faso",
-    "Burundi",
-    "Cameroon",
-    "Canada",
-    "Central African Republic",
-    "Chile",
-    "Colombia",
-    "Croatia",
-    "Denmark",
-    "Dominican Republic",
-    "Ecuador",
-    "Egypt",
-    "El Salvador",
-    "Eritrea",
-    "Estonia",
-    "Finland",
-    "France",
-    "Germany",
-    "Ghana",
-    "Greece",
-    "Guatemala",
-    "Guinea",
-    "Guyana",
-    "Haiti",
-    "Honduras",
-    "Hungary",
-    "India",
-    "Indonesia",
-    "Iraq",
-    "Ireland",
-    "Italy",
-    "Jamaica",
-    "Japan",
-    "Kazakhstan",
-    "Kenya",
-    "Latvia",
-    "Lebanon",
-    "Lesotho",
-    "Libya",
-    "Lithuania",
-    "Madagascar",
-    "Malawi",
-    "Malaysia",
-    "Mali",
-    "Mauritania",
-    "Mauritius",
-    "Mexico",
-    "Montenegro",
-    "Morocco",
-    "Mozambique",
-    "Namibia",
-    "Nepal",
-    "Netherlands",
-    "New Zealand",
-    "Nicaragua",
-    "Niger",
-    "Norway",
-    "Pakistan",
-    "Papua New Guinea",
-    "Peru",
-    "Poland",
-    "Portugal",
-    "Qatar",
-    "Romania",
-    "Rwanda",
-    "Saudi Arabia",
-    "Senegal",
-    "Slovenia",
-    "South Africa",
-    "Spain",
-    "Sri Lanka",
-    "Sudan",
-    "Suriname",
-    "Sweden",
-    "Switzerland",
-    "Tajikistan",
-    "Thailand",
-    "Tunisia",
-    "Turkey",
-    "Uganda",
-    "Ukraine",
-    "United Kingdom",
-    "Uruguay",
-    "Zambia",
-    "Zimbabwe"
+  "provinsi_classes": [
+    "ACEH",
+    "BALI",
+    "BANTEN",
+    "BENGKULU",
+    "DI YOGYAKARTA",
+    "DKI JAKARTA",
+    "GORONTALO",
+    "JAMBI",
+    "JAWA BARAT",
+    "JAWA TENGAH",
+    "JAWA TIMUR",
+    "KALIMANTAN BARAT",
+    "KALIMANTAN SELATAN",
+    "KALIMANTAN TENGAH",
+    "KALIMANTAN TIMUR",
+    "KALIMANTAN UTARA",
+    "KEPULAUAN BANGKA BELITUNG",
+    "KEPULAUAN RIAU",
+    "LAMPUNG",
+    "MALUKU",
+    "MALUKU UTARA",
+    "NUSA TENGGARA BARAT",
+    "NUSA TENGGARA TIMUR",
+    "PAPUA",
+    "PAPUA BARAT",
+    "RIAU",
+    "SULAWESI BARAT",
+    "SULAWESI SELATAN",
+    "SULAWESI TENGAH",
+    "SULAWESI TENGGARA",
+    "SULAWESI UTARA",
+    "SUMATERA BARAT",
+    "SUMATERA SELATAN",
+    "SUMATERA UTARA"
   ],
-  "item_classes": [
-    "Cassava",
-    "Maize",
-    "Plantains and others",
-    "Potatoes",
-    "Rice, paddy",
-    "Sorghum",
-    "Soybeans",
-    "Sweet potatoes",
-    "Wheat",
-    "Yams"
+  "tanaman_classes": [
+    "Jagung",
+    "Kacang_Hijau",
+    "Kacang_Tanah",
+    "Kedelai",
+    "Padi",
+    "Ubi_Jalar",
+    "Ubi_Kayu"
   ],
   "features": [
-    "area_enc",
-    "item_enc",
-    "rainfall_mm",
-    "pesticides_tonnes",
-    "avg_temp"
+    "provinsi_enc",
+    "tanaman_enc",
+    "curah_hujan_mm",
+    "hari_hujan",
+    "suhu_rata_c",
+    "tekanan_udara_mb",
+    "penyinaran_matahari_pct"
   ],
-  "year_train_min": 1990,
-  "year_train_max": 2013,
-  "split_year": 2010,
+  "tahun_min": 2000,
+  "tahun_max": 2015,
+  "split_year": 2013,
   "metrics": {
-    "MAE": 11953.78,
-    "RMSE": 23387.71,
-    "R2": 0.9401
+    "MAE": 60160.49,
+    "RMSE": 170323.81,
+    "R2": 0.9887
+  },
+  "prod_stats": {
+    "ACEH|Jagung": {
+      "mean": 121116.56,
+      "min": 36642.0,
+      "max": 205125.0,
+      "p25": 75156.75,
+      "p75": 167679.0
+    },
+    "ACEH|Kacang_Hijau": {
+      "mean": 2660.69,
+      "min": 955.0,
+      "max": 6132.0,
+      "p25": 1425.0,
+      "p75": 3792.5
+    },
+    "ACEH|Kacang_Tanah": {
+      "mean": 8114.75,
+      "min": 2527.0,
+      "max": 16887.0,
+      "p25": 5706.25,
+      "p75": 9657.0
+    },
+    "ACEH|Kedelai": {
+      "mean": 42706.19,
+      "min": 18697.0,
+      "max": 71576.0,
+      "p25": 29674.0,
+      "p75": 51916.0
+    },
+    "ACEH|Padi": {
+      "mean": 1618495.0,
+      "min": 1246614.0,
+      "max": 2331046.0,
+      "p25": 1404006.75,
+      "p75": 1776906.0
+    },
+    "ACEH|Ubi_Jalar": {
+      "mean": 15941.25,
+      "min": 8935.0,
+      "max": 24594.0,
+      "p25": 11783.5,
+      "p75": 18698.25
+    },
+    "ACEH|Ubi_Kayu": {
+      "mean": 46741.0,
+      "min": 29131.0,
+      "max": 75286.0,
+      "p25": 38366.5,
+      "p75": 52450.5
+    },
+    "BALI|Jagung": {
+      "mean": 73227.38,
+      "min": 40603.0,
+      "max": 98584.0,
+      "p25": 63922.75,
+      "p75": 83867.75
+    },
+    "BALI|Kacang_Hijau": {
+      "mean": 1118.31,
+      "min": 516.0,
+      "max": 1932.0,
+      "p25": 881.25,
+      "p75": 1269.75
+    },
+    "BALI|Kacang_Tanah": {
+      "mean": 14751.0,
+      "min": 7065.0,
+      "max": 19742.0,
+      "p25": 11489.5,
+      "p75": 18143.0
+    },
+    "BALI|Kedelai": {
+      "mean": 9564.31,
+      "min": 5554.0,
+      "max": 14326.0,
+      "p25": 7733.75,
+      "p75": 11154.5
+    },
+    "BALI|Padi": {
+      "mean": 836890.56,
+      "min": 786961.0,
+      "max": 882092.0,
+      "p25": 805042.5,
+      "p75": 866140.0
+    },
+    "BALI|Ubi_Jalar": {
+      "mean": 69458.94,
+      "min": 36655.0,
+      "max": 92078.0,
+      "p25": 61952.75,
+      "p75": 81287.5
+    },
+    "BALI|Ubi_Kayu": {
+      "mean": 149860.44,
+      "min": 86070.0,
+      "max": 174189.0,
+      "p25": 141138.5,
+      "p75": 164382.25
+    },
+    "BANTEN|Jagung": {
+      "mean": 21264.31,
+      "min": 9819.0,
+      "max": 30396.0,
+      "p25": 13406.75,
+      "p75": 27451.5
+    },
+    "BANTEN|Kacang_Hijau": {
+      "mean": 6666.94,
+      "min": 542.0,
+      "max": 81496.0,
+      "p25": 908.0,
+      "p75": 2304.75
+    },
+    "BANTEN|Kacang_Tanah": {
+      "mean": 14814.81,
+      "min": 11004.0,
+      "max": 20381.0,
+      "p25": 12253.5,
+      "p75": 17932.5
+    },
+    "BANTEN|Kedelai": {
+      "mean": 5823.5,
+      "min": 262.0,
+      "max": 15888.0,
+      "p25": 2371.75,
+      "p75": 7670.25
+    },
+    "BANTEN|Padi": {
+      "mean": 1825568.38,
+      "min": 1433397.0,
+      "max": 2188996.0,
+      "p25": 1736581.75,
+      "p75": 1974297.25
+    },
+    "BANTEN|Ubi_Jalar": {
+      "mean": 35643.38,
+      "min": 20150.0,
+      "max": 45917.0,
+      "p25": 33459.5,
+      "p75": 40753.25
+    },
+    "BANTEN|Ubi_Kayu": {
+      "mean": 125621.56,
+      "min": 74163.0,
+      "max": 179475.0,
+      "p25": 103677.5,
+      "p75": 147026.5
+    },
+    "BENGKULU|Jagung": {
+      "mean": 74008.56,
+      "min": 41557.0,
+      "max": 111826.0,
+      "p25": 52589.75,
+      "p75": 88971.0
+    },
+    "BENGKULU|Kacang_Hijau": {
+      "mean": 1413.75,
+      "min": 662.0,
+      "max": 1757.0,
+      "p25": 1334.75,
+      "p75": 1692.25
+    },
+    "BENGKULU|Kacang_Tanah": {
+      "mean": 5517.25,
+      "min": 3472.0,
+      "max": 7253.0,
+      "p25": 4655.5,
+      "p75": 6141.0
+    },
+    "BENGKULU|Kedelai": {
+      "mean": 2957.12,
+      "min": 1341.0,
+      "max": 5388.0,
+      "p25": 2042.0,
+      "p75": 3590.25
+    },
+    "BENGKULU|Padi": {
+      "mean": 477289.25,
+      "min": 362979.0,
+      "max": 622832.0,
+      "p25": 404985.75,
+      "p75": 532315.25
+    },
+    "BENGKULU|Ubi_Jalar": {
+      "mean": 40877.25,
+      "min": 20930.0,
+      "max": 64313.0,
+      "p25": 31424.5,
+      "p75": 52073.25
+    },
+    "BENGKULU|Ubi_Kayu": {
+      "mean": 69393.19,
+      "min": 37311.0,
+      "max": 113488.0,
+      "p25": 55583.0,
+      "p75": 80579.25
+    },
+    "DI YOGYAKARTA|Jagung": {
+      "mean": 245894.94,
+      "min": 22362.0,
+      "max": 345576.0,
+      "p25": 199991.0,
+      "p75": 295520.0
+    },
+    "DI YOGYAKARTA|Kacang_Hijau": {
+      "mean": 446.94,
+      "min": 230.0,
+      "max": 651.0,
+      "p25": 313.5,
+      "p75": 565.0
+    },
+    "DI YOGYAKARTA|Kacang_Tanah": {
+      "mean": 63209.62,
+      "min": 50552.0,
+      "max": 83300.0,
+      "p25": 58303.25,
+      "p75": 66009.5
+    },
+    "DI YOGYAKARTA|Kedelai": {
+      "mean": 37661.25,
+      "min": 18822.0,
+      "max": 68102.0,
+      "p25": 32515.5,
+      "p75": 39728.25
+    },
+    "DI YOGYAKARTA|Padi": {
+      "mean": 778297.06,
+      "min": 652280.0,
+      "max": 946224.0,
+      "p25": 668477.75,
+      "p75": 862656.5
+    },
+    "DI YOGYAKARTA|Ubi_Jalar": {
+      "mean": 6374.38,
+      "min": 4584.0,
+      "max": 7906.0,
+      "p25": 5506.5,
+      "p75": 7219.5
+    },
+    "DI YOGYAKARTA|Ubi_Kayu": {
+      "mean": 893939.44,
+      "min": 701314.0,
+      "max": 1114665.0,
+      "p25": 804150.75,
+      "p75": 985848.75
+    },
+    "DKI JAKARTA|Jagung": {
+      "mean": 38.5,
+      "min": 0.0,
+      "max": 78.0,
+      "p25": 18.75,
+      "p75": 60.25
+    },
+    "DKI JAKARTA|Kacang_Hijau": {
+      "mean": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "p25": 0.0,
+      "p75": 0.0
+    },
+    "DKI JAKARTA|Kacang_Tanah": {
+      "mean": 14.06,
+      "min": 0.0,
+      "max": 34.0,
+      "p25": 5.5,
+      "p75": 20.5
+    },
+    "DKI JAKARTA|Kedelai": {
+      "mean": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "p25": 0.0,
+      "p75": 0.0
+    },
+    "DKI JAKARTA|Padi": {
+      "mean": 10565.81,
+      "min": 6197.0,
+      "max": 16886.0,
+      "p25": 8236.0,
+      "p75": 11811.0
+    },
+    "DKI JAKARTA|Ubi_Jalar": {
+      "mean": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "p25": 0.0,
+      "p75": 0.0
+    },
+    "DKI JAKARTA|Ubi_Kayu": {
+      "mean": 558.06,
+      "min": 0.0,
+      "max": 1678.0,
+      "p25": 143.75,
+      "p75": 832.0
+    },
+    "GORONTALO|Jagung": {
+      "mean": 458704.75,
+      "min": 81720.0,
+      "max": 753598.0,
+      "p25": 234410.0,
+      "p75": 647641.25
+    },
+    "GORONTALO|Kacang_Hijau": {
+      "mean": 380.94,
+      "min": 138.0,
+      "max": 865.0,
+      "p25": 213.75,
+      "p75": 541.5
+    },
+    "GORONTALO|Kacang_Tanah": {
+      "mean": 2550.62,
+      "min": 756.0,
+      "max": 5536.0,
+      "p25": 1243.0,
+      "p75": 3408.75
+    },
+    "GORONTALO|Kedelai": {
+      "mean": 3309.94,
+      "min": 542.0,
+      "max": 6734.0,
+      "p25": 2168.75,
+      "p75": 4132.0
+    },
+    "GORONTALO|Padi": {
+      "mean": 222446.75,
+      "min": 153222.0,
+      "max": 331220.0,
+      "p25": 162038.25,
+      "p75": 261180.75
+    },
+    "GORONTALO|Ubi_Jalar": {
+      "mean": 3370.31,
+      "min": 1434.0,
+      "max": 5384.0,
+      "p25": 2425.5,
+      "p75": 4033.5
+    },
+    "GORONTALO|Ubi_Kayu": {
+      "mean": 8132.19,
+      "min": 2653.0,
+      "max": 14507.0,
+      "p25": 5566.75,
+      "p75": 10365.0
+    },
+    "JAMBI|Jagung": {
+      "mean": 30615.94,
+      "min": 23975.0,
+      "max": 51712.0,
+      "p25": 25660.25,
+      "p75": 31672.25
+    },
+    "JAMBI|Kacang_Hijau": {
+      "mean": 552.88,
+      "min": 129.0,
+      "max": 1093.0,
+      "p25": 429.0,
+      "p75": 628.0
+    },
+    "JAMBI|Kacang_Tanah": {
+      "mean": 2004.75,
+      "min": 1176.0,
+      "max": 2614.0,
+      "p25": 1643.75,
+      "p75": 2383.0
+    },
+    "JAMBI|Kedelai": {
+      "mean": 4423.19,
+      "min": 2359.0,
+      "max": 9132.0,
+      "p25": 3298.0,
+      "p75": 5407.0
+    },
+    "JAMBI|Padi": {
+      "mean": 558206.88,
+      "min": 58663.0,
+      "max": 664535.0,
+      "p25": 553572.25,
+      "p75": 626080.0
+    },
+    "JAMBI|Ubi_Jalar": {
+      "mean": 38930.25,
+      "min": 14266.0,
+      "max": 80057.0,
+      "p25": 21020.5,
+      "p75": 68324.0
+    },
+    "JAMBI|Ubi_Kayu": {
+      "mean": 43404.12,
+      "min": 33291.0,
+      "max": 54605.0,
+      "p25": 39260.75,
+      "p75": 46724.5
+    },
+    "JAWA BARAT|Jagung": {
+      "mean": 711657.19,
+      "min": 361061.0,
+      "max": 1101998.0,
+      "p25": 528147.5,
+      "p75": 948811.25
+    },
+    "JAWA BARAT|Kacang_Hijau": {
+      "mean": 12751.25,
+      "min": 9691.0,
+      "max": 16195.0,
+      "p25": 10881.25,
+      "p75": 14321.75
+    },
+    "JAWA BARAT|Kacang_Tanah": {
+      "mean": 89347.81,
+      "min": 73705.0,
+      "max": 109368.0,
+      "p25": 84727.0,
+      "p75": 93293.75
+    },
+    "JAWA BARAT|Kedelai": {
+      "mean": 44494.75,
+      "min": 17438.0,
+      "max": 98938.0,
+      "p25": 27941.25,
+      "p75": 55908.75
+    },
+    "JAWA BARAT|Padi": {
+      "mean": 10494647.69,
+      "min": 8776889.0,
+      "max": 12083162.0,
+      "p25": 9556369.5,
+      "p75": 11438330.75
+    },
+    "JAWA BARAT|Ubi_Jalar": {
+      "mean": 408375.94,
+      "min": 311742.0,
+      "max": 485065.0,
+      "p25": 383654.0,
+      "p75": 441476.75
+    },
+    "JAWA BARAT|Ubi_Kayu": {
+      "mean": 1967594.0,
+      "min": 1569846.0,
+      "max": 2138532.0,
+      "p25": 1896010.0,
+      "p75": 2070539.0
+    },
+    "JAWA TENGAH|Jagung": {
+      "mean": 2415175.44,
+      "min": 1505706.0,
+      "max": 3212391.0,
+      "p25": 1851075.5,
+      "p75": 3045683.75
+    },
+    "JAWA TENGAH|Kacang_Hijau": {
+      "mean": 84874.12,
+      "min": 2602.0,
+      "max": 116518.0,
+      "p25": 80345.5,
+      "p75": 97620.25
+    },
+    "JAWA TENGAH|Kacang_Tanah": {
+      "mean": 155411.88,
+      "min": 109204.0,
+      "max": 185797.0,
+      "p25": 139772.75,
+      "p75": 174358.5
+    },
+    "JAWA TENGAH|Kedelai": {
+      "mean": 143119.0,
+      "min": 99318.0,
+      "max": 204064.0,
+      "p25": 116440.0,
+      "p75": 167166.5
+    },
+    "JAWA TENGAH|Padi": {
+      "mean": 9288587.38,
+      "min": 8123839.0,
+      "max": 11301422.0,
+      "p25": 8496495.25,
+      "p75": 10141356.0
+    },
+    "JAWA TENGAH|Ubi_Jalar": {
+      "mean": 145331.69,
+      "min": 117159.0,
+      "max": 183694.0,
+      "p25": 136219.5,
+      "p75": 152977.0
+    },
+    "JAWA TENGAH|Ubi_Kayu": {
+      "mean": 3545048.12,
+      "min": 3091874.0,
+      "max": 4089635.0,
+      "p25": 3389126.5,
+      "p75": 3715260.25
+    },
+    "JAWA TIMUR|Jagung": {
+      "mean": 4823210.06,
+      "min": 3487735.0,
+      "max": 6295301.0,
+      "p25": 4103117.0,
+      "p75": 5630728.25
+    },
+    "JAWA TIMUR|Kacang_Hijau": {
+      "mean": 77998.62,
+      "min": 57686.0,
+      "max": 95709.0,
+      "p25": 71049.75,
+      "p75": 83341.0
+    },
+    "JAWA TIMUR|Kacang_Tanah": {
+      "mean": 201739.75,
+      "min": 176889.0,
+      "max": 218910.0,
+      "p25": 193901.75,
+      "p75": 211643.25
+    },
+    "JAWA TIMUR|Kedelai": {
+      "mean": 328797.62,
+      "min": 252027.0,
+      "max": 385212.0,
+      "p25": 314242.75,
+      "p75": 350706.0
+    },
+    "JAWA TIMUR|Padi": {
+      "mean": 10395851.69,
+      "min": 8672791.0,
+      "max": 13154967.0,
+      "p25": 9005955.0,
+      "p75": 11745165.25
+    },
+    "JAWA TIMUR|Ubi_Jalar": {
+      "mean": 220057.44,
+      "min": 136556.0,
+      "max": 411957.0,
+      "p25": 150558.0,
+      "p75": 250787.75
+    },
+    "JAWA TIMUR|Ubi_Kayu": {
+      "mean": 3705146.69,
+      "min": 3161573.0,
+      "max": 4246028.0,
+      "p25": 3506236.5,
+      "p75": 3976691.0
+    },
+    "KALIMANTAN BARAT|Jagung": {
+      "mean": 122653.81,
+      "min": 31631.0,
+      "max": 181407.0,
+      "p25": 98061.5,
+      "p75": 162322.5
+    },
+    "KALIMANTAN BARAT|Kacang_Hijau": {
+      "mean": 1037.5,
+      "min": 463.0,
+      "max": 1687.0,
+      "p25": 853.5,
+      "p75": 1309.25
+    },
+    "KALIMANTAN BARAT|Kacang_Tanah": {
+      "mean": 1856.06,
+      "min": 945.0,
+      "max": 2746.0,
+      "p25": 1605.5,
+      "p75": 2111.5
+    },
+    "KALIMANTAN BARAT|Kedelai": {
+      "mean": 1828.81,
+      "min": 802.0,
+      "max": 3477.0,
+      "p25": 1346.5,
+      "p75": 2073.75
+    },
+    "KALIMANTAN BARAT|Padi": {
+      "mean": 1186892.5,
+      "min": 903191.0,
+      "max": 1441876.0,
+      "p25": 1026262.5,
+      "p75": 1327054.25
+    },
+    "KALIMANTAN BARAT|Ubi_Jalar": {
+      "mean": 14360.31,
+      "min": 11735.0,
+      "max": 16676.0,
+      "p25": 13719.5,
+      "p75": 15102.25
+    },
+    "KALIMANTAN BARAT|Ubi_Kayu": {
+      "mean": 190485.31,
+      "min": 141550.0,
+      "max": 250173.0,
+      "p25": 168249.25,
+      "p75": 211281.5
+    },
+    "KALIMANTAN SELATAN|Jagung": {
+      "mean": 79878.38,
+      "min": 29012.0,
+      "max": 128505.0,
+      "p25": 43834.25,
+      "p75": 112520.75
+    },
+    "KALIMANTAN SELATAN|Kacang_Hijau": {
+      "mean": 1236.25,
+      "min": 655.0,
+      "max": 1751.0,
+      "p25": 825.75,
+      "p75": 1533.75
+    },
+    "KALIMANTAN SELATAN|Kacang_Tanah": {
+      "mean": 14712.06,
+      "min": 9121.0,
+      "max": 18214.0,
+      "p25": 12328.0,
+      "p75": 16698.25
+    },
+    "KALIMANTAN SELATAN|Kedelai": {
+      "mean": 5012.12,
+      "min": 206.0,
+      "max": 10537.0,
+      "p25": 3815.75,
+      "p75": 6580.0
+    },
+    "KALIMANTAN SELATAN|Padi": {
+      "mean": 1771150.62,
+      "min": 1332364.0,
+      "max": 2140276.0,
+      "p25": 1492109.25,
+      "p75": 2032849.0
+    },
+    "KALIMANTAN SELATAN|Ubi_Jalar": {
+      "mean": 22717.19,
+      "min": 16534.0,
+      "max": 31143.0,
+      "p25": 18657.75,
+      "p75": 25231.0
+    },
+    "KALIMANTAN SELATAN|Ubi_Kayu": {
+      "mean": 93765.25,
+      "min": 67292.0,
+      "max": 128615.0,
+      "p25": 78703.25,
+      "p75": 114192.25
+    },
+    "KALIMANTAN TENGAH|Jagung": {
+      "mean": 6929.44,
+      "min": 969.0,
+      "max": 9345.0,
+      "p25": 6158.25,
+      "p75": 8443.75
+    },
+    "KALIMANTAN TENGAH|Kacang_Hijau": {
+      "mean": 277.56,
+      "min": 44.0,
+      "max": 601.0,
+      "p25": 135.0,
+      "p75": 398.25
+    },
+    "KALIMANTAN TENGAH|Kacang_Tanah": {
+      "mean": 1452.0,
+      "min": 523.0,
+      "max": 2979.0,
+      "p25": 771.75,
+      "p75": 1954.5
+    },
+    "KALIMANTAN TENGAH|Kedelai": {
+      "mean": 1924.19,
+      "min": 682.0,
+      "max": 4606.0,
+      "p25": 1237.0,
+      "p75": 2293.0
+    },
+    "KALIMANTAN TENGAH|Padi": {
+      "mean": 588833.44,
+      "min": 360084.0,
+      "max": 893202.0,
+      "p25": 491304.0,
+      "p75": 676688.75
+    },
+    "KALIMANTAN TENGAH|Ubi_Jalar": {
+      "mean": 11810.38,
+      "min": 8570.0,
+      "max": 18682.0,
+      "p25": 9498.75,
+      "p75": 13263.25
+    },
+    "KALIMANTAN TENGAH|Ubi_Kayu": {
+      "mean": 72937.69,
+      "min": 40762.0,
+      "max": 115017.0,
+      "p25": 48763.75,
+      "p75": 83535.75
+    },
+    "KALIMANTAN TIMUR|Jagung": {
+      "mean": 9252.0,
+      "min": 1162.0,
+      "max": 13827.0,
+      "p25": 7161.25,
+      "p75": 12238.75
+    },
+    "KALIMANTAN TIMUR|Kacang_Hijau": {
+      "mean": 826.88,
+      "min": 176.0,
+      "max": 1212.0,
+      "p25": 709.75,
+      "p75": 1040.75
+    },
+    "KALIMANTAN TIMUR|Kacang_Tanah": {
+      "mean": 2144.31,
+      "min": 1127.0,
+      "max": 2805.0,
+      "p25": 1815.0,
+      "p75": 2465.75
+    },
+    "KALIMANTAN TIMUR|Kedelai": {
+      "mean": 2096.88,
+      "min": 1364.0,
+      "max": 2783.0,
+      "p25": 1885.75,
+      "p75": 2324.0
+    },
+    "KALIMANTAN TIMUR|Padi": {
+      "mean": 490834.69,
+      "min": 366708.0,
+      "max": 588879.0,
+      "p25": 428742.0,
+      "p75": 557159.75
+    },
+    "KALIMANTAN TIMUR|Ubi_Jalar": {
+      "mean": 22313.69,
+      "min": 10933.0,
+      "max": 31947.0,
+      "p25": 18857.75,
+      "p75": 26516.5
+    },
+    "KALIMANTAN TIMUR|Ubi_Kayu": {
+      "mean": 92113.56,
+      "min": 53966.0,
+      "max": 125714.0,
+      "p25": 87738.25,
+      "p75": 106561.5
+    },
+    "KALIMANTAN UTARA|Jagung": {
+      "mean": 978.5,
+      "min": 973.0,
+      "max": 1032.0,
+      "p25": 973.0,
+      "p75": 973.0
+    },
+    "KALIMANTAN UTARA|Kacang_Hijau": {
+      "mean": 75.81,
+      "min": 72.0,
+      "max": 113.0,
+      "p25": 72.0,
+      "p75": 72.0
+    },
+    "KALIMANTAN UTARA|Kacang_Tanah": {
+      "mean": 236.19,
+      "min": 234.0,
+      "max": 257.0,
+      "p25": 234.0,
+      "p75": 234.0
+    },
+    "KALIMANTAN UTARA|Kedelai": {
+      "mean": 286.06,
+      "min": 84.0,
+      "max": 2239.0,
+      "p25": 84.0,
+      "p75": 84.0
+    },
+    "KALIMANTAN UTARA|Padi": {
+      "mean": 123540.69,
+      "min": 112102.0,
+      "max": 124724.0,
+      "p25": 124724.0,
+      "p75": 124724.0
+    },
+    "KALIMANTAN UTARA|Ubi_Jalar": {
+      "mean": 3106.56,
+      "min": 2851.0,
+      "max": 3133.0,
+      "p25": 3133.0,
+      "p75": 3133.0
+    },
+    "KALIMANTAN UTARA|Ubi_Kayu": {
+      "mean": 33497.62,
+      "min": 32935.0,
+      "max": 38936.0,
+      "p25": 32935.0,
+      "p75": 32935.0
+    },
+    "KEPULAUAN BANGKA BELITUNG|Jagung": {
+      "mean": 1531.38,
+      "min": 666.0,
+      "max": 3199.0,
+      "p25": 910.75,
+      "p75": 2223.75
+    },
+    "KEPULAUAN BANGKA BELITUNG|Kacang_Hijau": {
+      "mean": 1.06,
+      "min": 0.0,
+      "max": 2.0,
+      "p25": 0.75,
+      "p75": 2.0
+    },
+    "KEPULAUAN BANGKA BELITUNG|Kacang_Tanah": {
+      "mean": 377.25,
+      "min": 144.0,
+      "max": 702.0,
+      "p25": 321.75,
+      "p75": 401.75
+    },
+    "KEPULAUAN BANGKA BELITUNG|Kedelai": {
+      "mean": 6.25,
+      "min": 1.0,
+      "max": 52.0,
+      "p25": 1.0,
+      "p75": 5.25
+    },
+    "KEPULAUAN BANGKA BELITUNG|Padi": {
+      "mean": 18138.44,
+      "min": 2439.0,
+      "max": 28480.0,
+      "p25": 15178.0,
+      "p75": 22293.0
+    },
+    "KEPULAUAN BANGKA BELITUNG|Ubi_Jalar": {
+      "mean": 4004.0,
+      "min": 2620.0,
+      "max": 5179.0,
+      "p25": 3229.5,
+      "p75": 4696.75
+    },
+    "KEPULAUAN BANGKA BELITUNG|Ubi_Kayu": {
+      "mean": 20068.06,
+      "min": 13276.0,
+      "max": 35024.0,
+      "p25": 17913.5,
+      "p75": 21604.75
+    },
+    "KEPULAUAN RIAU|Jagung": {
+      "mean": 756.81,
+      "min": 473.0,
+      "max": 1125.0,
+      "p25": 584.0,
+      "p75": 902.0
+    },
+    "KEPULAUAN RIAU|Kacang_Hijau": {
+      "mean": 2.19,
+      "min": 0.0,
+      "max": 4.0,
+      "p25": 1.0,
+      "p75": 4.0
+    },
+    "KEPULAUAN RIAU|Kacang_Tanah": {
+      "mean": 117.69,
+      "min": 60.0,
+      "max": 168.0,
+      "p25": 104.75,
+      "p75": 146.25
+    },
+    "KEPULAUAN RIAU|Kedelai": {
+      "mean": 6.06,
+      "min": 2.0,
+      "max": 18.0,
+      "p25": 2.0,
+      "p75": 9.0
+    },
+    "KEPULAUAN RIAU|Padi": {
+      "mean": 666.62,
+      "min": 312.0,
+      "max": 1370.0,
+      "p25": 312.0,
+      "p75": 1178.75
+    },
+    "KEPULAUAN RIAU|Ubi_Jalar": {
+      "mean": 1633.25,
+      "min": 1427.0,
+      "max": 1916.0,
+      "p25": 1527.5,
+      "p75": 1797.5
+    },
+    "KEPULAUAN RIAU|Ubi_Kayu": {
+      "mean": 6504.69,
+      "min": 3526.0,
+      "max": 9364.0,
+      "p25": 3526.0,
+      "p75": 8608.5
+    },
+    "LAMPUNG|Jagung": {
+      "mean": 1499166.0,
+      "min": 989323.0,
+      "max": 2126571.0,
+      "p25": 1168725.0,
+      "p75": 1772680.0
+    },
+    "LAMPUNG|Kacang_Hijau": {
+      "mean": 4106.25,
+      "min": 1445.0,
+      "max": 6352.0,
+      "p25": 3446.0,
+      "p75": 5042.5
+    },
+    "LAMPUNG|Kacang_Tanah": {
+      "mean": 11342.31,
+      "min": 4963.0,
+      "max": 17617.0,
+      "p25": 10390.0,
+      "p75": 12794.75
+    },
+    "LAMPUNG|Kedelai": {
+      "mean": 8462.94,
+      "min": 3396.0,
+      "max": 22457.0,
+      "p25": 5215.75,
+      "p75": 10107.25
+    },
+    "LAMPUNG|Padi": {
+      "mean": 2540573.88,
+      "min": 1946406.0,
+      "max": 3641895.0,
+      "p25": 2067178.5,
+      "p75": 2980960.0
+    },
+    "LAMPUNG|Ubi_Jalar": {
+      "mean": 43063.38,
+      "min": 28494.0,
+      "max": 48191.0,
+      "p25": 41925.75,
+      "p75": 46019.75
+    },
+    "LAMPUNG|Ubi_Kayu": {
+      "mean": 6338884.81,
+      "min": 2924418.0,
+      "max": 9193676.0,
+      "p25": 4772963.25,
+      "p75": 7975906.75
+    },
+    "MALUKU|Jagung": {
+      "mean": 13174.31,
+      "min": 7092.0,
+      "max": 18924.0,
+      "p25": 11542.75,
+      "p75": 15376.0
+    },
+    "MALUKU|Kacang_Hijau": {
+      "mean": 585.06,
+      "min": 227.0,
+      "max": 889.0,
+      "p25": 434.0,
+      "p75": 704.0
+    },
+    "MALUKU|Kacang_Tanah": {
+      "mean": 2194.69,
+      "min": 801.0,
+      "max": 3133.0,
+      "p25": 1475.5,
+      "p75": 2914.0
+    },
+    "MALUKU|Kedelai": {
+      "mean": 1079.19,
+      "min": 148.0,
+      "max": 2415.0,
+      "p25": 447.0,
+      "p75": 1503.75
+    },
+    "MALUKU|Padi": {
+      "mean": 65233.44,
+      "min": 12033.0,
+      "max": 117791.0,
+      "p25": 36253.0,
+      "p75": 88069.75
+    },
+    "MALUKU|Ubi_Jalar": {
+      "mean": 20655.56,
+      "min": 7793.0,
+      "max": 33639.0,
+      "p25": 17610.0,
+      "p75": 23011.25
+    },
+    "MALUKU|Ubi_Kayu": {
+      "mean": 141124.06,
+      "min": 83716.0,
+      "max": 335572.0,
+      "p25": 101898.25,
+      "p75": 137097.5
+    },
+    "MALUKU UTARA|Jagung": {
+      "mean": 13455.31,
+      "min": 3778.0,
+      "max": 29421.0,
+      "p25": 4736.5,
+      "p75": 20553.0
+    },
+    "MALUKU UTARA|Kacang_Hijau": {
+      "mean": 341.94,
+      "min": 201.0,
+      "max": 739.0,
+      "p25": 254.25,
+      "p75": 384.0
+    },
+    "MALUKU UTARA|Kacang_Tanah": {
+      "mean": 3806.69,
+      "min": 1748.0,
+      "max": 6186.0,
+      "p25": 2137.25,
+      "p75": 5005.75
+    },
+    "MALUKU UTARA|Kedelai": {
+      "mean": 887.12,
+      "min": 475.0,
+      "max": 1303.0,
+      "p25": 552.0,
+      "p75": 1168.5
+    },
+    "MALUKU UTARA|Padi": {
+      "mean": 59996.81,
+      "min": 46253.0,
+      "max": 75265.0,
+      "p25": 54500.75,
+      "p75": 62494.0
+    },
+    "MALUKU UTARA|Ubi_Jalar": {
+      "mean": 32111.12,
+      "min": 27666.0,
+      "max": 37024.0,
+      "p25": 28387.0,
+      "p75": 34769.25
+    },
+    "MALUKU UTARA|Ubi_Kayu": {
+      "mean": 116703.75,
+      "min": 103297.0,
+      "max": 144313.0,
+      "p25": 105656.5,
+      "p75": 120101.5
+    },
+    "NUSA TENGGARA BARAT|Jagung": {
+      "mean": 304728.38,
+      "min": 50777.0,
+      "max": 959973.0,
+      "p25": 70011.0,
+      "p75": 501129.5
+    },
+    "NUSA TENGGARA BARAT|Kacang_Hijau": {
+      "mean": 33779.25,
+      "min": 17736.0,
+      "max": 50702.0,
+      "p25": 24448.25,
+      "p75": 40059.0
+    },
+    "NUSA TENGGARA BARAT|Kacang_Tanah": {
+      "mean": 36959.12,
+      "min": 27515.0,
+      "max": 49226.0,
+      "p25": 32317.25,
+      "p75": 40839.0
+    },
+    "NUSA TENGGARA BARAT|Kedelai": {
+      "mean": 82946.81,
+      "min": 10864.0,
+      "max": 125036.0,
+      "p25": 71776.0,
+      "p75": 95291.0
+    },
+    "NUSA TENGGARA BARAT|Padi": {
+      "mean": 1759185.75,
+      "min": 1367869.0,
+      "max": 2417392.0,
+      "p25": 1464721.75,
+      "p75": 2078910.5
+    },
+    "NUSA TENGGARA BARAT|Ubi_Jalar": {
+      "mean": 15268.94,
+      "min": 10060.0,
+      "max": 20886.0,
+      "p25": 11811.25,
+      "p75": 19111.0
+    },
+    "NUSA TENGGARA BARAT|Ubi_Kayu": {
+      "mean": 84870.75,
+      "min": 59085.0,
+      "max": 107254.0,
+      "p25": 78445.75,
+      "p75": 89673.75
+    },
+    "NUSA TENGGARA TIMUR|Jagung": {
+      "mean": 578948.38,
+      "min": 51436.0,
+      "max": 707642.0,
+      "p25": 553083.5,
+      "p75": 658493.0
+    },
+    "NUSA TENGGARA TIMUR|Kacang_Hijau": {
+      "mean": 15957.06,
+      "min": 9717.0,
+      "max": 23392.0,
+      "p25": 11210.25,
+      "p75": 19955.75
+    },
+    "NUSA TENGGARA TIMUR|Kacang_Tanah": {
+      "mean": 17401.38,
+      "min": 10620.0,
+      "max": 25678.0,
+      "p25": 13631.5,
+      "p75": 21405.5
+    },
+    "NUSA TENGGARA TIMUR|Kedelai": {
+      "mean": 2428.44,
+      "min": 1378.0,
+      "max": 4032.0,
+      "p25": 1753.75,
+      "p75": 2835.5
+    },
+    "NUSA TENGGARA TIMUR|Padi": {
+      "mean": 591556.88,
+      "min": 448001.0,
+      "max": 948088.0,
+      "p25": 496223.75,
+      "p75": 630160.75
+    },
+    "NUSA TENGGARA TIMUR|Ubi_Jalar": {
+      "mean": 111648.62,
+      "min": 60746.0,
+      "max": 156394.0,
+      "p25": 96484.0,
+      "p75": 130562.5
+    },
+    "NUSA TENGGARA TIMUR|Ubi_Kayu": {
+      "mean": 869563.0,
+      "min": 637315.0,
+      "max": 1041279.0,
+      "p25": 806904.75,
+      "p75": 931233.0
+    },
+    "PAPUA|Jagung": {
+      "mean": 6812.62,
+      "min": 4839.0,
+      "max": 8609.0,
+      "p25": 6597.75,
+      "p75": 7038.75
+    },
+    "PAPUA|Kacang_Hijau": {
+      "mean": 1001.06,
+      "min": 468.0,
+      "max": 2099.0,
+      "p25": 742.0,
+      "p75": 1285.0
+    },
+    "PAPUA|Kacang_Tanah": {
+      "mean": 3139.44,
+      "min": 2044.0,
+      "max": 7405.0,
+      "p25": 2245.0,
+      "p75": 2889.25
+    },
+    "PAPUA|Kedelai": {
+      "mean": 4573.88,
+      "min": 3407.0,
+      "max": 8010.0,
+      "p25": 3982.75,
+      "p75": 4535.75
+    },
+    "PAPUA|Padi": {
+      "mean": 101836.25,
+      "min": 57889.0,
+      "max": 181769.0,
+      "p25": 71922.0,
+      "p75": 121085.75
+    },
+    "PAPUA|Ubi_Jalar": {
+      "mean": 344114.44,
+      "min": 257297.0,
+      "max": 512427.0,
+      "p25": 288725.0,
+      "p75": 363230.5
+    },
+    "PAPUA|Ubi_Kayu": {
+      "mean": 40934.56,
+      "min": 33959.0,
+      "max": 58200.0,
+      "p25": 35423.25,
+      "p75": 46576.0
+    },
+    "PAPUA BARAT|Jagung": {
+      "mean": 2415.31,
+      "min": 313.0,
+      "max": 3317.0,
+      "p25": 2019.5,
+      "p75": 3317.0
+    },
+    "PAPUA BARAT|Kacang_Hijau": {
+      "mean": 552.44,
+      "min": 116.0,
+      "max": 928.0,
+      "p25": 232.75,
+      "p75": 872.0
+    },
+    "PAPUA BARAT|Kacang_Tanah": {
+      "mean": 1365.44,
+      "min": 487.0,
+      "max": 2131.0,
+      "p25": 650.5,
+      "p75": 2131.0
+    },
+    "PAPUA BARAT|Kedelai": {
+      "mean": 1542.81,
+      "min": 403.0,
+      "max": 2279.0,
+      "p25": 957.75,
+      "p75": 2279.0
+    },
+    "PAPUA BARAT|Padi": {
+      "mean": 29000.69,
+      "min": 24702.0,
+      "max": 39537.0,
+      "p25": 24702.0,
+      "p75": 30225.5
+    },
+    "PAPUA BARAT|Ubi_Jalar": {
+      "mean": 16055.69,
+      "min": 10410.0,
+      "max": 21375.0,
+      "p25": 12487.5,
+      "p75": 19543.0
+    },
+    "PAPUA BARAT|Ubi_Kayu": {
+      "mean": 20047.12,
+      "min": 9747.0,
+      "max": 25897.0,
+      "p25": 12225.75,
+      "p75": 25897.0
+    },
+    "RIAU|Jagung": {
+      "mean": 35956.12,
+      "min": 4041.0,
+      "max": 56521.0,
+      "p25": 31292.25,
+      "p75": 41927.0
+    },
+    "RIAU|Kacang_Hijau": {
+      "mean": 1335.81,
+      "min": 598.0,
+      "max": 2311.0,
+      "p25": 976.25,
+      "p75": 1710.5
+    },
+    "RIAU|Kacang_Tanah": {
+      "mean": 2565.88,
+      "min": 1036.0,
+      "max": 4142.0,
+      "p25": 1674.5,
+      "p75": 3369.0
+    },
+    "RIAU|Kedelai": {
+      "mean": 3383.69,
+      "min": 1438.0,
+      "max": 7100.0,
+      "p25": 2202.75,
+      "p75": 4326.0
+    },
+    "RIAU|Padi": {
+      "mean": 434844.56,
+      "min": 42938.0,
+      "max": 574864.0,
+      "p25": 413870.25,
+      "p75": 498733.0
+    },
+    "RIAU|Ubi_Jalar": {
+      "mean": 10274.25,
+      "min": 6562.0,
+      "max": 13577.0,
+      "p25": 9362.5,
+      "p75": 11306.75
+    },
+    "RIAU|Ubi_Kayu": {
+      "mean": 68457.5,
+      "min": 41668.0,
+      "max": 103599.0,
+      "p25": 51308.25,
+      "p75": 81754.25
+    },
+    "SULAWESI BARAT|Jagung": {
+      "mean": 53415.5,
+      "min": 17343.0,
+      "max": 128327.0,
+      "p25": 17343.0,
+      "p75": 87449.0
+    },
+    "SULAWESI BARAT|Kacang_Hijau": {
+      "mean": 793.25,
+      "min": 360.0,
+      "max": 1293.0,
+      "p25": 726.0,
+      "p75": 912.75
+    },
+    "SULAWESI BARAT|Kacang_Tanah": {
+      "mean": 931.56,
+      "min": 329.0,
+      "max": 2022.0,
+      "p25": 705.5,
+      "p75": 1035.0
+    },
+    "SULAWESI BARAT|Kedelai": {
+      "mean": 1697.44,
+      "min": 108.0,
+      "max": 4218.0,
+      "p25": 641.0,
+      "p75": 2813.25
+    },
+    "SULAWESI BARAT|Padi": {
+      "mean": 330797.94,
+      "min": 253886.0,
+      "max": 461844.0,
+      "p25": 253886.0,
+      "p75": 377346.75
+    },
+    "SULAWESI BARAT|Ubi_Jalar": {
+      "mean": 11691.38,
+      "min": 6194.0,
+      "max": 20455.0,
+      "p25": 9475.0,
+      "p75": 15688.5
+    },
+    "SULAWESI BARAT|Ubi_Kayu": {
+      "mean": 49278.94,
+      "min": 24984.0,
+      "max": 56717.0,
+      "p25": 46256.25,
+      "p75": 56717.0
+    },
+    "SULAWESI SELATAN|Jagung": {
+      "mean": 1034056.0,
+      "min": 515405.0,
+      "max": 1528414.0,
+      "p25": 671288.25,
+      "p75": 1390916.5
+    },
+    "SULAWESI SELATAN|Kacang_Hijau": {
+      "mean": 31246.75,
+      "min": 18341.0,
+      "max": 45700.0,
+      "p25": 25842.25,
+      "p75": 38846.5
+    },
+    "SULAWESI SELATAN|Kacang_Tanah": {
+      "mean": 36320.5,
+      "min": 19024.0,
+      "max": 52763.0,
+      "p25": 28156.5,
+      "p75": 41962.5
+    },
+    "SULAWESI SELATAN|Kedelai": {
+      "mean": 33696.81,
+      "min": 18605.0,
+      "max": 67192.0,
+      "p25": 23665.5,
+      "p75": 41636.75
+    },
+    "SULAWESI SELATAN|Padi": {
+      "mean": 4205912.06,
+      "min": 3365509.0,
+      "max": 5471806.0,
+      "p25": 3652911.75,
+      "p75": 4634531.5
+    },
+    "SULAWESI SELATAN|Ubi_Jalar": {
+      "mean": 68995.0,
+      "min": 53513.0,
+      "max": 94474.0,
+      "p25": 61046.5,
+      "p75": 74141.75
+    },
+    "SULAWESI SELATAN|Ubi_Kayu": {
+      "mean": 519554.19,
+      "min": 370125.0,
+      "max": 682995.0,
+      "p25": 463556.5,
+      "p75": 572399.25
+    },
+    "SULAWESI TENGAH|Jagung": {
+      "mean": 104965.94,
+      "min": 48498.0,
+      "max": 164282.0,
+      "p25": 53418.25,
+      "p75": 139861.75
+    },
+    "SULAWESI TENGAH|Kacang_Hijau": {
+      "mean": 2711.94,
+      "min": 628.0,
+      "max": 27063.0,
+      "p25": 888.75,
+      "p75": 1343.75
+    },
+    "SULAWESI TENGAH|Kacang_Tanah": {
+      "mean": 7834.19,
+      "min": 3662.0,
+      "max": 10808.0,
+      "p25": 6119.75,
+      "p75": 9661.0
+    },
+    "SULAWESI TENGAH|Kedelai": {
+      "mean": 5177.69,
+      "min": 1648.0,
+      "max": 13270.0,
+      "p25": 2202.0,
+      "p75": 7225.5
+    },
+    "SULAWESI TENGAH|Padi": {
+      "mean": 853390.38,
+      "min": 520642.0,
+      "max": 1041789.0,
+      "p25": 735386.5,
+      "p75": 1017367.5
+    },
+    "SULAWESI TENGAH|Ubi_Jalar": {
+      "mean": 24769.12,
+      "min": 16650.0,
+      "max": 29821.0,
+      "p25": 23213.5,
+      "p75": 27742.5
+    },
+    "SULAWESI TENGAH|Ubi_Kayu": {
+      "mean": 65993.62,
+      "min": 43805.0,
+      "max": 100950.0,
+      "p25": 49402.75,
+      "p75": 76169.5
+    },
+    "SULAWESI TENGGARA|Jagung": {
+      "mean": 75994.69,
+      "min": 60385.0,
+      "max": 97037.0,
+      "p25": 68105.0,
+      "p75": 80620.5
+    },
+    "SULAWESI TENGGARA|Kacang_Hijau": {
+      "mean": 1312.31,
+      "min": 900.0,
+      "max": 1832.0,
+      "p25": 1072.0,
+      "p75": 1545.75
+    },
+    "SULAWESI TENGGARA|Kacang_Tanah": {
+      "mean": 6244.88,
+      "min": 3471.0,
+      "max": 8536.0,
+      "p25": 4942.0,
+      "p75": 7637.75
+    },
+    "SULAWESI TENGGARA|Kedelai": {
+      "mean": 4199.69,
+      "min": 1198.0,
+      "max": 12799.0,
+      "p25": 2831.75,
+      "p75": 4262.75
+    },
+    "SULAWESI TENGGARA|Padi": {
+      "mean": 422172.0,
+      "min": 263477.0,
+      "max": 660720.0,
+      "p25": 331320.75,
+      "p75": 497748.0
+    },
+    "SULAWESI TENGGARA|Ubi_Jalar": {
+      "mean": 24877.31,
+      "min": 19532.0,
+      "max": 30892.0,
+      "p25": 23831.0,
+      "p75": 25924.0
+    },
+    "SULAWESI TENGGARA|Ubi_Kayu": {
+      "mean": 201788.56,
+      "min": 152817.0,
+      "max": 263972.0,
+      "p25": 175563.0,
+      "p75": 229705.0
+    },
+    "SULAWESI UTARA|Jagung": {
+      "mean": 312265.81,
+      "min": 116897.0,
+      "max": 466041.0,
+      "p25": 184093.5,
+      "p75": 441767.0
+    },
+    "SULAWESI UTARA|Kacang_Hijau": {
+      "mean": 1779.56,
+      "min": 969.0,
+      "max": 2685.0,
+      "p25": 1264.75,
+      "p75": 2160.75
+    },
+    "SULAWESI UTARA|Kacang_Tanah": {
+      "mean": 6958.31,
+      "min": 3525.0,
+      "max": 9049.0,
+      "p25": 5875.0,
+      "p75": 8529.75
+    },
+    "SULAWESI UTARA|Kedelai": {
+      "mean": 5259.25,
+      "min": 1756.0,
+      "max": 7667.0,
+      "p25": 3977.0,
+      "p75": 6818.0
+    },
+    "SULAWESI UTARA|Padi": {
+      "mean": 482442.19,
+      "min": 49495.0,
+      "max": 674169.0,
+      "p25": 398001.0,
+      "p75": 600932.75
+    },
+    "SULAWESI UTARA|Ubi_Jalar": {
+      "mean": 34911.06,
+      "min": 14958.0,
+      "max": 53121.0,
+      "p25": 25673.5,
+      "p75": 41435.75
+    },
+    "SULAWESI UTARA|Ubi_Kayu": {
+      "mean": 59926.75,
+      "min": 26526.0,
+      "max": 84084.0,
+      "p25": 48279.5,
+      "p75": 75106.0
+    },
+    "SUMATERA BARAT|Jagung": {
+      "mean": 297618.75,
+      "min": 48820.0,
+      "max": 602549.0,
+      "p25": 109980.0,
+      "p75": 477761.0
+    },
+    "SUMATERA BARAT|Kacang_Hijau": {
+      "mean": 1238.19,
+      "min": 419.0,
+      "max": 1692.0,
+      "p25": 1109.0,
+      "p75": 1483.75
+    },
+    "SUMATERA BARAT|Kacang_Tanah": {
+      "mean": 9176.81,
+      "min": 5964.0,
+      "max": 11908.0,
+      "p25": 8679.75,
+      "p75": 9990.75
+    },
+    "SUMATERA BARAT|Kedelai": {
+      "mean": 2126.25,
+      "min": 353.0,
+      "max": 7614.0,
+      "p25": 1124.75,
+      "p75": 2089.0
+    },
+    "SUMATERA BARAT|Padi": {
+      "mean": 2071245.44,
+      "min": 1668955.0,
+      "max": 2550609.0,
+      "p25": 1875672.5,
+      "p75": 2301799.0
+    },
+    "SUMATERA BARAT|Ubi_Jalar": {
+      "mean": 79300.5,
+      "min": 30335.0,
+      "max": 160922.0,
+      "p25": 49032.5,
+      "p75": 109446.75
+    },
+    "SUMATERA BARAT|Ubi_Kayu": {
+      "mean": 146061.62,
+      "min": 82207.0,
+      "max": 218830.0,
+      "p25": 111220.5,
+      "p75": 196987.5
+    },
+    "SUMATERA SELATAN|Jagung": {
+      "mean": 114904.62,
+      "min": 53436.0,
+      "max": 289007.0,
+      "p25": 72614.25,
+      "p75": 125715.0
+    },
+    "SUMATERA SELATAN|Kacang_Hijau": {
+      "mean": 2615.5,
+      "min": 974.0,
+      "max": 4172.0,
+      "p25": 2206.5,
+      "p75": 3211.0
+    },
+    "SUMATERA SELATAN|Kacang_Tanah": {
+      "mean": 6277.75,
+      "min": 2021.0,
+      "max": 11696.0,
+      "p25": 4035.0,
+      "p75": 7677.5
+    },
+    "SUMATERA SELATAN|Kedelai": {
+      "mean": 8167.25,
+      "min": 2873.0,
+      "max": 16818.0,
+      "p25": 4777.25,
+      "p75": 11788.5
+    },
+    "SUMATERA SELATAN|Padi": {
+      "mean": 2824395.38,
+      "min": 1723433.0,
+      "max": 4247922.0,
+      "p25": 2189931.75,
+      "p75": 3317602.75
+    },
+    "SUMATERA SELATAN|Ubi_Jalar": {
+      "mean": 19743.88,
+      "min": 14804.0,
+      "max": 26537.0,
+      "p25": 16799.25,
+      "p75": 21779.5
+    },
+    "SUMATERA SELATAN|Ubi_Kayu": {
+      "mean": 205515.44,
+      "min": 143565.0,
+      "max": 326766.0,
+      "p25": 159783.25,
+      "p75": 233451.75
+    },
+    "SUMATERA UTARA|Jagung": {
+      "mean": 948627.19,
+      "min": 80485.0,
+      "max": 1519407.0,
+      "p25": 678209.0,
+      "p75": 1307764.75
+    },
+    "SUMATERA UTARA|Kacang_Hijau": {
+      "mean": 6205.75,
+      "min": 2344.0,
+      "max": 11455.0,
+      "p25": 3321.25,
+      "p75": 9212.75
+    },
+    "SUMATERA UTARA|Kacang_Tanah": {
+      "mean": 18155.06,
+      "min": 8517.0,
+      "max": 28708.0,
+      "p25": 11893.25,
+      "p75": 22687.75
+    },
+    "SUMATERA UTARA|Kedelai": {
+      "mean": 9411.25,
+      "min": 3229.0,
+      "max": 15793.0,
+      "p25": 6266.5,
+      "p75": 11818.5
+    },
+    "SUMATERA UTARA|Padi": {
+      "mean": 3495863.94,
+      "min": 3007636.0,
+      "max": 4044829.0,
+      "p25": 3328474.25,
+      "p75": 3634430.75
+    },
+    "SUMATERA UTARA|Ubi_Jalar": {
+      "mean": 132643.69,
+      "min": 102712.0,
+      "max": 191104.0,
+      "p25": 117139.0,
+      "p75": 136780.25
+    },
+    "SUMATERA UTARA|Ubi_Kayu": {
+      "mean": 832916.62,
+      "min": 411990.0,
+      "max": 1619495.0,
+      "p25": 461832.5,
+      "p75": 1111663.25
+    }
+  },
+  "feature_ranges": {
+    "ACEH|Jagung": {
+      "curah_hujan_mm": {
+        "min": 506.7,
+        "max": 2264.4,
+        "mean": 1390.62
+      },
+      "hari_hujan": {
+        "min": 61.0,
+        "max": 177.0,
+        "mean": 110.38
+      },
+      "suhu_rata_c": {
+        "min": 26.73,
+        "max": 29.48,
+        "mean": 27.5
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.8,
+        "max": 1010.7,
+        "mean": 1009.68
+      },
+      "penyinaran_matahari_pct": {
+        "min": 43.1,
+        "max": 65.69,
+        "mean": 53.17
+      }
+    },
+    "ACEH|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 506.7,
+        "max": 2264.4,
+        "mean": 1390.62
+      },
+      "hari_hujan": {
+        "min": 61.0,
+        "max": 177.0,
+        "mean": 110.38
+      },
+      "suhu_rata_c": {
+        "min": 26.73,
+        "max": 29.48,
+        "mean": 27.5
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.8,
+        "max": 1010.7,
+        "mean": 1009.68
+      },
+      "penyinaran_matahari_pct": {
+        "min": 43.1,
+        "max": 65.69,
+        "mean": 53.17
+      }
+    },
+    "ACEH|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 506.7,
+        "max": 2264.4,
+        "mean": 1390.62
+      },
+      "hari_hujan": {
+        "min": 61.0,
+        "max": 177.0,
+        "mean": 110.38
+      },
+      "suhu_rata_c": {
+        "min": 26.73,
+        "max": 29.48,
+        "mean": 27.5
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.8,
+        "max": 1010.7,
+        "mean": 1009.68
+      },
+      "penyinaran_matahari_pct": {
+        "min": 43.1,
+        "max": 65.69,
+        "mean": 53.17
+      }
+    },
+    "ACEH|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 506.7,
+        "max": 2264.4,
+        "mean": 1390.62
+      },
+      "hari_hujan": {
+        "min": 61.0,
+        "max": 177.0,
+        "mean": 110.38
+      },
+      "suhu_rata_c": {
+        "min": 26.73,
+        "max": 29.48,
+        "mean": 27.5
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.8,
+        "max": 1010.7,
+        "mean": 1009.68
+      },
+      "penyinaran_matahari_pct": {
+        "min": 43.1,
+        "max": 65.69,
+        "mean": 53.17
+      }
+    },
+    "ACEH|Padi": {
+      "curah_hujan_mm": {
+        "min": 506.7,
+        "max": 2264.4,
+        "mean": 1390.62
+      },
+      "hari_hujan": {
+        "min": 61.0,
+        "max": 177.0,
+        "mean": 110.38
+      },
+      "suhu_rata_c": {
+        "min": 26.73,
+        "max": 29.48,
+        "mean": 27.5
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.8,
+        "max": 1010.7,
+        "mean": 1009.68
+      },
+      "penyinaran_matahari_pct": {
+        "min": 43.1,
+        "max": 65.69,
+        "mean": 53.17
+      }
+    },
+    "ACEH|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 506.7,
+        "max": 2264.4,
+        "mean": 1390.62
+      },
+      "hari_hujan": {
+        "min": 61.0,
+        "max": 177.0,
+        "mean": 110.38
+      },
+      "suhu_rata_c": {
+        "min": 26.73,
+        "max": 29.48,
+        "mean": 27.5
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.8,
+        "max": 1010.7,
+        "mean": 1009.68
+      },
+      "penyinaran_matahari_pct": {
+        "min": 43.1,
+        "max": 65.69,
+        "mean": 53.17
+      }
+    },
+    "ACEH|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 506.7,
+        "max": 2264.4,
+        "mean": 1390.62
+      },
+      "hari_hujan": {
+        "min": 61.0,
+        "max": 177.0,
+        "mean": 110.38
+      },
+      "suhu_rata_c": {
+        "min": 26.73,
+        "max": 29.48,
+        "mean": 27.5
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.8,
+        "max": 1010.7,
+        "mean": 1009.68
+      },
+      "penyinaran_matahari_pct": {
+        "min": 43.1,
+        "max": 65.69,
+        "mean": 53.17
+      }
+    },
+    "BALI|Jagung": {
+      "curah_hujan_mm": {
+        "min": 1096.9,
+        "max": 2525.0,
+        "mean": 1713.97
+      },
+      "hari_hujan": {
+        "min": 74.0,
+        "max": 193.0,
+        "mean": 116.94
+      },
+      "suhu_rata_c": {
+        "min": 26.73,
+        "max": 29.4,
+        "mean": 27.6
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.8,
+        "max": 1011.3,
+        "mean": 1009.77
+      },
+      "penyinaran_matahari_pct": {
+        "min": 72.0,
+        "max": 84.44,
+        "mean": 77.13
+      }
+    },
+    "BALI|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 1096.9,
+        "max": 2525.0,
+        "mean": 1713.97
+      },
+      "hari_hujan": {
+        "min": 74.0,
+        "max": 193.0,
+        "mean": 116.94
+      },
+      "suhu_rata_c": {
+        "min": 26.73,
+        "max": 29.4,
+        "mean": 27.6
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.8,
+        "max": 1011.3,
+        "mean": 1009.77
+      },
+      "penyinaran_matahari_pct": {
+        "min": 72.0,
+        "max": 84.44,
+        "mean": 77.13
+      }
+    },
+    "BALI|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 1096.9,
+        "max": 2525.0,
+        "mean": 1713.97
+      },
+      "hari_hujan": {
+        "min": 74.0,
+        "max": 193.0,
+        "mean": 116.94
+      },
+      "suhu_rata_c": {
+        "min": 26.73,
+        "max": 29.4,
+        "mean": 27.6
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.8,
+        "max": 1011.3,
+        "mean": 1009.77
+      },
+      "penyinaran_matahari_pct": {
+        "min": 72.0,
+        "max": 84.44,
+        "mean": 77.13
+      }
+    },
+    "BALI|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 1096.9,
+        "max": 2525.0,
+        "mean": 1713.97
+      },
+      "hari_hujan": {
+        "min": 74.0,
+        "max": 193.0,
+        "mean": 116.94
+      },
+      "suhu_rata_c": {
+        "min": 26.73,
+        "max": 29.4,
+        "mean": 27.6
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.8,
+        "max": 1011.3,
+        "mean": 1009.77
+      },
+      "penyinaran_matahari_pct": {
+        "min": 72.0,
+        "max": 84.44,
+        "mean": 77.13
+      }
+    },
+    "BALI|Padi": {
+      "curah_hujan_mm": {
+        "min": 1096.9,
+        "max": 2525.0,
+        "mean": 1713.97
+      },
+      "hari_hujan": {
+        "min": 74.0,
+        "max": 193.0,
+        "mean": 116.94
+      },
+      "suhu_rata_c": {
+        "min": 26.73,
+        "max": 29.4,
+        "mean": 27.6
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.8,
+        "max": 1011.3,
+        "mean": 1009.77
+      },
+      "penyinaran_matahari_pct": {
+        "min": 72.0,
+        "max": 84.44,
+        "mean": 77.13
+      }
+    },
+    "BALI|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 1096.9,
+        "max": 2525.0,
+        "mean": 1713.97
+      },
+      "hari_hujan": {
+        "min": 74.0,
+        "max": 193.0,
+        "mean": 116.94
+      },
+      "suhu_rata_c": {
+        "min": 26.73,
+        "max": 29.4,
+        "mean": 27.6
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.8,
+        "max": 1011.3,
+        "mean": 1009.77
+      },
+      "penyinaran_matahari_pct": {
+        "min": 72.0,
+        "max": 84.44,
+        "mean": 77.13
+      }
+    },
+    "BALI|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 1096.9,
+        "max": 2525.0,
+        "mean": 1713.97
+      },
+      "hari_hujan": {
+        "min": 74.0,
+        "max": 193.0,
+        "mean": 116.94
+      },
+      "suhu_rata_c": {
+        "min": 26.73,
+        "max": 29.4,
+        "mean": 27.6
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.8,
+        "max": 1011.3,
+        "mean": 1009.77
+      },
+      "penyinaran_matahari_pct": {
+        "min": 72.0,
+        "max": 84.44,
+        "mean": 77.13
+      }
+    },
+    "BANTEN|Jagung": {
+      "curah_hujan_mm": {
+        "min": 192.0,
+        "max": 3573.0,
+        "mean": 1369.76
+      },
+      "hari_hujan": {
+        "min": 68.0,
+        "max": 228.0,
+        "mean": 124.12
+      },
+      "suhu_rata_c": {
+        "min": 26.6,
+        "max": 29.85,
+        "mean": 27.51
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1011.68,
+        "mean": 1009.79
+      },
+      "penyinaran_matahari_pct": {
+        "min": 57.0,
+        "max": 78.0,
+        "mean": 64.65
+      }
+    },
+    "BANTEN|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 192.0,
+        "max": 3573.0,
+        "mean": 1369.76
+      },
+      "hari_hujan": {
+        "min": 68.0,
+        "max": 228.0,
+        "mean": 124.12
+      },
+      "suhu_rata_c": {
+        "min": 26.6,
+        "max": 29.85,
+        "mean": 27.51
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1011.68,
+        "mean": 1009.79
+      },
+      "penyinaran_matahari_pct": {
+        "min": 57.0,
+        "max": 78.0,
+        "mean": 64.65
+      }
+    },
+    "BANTEN|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 192.0,
+        "max": 3573.0,
+        "mean": 1369.76
+      },
+      "hari_hujan": {
+        "min": 68.0,
+        "max": 228.0,
+        "mean": 124.12
+      },
+      "suhu_rata_c": {
+        "min": 26.6,
+        "max": 29.85,
+        "mean": 27.51
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1011.68,
+        "mean": 1009.79
+      },
+      "penyinaran_matahari_pct": {
+        "min": 57.0,
+        "max": 78.0,
+        "mean": 64.65
+      }
+    },
+    "BANTEN|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 192.0,
+        "max": 3573.0,
+        "mean": 1369.76
+      },
+      "hari_hujan": {
+        "min": 68.0,
+        "max": 228.0,
+        "mean": 124.12
+      },
+      "suhu_rata_c": {
+        "min": 26.6,
+        "max": 29.85,
+        "mean": 27.51
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1011.68,
+        "mean": 1009.79
+      },
+      "penyinaran_matahari_pct": {
+        "min": 57.0,
+        "max": 78.0,
+        "mean": 64.65
+      }
+    },
+    "BANTEN|Padi": {
+      "curah_hujan_mm": {
+        "min": 192.0,
+        "max": 3573.0,
+        "mean": 1369.76
+      },
+      "hari_hujan": {
+        "min": 68.0,
+        "max": 228.0,
+        "mean": 124.12
+      },
+      "suhu_rata_c": {
+        "min": 26.6,
+        "max": 29.85,
+        "mean": 27.51
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1011.68,
+        "mean": 1009.79
+      },
+      "penyinaran_matahari_pct": {
+        "min": 57.0,
+        "max": 78.0,
+        "mean": 64.65
+      }
+    },
+    "BANTEN|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 192.0,
+        "max": 3573.0,
+        "mean": 1369.76
+      },
+      "hari_hujan": {
+        "min": 68.0,
+        "max": 228.0,
+        "mean": 124.12
+      },
+      "suhu_rata_c": {
+        "min": 26.6,
+        "max": 29.85,
+        "mean": 27.51
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1011.68,
+        "mean": 1009.79
+      },
+      "penyinaran_matahari_pct": {
+        "min": 57.0,
+        "max": 78.0,
+        "mean": 64.65
+      }
+    },
+    "BANTEN|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 192.0,
+        "max": 3573.0,
+        "mean": 1369.76
+      },
+      "hari_hujan": {
+        "min": 68.0,
+        "max": 228.0,
+        "mean": 124.12
+      },
+      "suhu_rata_c": {
+        "min": 26.6,
+        "max": 29.85,
+        "mean": 27.51
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1011.68,
+        "mean": 1009.79
+      },
+      "penyinaran_matahari_pct": {
+        "min": 57.0,
+        "max": 78.0,
+        "mean": 64.65
+      }
+    },
+    "BENGKULU|Jagung": {
+      "curah_hujan_mm": {
+        "min": 2313.8,
+        "max": 3980.9,
+        "mean": 3198.89
+      },
+      "hari_hujan": {
+        "min": 143.0,
+        "max": 250.0,
+        "mean": 171.94
+      },
+      "suhu_rata_c": {
+        "min": 24.95,
+        "max": 29.71,
+        "mean": 26.98
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.0,
+        "max": 1011.0,
+        "mean": 1009.2
+      },
+      "penyinaran_matahari_pct": {
+        "min": 44.0,
+        "max": 71.35,
+        "mean": 63.89
+      }
+    },
+    "BENGKULU|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 2313.8,
+        "max": 3980.9,
+        "mean": 3198.89
+      },
+      "hari_hujan": {
+        "min": 143.0,
+        "max": 250.0,
+        "mean": 171.94
+      },
+      "suhu_rata_c": {
+        "min": 24.95,
+        "max": 29.71,
+        "mean": 26.98
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.0,
+        "max": 1011.0,
+        "mean": 1009.2
+      },
+      "penyinaran_matahari_pct": {
+        "min": 44.0,
+        "max": 71.35,
+        "mean": 63.89
+      }
+    },
+    "BENGKULU|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 2313.8,
+        "max": 3980.9,
+        "mean": 3198.89
+      },
+      "hari_hujan": {
+        "min": 143.0,
+        "max": 250.0,
+        "mean": 171.94
+      },
+      "suhu_rata_c": {
+        "min": 24.95,
+        "max": 29.71,
+        "mean": 26.98
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.0,
+        "max": 1011.0,
+        "mean": 1009.2
+      },
+      "penyinaran_matahari_pct": {
+        "min": 44.0,
+        "max": 71.35,
+        "mean": 63.89
+      }
+    },
+    "BENGKULU|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 2313.8,
+        "max": 3980.9,
+        "mean": 3198.89
+      },
+      "hari_hujan": {
+        "min": 143.0,
+        "max": 250.0,
+        "mean": 171.94
+      },
+      "suhu_rata_c": {
+        "min": 24.95,
+        "max": 29.71,
+        "mean": 26.98
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.0,
+        "max": 1011.0,
+        "mean": 1009.2
+      },
+      "penyinaran_matahari_pct": {
+        "min": 44.0,
+        "max": 71.35,
+        "mean": 63.89
+      }
+    },
+    "BENGKULU|Padi": {
+      "curah_hujan_mm": {
+        "min": 2313.8,
+        "max": 3980.9,
+        "mean": 3198.89
+      },
+      "hari_hujan": {
+        "min": 143.0,
+        "max": 250.0,
+        "mean": 171.94
+      },
+      "suhu_rata_c": {
+        "min": 24.95,
+        "max": 29.71,
+        "mean": 26.98
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.0,
+        "max": 1011.0,
+        "mean": 1009.2
+      },
+      "penyinaran_matahari_pct": {
+        "min": 44.0,
+        "max": 71.35,
+        "mean": 63.89
+      }
+    },
+    "BENGKULU|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 2313.8,
+        "max": 3980.9,
+        "mean": 3198.89
+      },
+      "hari_hujan": {
+        "min": 143.0,
+        "max": 250.0,
+        "mean": 171.94
+      },
+      "suhu_rata_c": {
+        "min": 24.95,
+        "max": 29.71,
+        "mean": 26.98
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.0,
+        "max": 1011.0,
+        "mean": 1009.2
+      },
+      "penyinaran_matahari_pct": {
+        "min": 44.0,
+        "max": 71.35,
+        "mean": 63.89
+      }
+    },
+    "BENGKULU|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 2313.8,
+        "max": 3980.9,
+        "mean": 3198.89
+      },
+      "hari_hujan": {
+        "min": 143.0,
+        "max": 250.0,
+        "mean": 171.94
+      },
+      "suhu_rata_c": {
+        "min": 24.95,
+        "max": 29.71,
+        "mean": 26.98
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.0,
+        "max": 1011.0,
+        "mean": 1009.2
+      },
+      "penyinaran_matahari_pct": {
+        "min": 44.0,
+        "max": 71.35,
+        "mean": 63.89
+      }
+    },
+    "DI YOGYAKARTA|Jagung": {
+      "curah_hujan_mm": {
+        "min": 919.0,
+        "max": 2417.5,
+        "mean": 1765.03
+      },
+      "hari_hujan": {
+        "min": 82.0,
+        "max": 170.0,
+        "mean": 115.56
+      },
+      "suhu_rata_c": {
+        "min": 25.8,
+        "max": 29.87,
+        "mean": 27.22
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1013.09,
+        "mean": 1008.93
+      },
+      "penyinaran_matahari_pct": {
+        "min": 25.68,
+        "max": 75.14,
+        "mean": 60.01
+      }
+    },
+    "DI YOGYAKARTA|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 919.0,
+        "max": 2417.5,
+        "mean": 1765.03
+      },
+      "hari_hujan": {
+        "min": 82.0,
+        "max": 170.0,
+        "mean": 115.56
+      },
+      "suhu_rata_c": {
+        "min": 25.8,
+        "max": 29.87,
+        "mean": 27.22
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1013.09,
+        "mean": 1008.93
+      },
+      "penyinaran_matahari_pct": {
+        "min": 25.68,
+        "max": 75.14,
+        "mean": 60.01
+      }
+    },
+    "DI YOGYAKARTA|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 919.0,
+        "max": 2417.5,
+        "mean": 1765.03
+      },
+      "hari_hujan": {
+        "min": 82.0,
+        "max": 170.0,
+        "mean": 115.56
+      },
+      "suhu_rata_c": {
+        "min": 25.8,
+        "max": 29.87,
+        "mean": 27.22
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1013.09,
+        "mean": 1008.93
+      },
+      "penyinaran_matahari_pct": {
+        "min": 25.68,
+        "max": 75.14,
+        "mean": 60.01
+      }
+    },
+    "DI YOGYAKARTA|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 919.0,
+        "max": 2417.5,
+        "mean": 1765.03
+      },
+      "hari_hujan": {
+        "min": 82.0,
+        "max": 170.0,
+        "mean": 115.56
+      },
+      "suhu_rata_c": {
+        "min": 25.8,
+        "max": 29.87,
+        "mean": 27.22
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1013.09,
+        "mean": 1008.93
+      },
+      "penyinaran_matahari_pct": {
+        "min": 25.68,
+        "max": 75.14,
+        "mean": 60.01
+      }
+    },
+    "DI YOGYAKARTA|Padi": {
+      "curah_hujan_mm": {
+        "min": 919.0,
+        "max": 2417.5,
+        "mean": 1765.03
+      },
+      "hari_hujan": {
+        "min": 82.0,
+        "max": 170.0,
+        "mean": 115.56
+      },
+      "suhu_rata_c": {
+        "min": 25.8,
+        "max": 29.87,
+        "mean": 27.22
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1013.09,
+        "mean": 1008.93
+      },
+      "penyinaran_matahari_pct": {
+        "min": 25.68,
+        "max": 75.14,
+        "mean": 60.01
+      }
+    },
+    "DI YOGYAKARTA|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 919.0,
+        "max": 2417.5,
+        "mean": 1765.03
+      },
+      "hari_hujan": {
+        "min": 82.0,
+        "max": 170.0,
+        "mean": 115.56
+      },
+      "suhu_rata_c": {
+        "min": 25.8,
+        "max": 29.87,
+        "mean": 27.22
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1013.09,
+        "mean": 1008.93
+      },
+      "penyinaran_matahari_pct": {
+        "min": 25.68,
+        "max": 75.14,
+        "mean": 60.01
+      }
+    },
+    "DI YOGYAKARTA|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 919.0,
+        "max": 2417.5,
+        "mean": 1765.03
+      },
+      "hari_hujan": {
+        "min": 82.0,
+        "max": 170.0,
+        "mean": 115.56
+      },
+      "suhu_rata_c": {
+        "min": 25.8,
+        "max": 29.87,
+        "mean": 27.22
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1013.09,
+        "mean": 1008.93
+      },
+      "penyinaran_matahari_pct": {
+        "min": 25.68,
+        "max": 75.14,
+        "mean": 60.01
+      }
+    },
+    "DKI JAKARTA|Jagung": {
+      "curah_hujan_mm": {
+        "min": 1274.0,
+        "max": 2908.0,
+        "mean": 1528.76
+      },
+      "hari_hujan": {
+        "min": 121.0,
+        "max": 172.0,
+        "mean": 141.06
+      },
+      "suhu_rata_c": {
+        "min": 28.1,
+        "max": 28.5,
+        "mean": 28.44
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.5,
+        "max": 1011.0,
+        "mean": 1009.82
+      },
+      "penyinaran_matahari_pct": {
+        "min": 48.3,
+        "max": 60.9,
+        "mean": 59.05
+      }
+    },
+    "DKI JAKARTA|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 1274.0,
+        "max": 2908.0,
+        "mean": 1528.76
+      },
+      "hari_hujan": {
+        "min": 121.0,
+        "max": 172.0,
+        "mean": 141.06
+      },
+      "suhu_rata_c": {
+        "min": 28.1,
+        "max": 28.5,
+        "mean": 28.44
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.5,
+        "max": 1011.0,
+        "mean": 1009.82
+      },
+      "penyinaran_matahari_pct": {
+        "min": 48.3,
+        "max": 60.9,
+        "mean": 59.05
+      }
+    },
+    "DKI JAKARTA|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 1274.0,
+        "max": 2908.0,
+        "mean": 1528.76
+      },
+      "hari_hujan": {
+        "min": 121.0,
+        "max": 172.0,
+        "mean": 141.06
+      },
+      "suhu_rata_c": {
+        "min": 28.1,
+        "max": 28.5,
+        "mean": 28.44
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.5,
+        "max": 1011.0,
+        "mean": 1009.82
+      },
+      "penyinaran_matahari_pct": {
+        "min": 48.3,
+        "max": 60.9,
+        "mean": 59.05
+      }
+    },
+    "DKI JAKARTA|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 1274.0,
+        "max": 2908.0,
+        "mean": 1528.76
+      },
+      "hari_hujan": {
+        "min": 121.0,
+        "max": 172.0,
+        "mean": 141.06
+      },
+      "suhu_rata_c": {
+        "min": 28.1,
+        "max": 28.5,
+        "mean": 28.44
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.5,
+        "max": 1011.0,
+        "mean": 1009.82
+      },
+      "penyinaran_matahari_pct": {
+        "min": 48.3,
+        "max": 60.9,
+        "mean": 59.05
+      }
+    },
+    "DKI JAKARTA|Padi": {
+      "curah_hujan_mm": {
+        "min": 1274.0,
+        "max": 2908.0,
+        "mean": 1528.76
+      },
+      "hari_hujan": {
+        "min": 121.0,
+        "max": 172.0,
+        "mean": 141.06
+      },
+      "suhu_rata_c": {
+        "min": 28.1,
+        "max": 28.5,
+        "mean": 28.44
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.5,
+        "max": 1011.0,
+        "mean": 1009.82
+      },
+      "penyinaran_matahari_pct": {
+        "min": 48.3,
+        "max": 60.9,
+        "mean": 59.05
+      }
+    },
+    "DKI JAKARTA|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 1274.0,
+        "max": 2908.0,
+        "mean": 1528.76
+      },
+      "hari_hujan": {
+        "min": 121.0,
+        "max": 172.0,
+        "mean": 141.06
+      },
+      "suhu_rata_c": {
+        "min": 28.1,
+        "max": 28.5,
+        "mean": 28.44
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.5,
+        "max": 1011.0,
+        "mean": 1009.82
+      },
+      "penyinaran_matahari_pct": {
+        "min": 48.3,
+        "max": 60.9,
+        "mean": 59.05
+      }
+    },
+    "DKI JAKARTA|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 1274.0,
+        "max": 2908.0,
+        "mean": 1528.76
+      },
+      "hari_hujan": {
+        "min": 121.0,
+        "max": 172.0,
+        "mean": 141.06
+      },
+      "suhu_rata_c": {
+        "min": 28.1,
+        "max": 28.5,
+        "mean": 28.44
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.5,
+        "max": 1011.0,
+        "mean": 1009.82
+      },
+      "penyinaran_matahari_pct": {
+        "min": 48.3,
+        "max": 60.9,
+        "mean": 59.05
+      }
+    },
+    "GORONTALO|Jagung": {
+      "curah_hujan_mm": {
+        "min": 255.0,
+        "max": 2289.0,
+        "mean": 1502.07
+      },
+      "hari_hujan": {
+        "min": 76.0,
+        "max": 248.0,
+        "mean": 135.94
+      },
+      "suhu_rata_c": {
+        "min": 26.5,
+        "max": 29.29,
+        "mean": 27.56
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.56,
+        "max": 1011.0,
+        "mean": 1009.51
+      },
+      "penyinaran_matahari_pct": {
+        "min": 50.16,
+        "max": 75.19,
+        "mean": 61.81
+      }
+    },
+    "GORONTALO|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 255.0,
+        "max": 2289.0,
+        "mean": 1502.07
+      },
+      "hari_hujan": {
+        "min": 76.0,
+        "max": 248.0,
+        "mean": 135.94
+      },
+      "suhu_rata_c": {
+        "min": 26.5,
+        "max": 29.29,
+        "mean": 27.56
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.56,
+        "max": 1011.0,
+        "mean": 1009.51
+      },
+      "penyinaran_matahari_pct": {
+        "min": 50.16,
+        "max": 75.19,
+        "mean": 61.81
+      }
+    },
+    "GORONTALO|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 255.0,
+        "max": 2289.0,
+        "mean": 1502.07
+      },
+      "hari_hujan": {
+        "min": 76.0,
+        "max": 248.0,
+        "mean": 135.94
+      },
+      "suhu_rata_c": {
+        "min": 26.5,
+        "max": 29.29,
+        "mean": 27.56
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.56,
+        "max": 1011.0,
+        "mean": 1009.51
+      },
+      "penyinaran_matahari_pct": {
+        "min": 50.16,
+        "max": 75.19,
+        "mean": 61.81
+      }
+    },
+    "GORONTALO|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 255.0,
+        "max": 2289.0,
+        "mean": 1502.07
+      },
+      "hari_hujan": {
+        "min": 76.0,
+        "max": 248.0,
+        "mean": 135.94
+      },
+      "suhu_rata_c": {
+        "min": 26.5,
+        "max": 29.29,
+        "mean": 27.56
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.56,
+        "max": 1011.0,
+        "mean": 1009.51
+      },
+      "penyinaran_matahari_pct": {
+        "min": 50.16,
+        "max": 75.19,
+        "mean": 61.81
+      }
+    },
+    "GORONTALO|Padi": {
+      "curah_hujan_mm": {
+        "min": 255.0,
+        "max": 2289.0,
+        "mean": 1502.07
+      },
+      "hari_hujan": {
+        "min": 76.0,
+        "max": 248.0,
+        "mean": 135.94
+      },
+      "suhu_rata_c": {
+        "min": 26.5,
+        "max": 29.29,
+        "mean": 27.56
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.56,
+        "max": 1011.0,
+        "mean": 1009.51
+      },
+      "penyinaran_matahari_pct": {
+        "min": 50.16,
+        "max": 75.19,
+        "mean": 61.81
+      }
+    },
+    "GORONTALO|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 255.0,
+        "max": 2289.0,
+        "mean": 1502.07
+      },
+      "hari_hujan": {
+        "min": 76.0,
+        "max": 248.0,
+        "mean": 135.94
+      },
+      "suhu_rata_c": {
+        "min": 26.5,
+        "max": 29.29,
+        "mean": 27.56
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.56,
+        "max": 1011.0,
+        "mean": 1009.51
+      },
+      "penyinaran_matahari_pct": {
+        "min": 50.16,
+        "max": 75.19,
+        "mean": 61.81
+      }
+    },
+    "GORONTALO|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 255.0,
+        "max": 2289.0,
+        "mean": 1502.07
+      },
+      "hari_hujan": {
+        "min": 76.0,
+        "max": 248.0,
+        "mean": 135.94
+      },
+      "suhu_rata_c": {
+        "min": 26.5,
+        "max": 29.29,
+        "mean": 27.56
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.56,
+        "max": 1011.0,
+        "mean": 1009.51
+      },
+      "penyinaran_matahari_pct": {
+        "min": 50.16,
+        "max": 75.19,
+        "mean": 61.81
+      }
+    },
+    "JAMBI|Jagung": {
+      "curah_hujan_mm": {
+        "min": 424.7,
+        "max": 3207.0,
+        "mean": 1936.18
+      },
+      "hari_hujan": {
+        "min": 34.0,
+        "max": 253.0,
+        "mean": 130.0
+      },
+      "suhu_rata_c": {
+        "min": 26.5,
+        "max": 29.39,
+        "mean": 27.41
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1011.8,
+        "mean": 1010.66
+      },
+      "penyinaran_matahari_pct": {
+        "min": 33.24,
+        "max": 54.1,
+        "mean": 47.78
+      }
+    },
+    "JAMBI|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 424.7,
+        "max": 3207.0,
+        "mean": 1936.18
+      },
+      "hari_hujan": {
+        "min": 34.0,
+        "max": 253.0,
+        "mean": 130.0
+      },
+      "suhu_rata_c": {
+        "min": 26.5,
+        "max": 29.39,
+        "mean": 27.41
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1011.8,
+        "mean": 1010.66
+      },
+      "penyinaran_matahari_pct": {
+        "min": 33.24,
+        "max": 54.1,
+        "mean": 47.78
+      }
+    },
+    "JAMBI|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 424.7,
+        "max": 3207.0,
+        "mean": 1936.18
+      },
+      "hari_hujan": {
+        "min": 34.0,
+        "max": 253.0,
+        "mean": 130.0
+      },
+      "suhu_rata_c": {
+        "min": 26.5,
+        "max": 29.39,
+        "mean": 27.41
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1011.8,
+        "mean": 1010.66
+      },
+      "penyinaran_matahari_pct": {
+        "min": 33.24,
+        "max": 54.1,
+        "mean": 47.78
+      }
+    },
+    "JAMBI|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 424.7,
+        "max": 3207.0,
+        "mean": 1936.18
+      },
+      "hari_hujan": {
+        "min": 34.0,
+        "max": 253.0,
+        "mean": 130.0
+      },
+      "suhu_rata_c": {
+        "min": 26.5,
+        "max": 29.39,
+        "mean": 27.41
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1011.8,
+        "mean": 1010.66
+      },
+      "penyinaran_matahari_pct": {
+        "min": 33.24,
+        "max": 54.1,
+        "mean": 47.78
+      }
+    },
+    "JAMBI|Padi": {
+      "curah_hujan_mm": {
+        "min": 424.7,
+        "max": 3207.0,
+        "mean": 1936.18
+      },
+      "hari_hujan": {
+        "min": 34.0,
+        "max": 253.0,
+        "mean": 130.0
+      },
+      "suhu_rata_c": {
+        "min": 26.5,
+        "max": 29.39,
+        "mean": 27.41
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1011.8,
+        "mean": 1010.66
+      },
+      "penyinaran_matahari_pct": {
+        "min": 33.24,
+        "max": 54.1,
+        "mean": 47.78
+      }
+    },
+    "JAMBI|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 424.7,
+        "max": 3207.0,
+        "mean": 1936.18
+      },
+      "hari_hujan": {
+        "min": 34.0,
+        "max": 253.0,
+        "mean": 130.0
+      },
+      "suhu_rata_c": {
+        "min": 26.5,
+        "max": 29.39,
+        "mean": 27.41
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1011.8,
+        "mean": 1010.66
+      },
+      "penyinaran_matahari_pct": {
+        "min": 33.24,
+        "max": 54.1,
+        "mean": 47.78
+      }
+    },
+    "JAMBI|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 424.7,
+        "max": 3207.0,
+        "mean": 1936.18
+      },
+      "hari_hujan": {
+        "min": 34.0,
+        "max": 253.0,
+        "mean": 130.0
+      },
+      "suhu_rata_c": {
+        "min": 26.5,
+        "max": 29.39,
+        "mean": 27.41
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1011.8,
+        "mean": 1010.66
+      },
+      "penyinaran_matahari_pct": {
+        "min": 33.24,
+        "max": 54.1,
+        "mean": 47.78
+      }
+    },
+    "JAWA BARAT|Jagung": {
+      "curah_hujan_mm": {
+        "min": 1368.0,
+        "max": 2682.0,
+        "mean": 2030.26
+      },
+      "hari_hujan": {
+        "min": 123.0,
+        "max": 240.0,
+        "mean": 172.59
+      },
+      "suhu_rata_c": {
+        "min": 24.95,
+        "max": 28.77,
+        "mean": 26.04
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1010.55,
+        "mean": 1008.28
+      },
+      "penyinaran_matahari_pct": {
+        "min": 54.6,
+        "max": 65.51,
+        "mean": 58.19
+      }
+    },
+    "JAWA BARAT|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 1368.0,
+        "max": 2682.0,
+        "mean": 2030.26
+      },
+      "hari_hujan": {
+        "min": 123.0,
+        "max": 240.0,
+        "mean": 172.59
+      },
+      "suhu_rata_c": {
+        "min": 24.95,
+        "max": 28.77,
+        "mean": 26.04
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1010.55,
+        "mean": 1008.28
+      },
+      "penyinaran_matahari_pct": {
+        "min": 54.6,
+        "max": 65.51,
+        "mean": 58.19
+      }
+    },
+    "JAWA BARAT|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 1368.0,
+        "max": 2682.0,
+        "mean": 2030.26
+      },
+      "hari_hujan": {
+        "min": 123.0,
+        "max": 240.0,
+        "mean": 172.59
+      },
+      "suhu_rata_c": {
+        "min": 24.95,
+        "max": 28.77,
+        "mean": 26.04
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1010.55,
+        "mean": 1008.28
+      },
+      "penyinaran_matahari_pct": {
+        "min": 54.6,
+        "max": 65.51,
+        "mean": 58.19
+      }
+    },
+    "JAWA BARAT|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 1368.0,
+        "max": 2682.0,
+        "mean": 2030.26
+      },
+      "hari_hujan": {
+        "min": 123.0,
+        "max": 240.0,
+        "mean": 172.59
+      },
+      "suhu_rata_c": {
+        "min": 24.95,
+        "max": 28.77,
+        "mean": 26.04
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1010.55,
+        "mean": 1008.28
+      },
+      "penyinaran_matahari_pct": {
+        "min": 54.6,
+        "max": 65.51,
+        "mean": 58.19
+      }
+    },
+    "JAWA BARAT|Padi": {
+      "curah_hujan_mm": {
+        "min": 1368.0,
+        "max": 2682.0,
+        "mean": 2030.26
+      },
+      "hari_hujan": {
+        "min": 123.0,
+        "max": 240.0,
+        "mean": 172.59
+      },
+      "suhu_rata_c": {
+        "min": 24.95,
+        "max": 28.77,
+        "mean": 26.04
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1010.55,
+        "mean": 1008.28
+      },
+      "penyinaran_matahari_pct": {
+        "min": 54.6,
+        "max": 65.51,
+        "mean": 58.19
+      }
+    },
+    "JAWA BARAT|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 1368.0,
+        "max": 2682.0,
+        "mean": 2030.26
+      },
+      "hari_hujan": {
+        "min": 123.0,
+        "max": 240.0,
+        "mean": 172.59
+      },
+      "suhu_rata_c": {
+        "min": 24.95,
+        "max": 28.77,
+        "mean": 26.04
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1010.55,
+        "mean": 1008.28
+      },
+      "penyinaran_matahari_pct": {
+        "min": 54.6,
+        "max": 65.51,
+        "mean": 58.19
+      }
+    },
+    "JAWA BARAT|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 1368.0,
+        "max": 2682.0,
+        "mean": 2030.26
+      },
+      "hari_hujan": {
+        "min": 123.0,
+        "max": 240.0,
+        "mean": 172.59
+      },
+      "suhu_rata_c": {
+        "min": 24.95,
+        "max": 28.77,
+        "mean": 26.04
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1010.55,
+        "mean": 1008.28
+      },
+      "penyinaran_matahari_pct": {
+        "min": 54.6,
+        "max": 65.51,
+        "mean": 58.19
+      }
+    },
+    "JAWA TENGAH|Jagung": {
+      "curah_hujan_mm": {
+        "min": 1132.1,
+        "max": 3228.0,
+        "mean": 2110.6
+      },
+      "hari_hujan": {
+        "min": 39.9,
+        "max": 219.0,
+        "mean": 116.33
+      },
+      "suhu_rata_c": {
+        "min": 27.2,
+        "max": 30.15,
+        "mean": 28.27
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.6,
+        "max": 1011.9,
+        "mean": 1010.15
+      },
+      "penyinaran_matahari_pct": {
+        "min": 47.0,
+        "max": 85.05,
+        "mean": 60.41
+      }
+    },
+    "JAWA TENGAH|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 1132.1,
+        "max": 3228.0,
+        "mean": 2110.6
+      },
+      "hari_hujan": {
+        "min": 39.9,
+        "max": 219.0,
+        "mean": 116.33
+      },
+      "suhu_rata_c": {
+        "min": 27.2,
+        "max": 30.15,
+        "mean": 28.27
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.6,
+        "max": 1011.9,
+        "mean": 1010.15
+      },
+      "penyinaran_matahari_pct": {
+        "min": 47.0,
+        "max": 85.05,
+        "mean": 60.41
+      }
+    },
+    "JAWA TENGAH|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 1132.1,
+        "max": 3228.0,
+        "mean": 2110.6
+      },
+      "hari_hujan": {
+        "min": 39.9,
+        "max": 219.0,
+        "mean": 116.33
+      },
+      "suhu_rata_c": {
+        "min": 27.2,
+        "max": 30.15,
+        "mean": 28.27
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.6,
+        "max": 1011.9,
+        "mean": 1010.15
+      },
+      "penyinaran_matahari_pct": {
+        "min": 47.0,
+        "max": 85.05,
+        "mean": 60.41
+      }
+    },
+    "JAWA TENGAH|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 1132.1,
+        "max": 3228.0,
+        "mean": 2110.6
+      },
+      "hari_hujan": {
+        "min": 39.9,
+        "max": 219.0,
+        "mean": 116.33
+      },
+      "suhu_rata_c": {
+        "min": 27.2,
+        "max": 30.15,
+        "mean": 28.27
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.6,
+        "max": 1011.9,
+        "mean": 1010.15
+      },
+      "penyinaran_matahari_pct": {
+        "min": 47.0,
+        "max": 85.05,
+        "mean": 60.41
+      }
+    },
+    "JAWA TENGAH|Padi": {
+      "curah_hujan_mm": {
+        "min": 1132.1,
+        "max": 3228.0,
+        "mean": 2110.6
+      },
+      "hari_hujan": {
+        "min": 39.9,
+        "max": 219.0,
+        "mean": 116.33
+      },
+      "suhu_rata_c": {
+        "min": 27.2,
+        "max": 30.15,
+        "mean": 28.27
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.6,
+        "max": 1011.9,
+        "mean": 1010.15
+      },
+      "penyinaran_matahari_pct": {
+        "min": 47.0,
+        "max": 85.05,
+        "mean": 60.41
+      }
+    },
+    "JAWA TENGAH|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 1132.1,
+        "max": 3228.0,
+        "mean": 2110.6
+      },
+      "hari_hujan": {
+        "min": 39.9,
+        "max": 219.0,
+        "mean": 116.33
+      },
+      "suhu_rata_c": {
+        "min": 27.2,
+        "max": 30.15,
+        "mean": 28.27
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.6,
+        "max": 1011.9,
+        "mean": 1010.15
+      },
+      "penyinaran_matahari_pct": {
+        "min": 47.0,
+        "max": 85.05,
+        "mean": 60.41
+      }
+    },
+    "JAWA TENGAH|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 1132.1,
+        "max": 3228.0,
+        "mean": 2110.6
+      },
+      "hari_hujan": {
+        "min": 39.9,
+        "max": 219.0,
+        "mean": 116.33
+      },
+      "suhu_rata_c": {
+        "min": 27.2,
+        "max": 30.15,
+        "mean": 28.27
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.6,
+        "max": 1011.9,
+        "mean": 1010.15
+      },
+      "penyinaran_matahari_pct": {
+        "min": 47.0,
+        "max": 85.05,
+        "mean": 60.41
+      }
+    },
+    "JAWA TIMUR|Jagung": {
+      "curah_hujan_mm": {
+        "min": 446.2,
+        "max": 2478.9,
+        "mean": 1646.97
+      },
+      "hari_hujan": {
+        "min": 70.0,
+        "max": 181.0,
+        "mean": 119.0
+      },
+      "suhu_rata_c": {
+        "min": 27.06,
+        "max": 30.15,
+        "mean": 28.55
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.01,
+        "max": 1011.8,
+        "mean": 1010.15
+      },
+      "penyinaran_matahari_pct": {
+        "min": 61.92,
+        "max": 80.5,
+        "mean": 75.12
+      }
+    },
+    "JAWA TIMUR|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 446.2,
+        "max": 2478.9,
+        "mean": 1646.97
+      },
+      "hari_hujan": {
+        "min": 70.0,
+        "max": 181.0,
+        "mean": 119.0
+      },
+      "suhu_rata_c": {
+        "min": 27.06,
+        "max": 30.15,
+        "mean": 28.55
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.01,
+        "max": 1011.8,
+        "mean": 1010.15
+      },
+      "penyinaran_matahari_pct": {
+        "min": 61.92,
+        "max": 80.5,
+        "mean": 75.12
+      }
+    },
+    "JAWA TIMUR|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 446.2,
+        "max": 2478.9,
+        "mean": 1646.97
+      },
+      "hari_hujan": {
+        "min": 70.0,
+        "max": 181.0,
+        "mean": 119.0
+      },
+      "suhu_rata_c": {
+        "min": 27.06,
+        "max": 30.15,
+        "mean": 28.55
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.01,
+        "max": 1011.8,
+        "mean": 1010.15
+      },
+      "penyinaran_matahari_pct": {
+        "min": 61.92,
+        "max": 80.5,
+        "mean": 75.12
+      }
+    },
+    "JAWA TIMUR|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 446.2,
+        "max": 2478.9,
+        "mean": 1646.97
+      },
+      "hari_hujan": {
+        "min": 70.0,
+        "max": 181.0,
+        "mean": 119.0
+      },
+      "suhu_rata_c": {
+        "min": 27.06,
+        "max": 30.15,
+        "mean": 28.55
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.01,
+        "max": 1011.8,
+        "mean": 1010.15
+      },
+      "penyinaran_matahari_pct": {
+        "min": 61.92,
+        "max": 80.5,
+        "mean": 75.12
+      }
+    },
+    "JAWA TIMUR|Padi": {
+      "curah_hujan_mm": {
+        "min": 446.2,
+        "max": 2478.9,
+        "mean": 1646.97
+      },
+      "hari_hujan": {
+        "min": 70.0,
+        "max": 181.0,
+        "mean": 119.0
+      },
+      "suhu_rata_c": {
+        "min": 27.06,
+        "max": 30.15,
+        "mean": 28.55
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.01,
+        "max": 1011.8,
+        "mean": 1010.15
+      },
+      "penyinaran_matahari_pct": {
+        "min": 61.92,
+        "max": 80.5,
+        "mean": 75.12
+      }
+    },
+    "JAWA TIMUR|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 446.2,
+        "max": 2478.9,
+        "mean": 1646.97
+      },
+      "hari_hujan": {
+        "min": 70.0,
+        "max": 181.0,
+        "mean": 119.0
+      },
+      "suhu_rata_c": {
+        "min": 27.06,
+        "max": 30.15,
+        "mean": 28.55
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.01,
+        "max": 1011.8,
+        "mean": 1010.15
+      },
+      "penyinaran_matahari_pct": {
+        "min": 61.92,
+        "max": 80.5,
+        "mean": 75.12
+      }
+    },
+    "JAWA TIMUR|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 446.2,
+        "max": 2478.9,
+        "mean": 1646.97
+      },
+      "hari_hujan": {
+        "min": 70.0,
+        "max": 181.0,
+        "mean": 119.0
+      },
+      "suhu_rata_c": {
+        "min": 27.06,
+        "max": 30.15,
+        "mean": 28.55
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.01,
+        "max": 1011.8,
+        "mean": 1010.15
+      },
+      "penyinaran_matahari_pct": {
+        "min": 61.92,
+        "max": 80.5,
+        "mean": 75.12
+      }
+    },
+    "KALIMANTAN BARAT|Jagung": {
+      "curah_hujan_mm": {
+        "min": 1528.2,
+        "max": 3666.0,
+        "mean": 2917.4
+      },
+      "hari_hujan": {
+        "min": 93.0,
+        "max": 257.0,
+        "mean": 163.03
+      },
+      "suhu_rata_c": {
+        "min": 26.4,
+        "max": 28.7,
+        "mean": 27.29
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.9,
+        "max": 1011.8,
+        "mean": 1010.0
+      },
+      "penyinaran_matahari_pct": {
+        "min": 55.04,
+        "max": 68.7,
+        "mean": 60.49
+      }
+    },
+    "KALIMANTAN BARAT|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 1528.2,
+        "max": 3666.0,
+        "mean": 2917.4
+      },
+      "hari_hujan": {
+        "min": 93.0,
+        "max": 257.0,
+        "mean": 163.03
+      },
+      "suhu_rata_c": {
+        "min": 26.4,
+        "max": 28.7,
+        "mean": 27.29
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.9,
+        "max": 1011.8,
+        "mean": 1010.0
+      },
+      "penyinaran_matahari_pct": {
+        "min": 55.04,
+        "max": 68.7,
+        "mean": 60.49
+      }
+    },
+    "KALIMANTAN BARAT|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 1528.2,
+        "max": 3666.0,
+        "mean": 2917.4
+      },
+      "hari_hujan": {
+        "min": 93.0,
+        "max": 257.0,
+        "mean": 163.03
+      },
+      "suhu_rata_c": {
+        "min": 26.4,
+        "max": 28.7,
+        "mean": 27.29
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.9,
+        "max": 1011.8,
+        "mean": 1010.0
+      },
+      "penyinaran_matahari_pct": {
+        "min": 55.04,
+        "max": 68.7,
+        "mean": 60.49
+      }
+    },
+    "KALIMANTAN BARAT|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 1528.2,
+        "max": 3666.0,
+        "mean": 2917.4
+      },
+      "hari_hujan": {
+        "min": 93.0,
+        "max": 257.0,
+        "mean": 163.03
+      },
+      "suhu_rata_c": {
+        "min": 26.4,
+        "max": 28.7,
+        "mean": 27.29
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.9,
+        "max": 1011.8,
+        "mean": 1010.0
+      },
+      "penyinaran_matahari_pct": {
+        "min": 55.04,
+        "max": 68.7,
+        "mean": 60.49
+      }
+    },
+    "KALIMANTAN BARAT|Padi": {
+      "curah_hujan_mm": {
+        "min": 1528.2,
+        "max": 3666.0,
+        "mean": 2917.4
+      },
+      "hari_hujan": {
+        "min": 93.0,
+        "max": 257.0,
+        "mean": 163.03
+      },
+      "suhu_rata_c": {
+        "min": 26.4,
+        "max": 28.7,
+        "mean": 27.29
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.9,
+        "max": 1011.8,
+        "mean": 1010.0
+      },
+      "penyinaran_matahari_pct": {
+        "min": 55.04,
+        "max": 68.7,
+        "mean": 60.49
+      }
+    },
+    "KALIMANTAN BARAT|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 1528.2,
+        "max": 3666.0,
+        "mean": 2917.4
+      },
+      "hari_hujan": {
+        "min": 93.0,
+        "max": 257.0,
+        "mean": 163.03
+      },
+      "suhu_rata_c": {
+        "min": 26.4,
+        "max": 28.7,
+        "mean": 27.29
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.9,
+        "max": 1011.8,
+        "mean": 1010.0
+      },
+      "penyinaran_matahari_pct": {
+        "min": 55.04,
+        "max": 68.7,
+        "mean": 60.49
+      }
+    },
+    "KALIMANTAN BARAT|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 1528.2,
+        "max": 3666.0,
+        "mean": 2917.4
+      },
+      "hari_hujan": {
+        "min": 93.0,
+        "max": 257.0,
+        "mean": 163.03
+      },
+      "suhu_rata_c": {
+        "min": 26.4,
+        "max": 28.7,
+        "mean": 27.29
+      },
+      "tekanan_udara_mb": {
+        "min": 1008.9,
+        "max": 1011.8,
+        "mean": 1010.0
+      },
+      "penyinaran_matahari_pct": {
+        "min": 55.04,
+        "max": 68.7,
+        "mean": 60.49
+      }
+    },
+    "KALIMANTAN SELATAN|Jagung": {
+      "curah_hujan_mm": {
+        "min": 749.7,
+        "max": 3006.0,
+        "mean": 2304.04
+      },
+      "hari_hujan": {
+        "min": 72.0,
+        "max": 243.0,
+        "mean": 148.94
+      },
+      "suhu_rata_c": {
+        "min": 26.23,
+        "max": 29.02,
+        "mean": 27.14
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1013.09,
+        "mean": 1010.54
+      },
+      "penyinaran_matahari_pct": {
+        "min": 45.7,
+        "max": 65.4,
+        "mean": 59.8
+      }
+    },
+    "KALIMANTAN SELATAN|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 749.7,
+        "max": 3006.0,
+        "mean": 2304.04
+      },
+      "hari_hujan": {
+        "min": 72.0,
+        "max": 243.0,
+        "mean": 148.94
+      },
+      "suhu_rata_c": {
+        "min": 26.23,
+        "max": 29.02,
+        "mean": 27.14
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1013.09,
+        "mean": 1010.54
+      },
+      "penyinaran_matahari_pct": {
+        "min": 45.7,
+        "max": 65.4,
+        "mean": 59.8
+      }
+    },
+    "KALIMANTAN SELATAN|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 749.7,
+        "max": 3006.0,
+        "mean": 2304.04
+      },
+      "hari_hujan": {
+        "min": 72.0,
+        "max": 243.0,
+        "mean": 148.94
+      },
+      "suhu_rata_c": {
+        "min": 26.23,
+        "max": 29.02,
+        "mean": 27.14
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1013.09,
+        "mean": 1010.54
+      },
+      "penyinaran_matahari_pct": {
+        "min": 45.7,
+        "max": 65.4,
+        "mean": 59.8
+      }
+    },
+    "KALIMANTAN SELATAN|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 749.7,
+        "max": 3006.0,
+        "mean": 2304.04
+      },
+      "hari_hujan": {
+        "min": 72.0,
+        "max": 243.0,
+        "mean": 148.94
+      },
+      "suhu_rata_c": {
+        "min": 26.23,
+        "max": 29.02,
+        "mean": 27.14
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1013.09,
+        "mean": 1010.54
+      },
+      "penyinaran_matahari_pct": {
+        "min": 45.7,
+        "max": 65.4,
+        "mean": 59.8
+      }
+    },
+    "KALIMANTAN SELATAN|Padi": {
+      "curah_hujan_mm": {
+        "min": 749.7,
+        "max": 3006.0,
+        "mean": 2304.04
+      },
+      "hari_hujan": {
+        "min": 72.0,
+        "max": 243.0,
+        "mean": 148.94
+      },
+      "suhu_rata_c": {
+        "min": 26.23,
+        "max": 29.02,
+        "mean": 27.14
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1013.09,
+        "mean": 1010.54
+      },
+      "penyinaran_matahari_pct": {
+        "min": 45.7,
+        "max": 65.4,
+        "mean": 59.8
+      }
+    },
+    "KALIMANTAN SELATAN|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 749.7,
+        "max": 3006.0,
+        "mean": 2304.04
+      },
+      "hari_hujan": {
+        "min": 72.0,
+        "max": 243.0,
+        "mean": 148.94
+      },
+      "suhu_rata_c": {
+        "min": 26.23,
+        "max": 29.02,
+        "mean": 27.14
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1013.09,
+        "mean": 1010.54
+      },
+      "penyinaran_matahari_pct": {
+        "min": 45.7,
+        "max": 65.4,
+        "mean": 59.8
+      }
+    },
+    "KALIMANTAN SELATAN|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 749.7,
+        "max": 3006.0,
+        "mean": 2304.04
+      },
+      "hari_hujan": {
+        "min": 72.0,
+        "max": 243.0,
+        "mean": 148.94
+      },
+      "suhu_rata_c": {
+        "min": 26.23,
+        "max": 29.02,
+        "mean": 27.14
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1013.09,
+        "mean": 1010.54
+      },
+      "penyinaran_matahari_pct": {
+        "min": 45.7,
+        "max": 65.4,
+        "mean": 59.8
+      }
+    },
+    "KALIMANTAN TENGAH|Jagung": {
+      "curah_hujan_mm": {
+        "min": 539.7,
+        "max": 4508.0,
+        "mean": 2682.53
+      },
+      "hari_hujan": {
+        "min": 62.0,
+        "max": 276.0,
+        "mean": 145.06
+      },
+      "suhu_rata_c": {
+        "min": 24.95,
+        "max": 29.0,
+        "mean": 27.43
+      },
+      "tekanan_udara_mb": {
+        "min": 1011.21,
+        "max": 1013.09,
+        "mean": 1012.32
+      },
+      "penyinaran_matahari_pct": {
+        "min": 51.0,
+        "max": 67.4,
+        "mean": 54.66
+      }
+    },
+    "KALIMANTAN TENGAH|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 539.7,
+        "max": 4508.0,
+        "mean": 2682.53
+      },
+      "hari_hujan": {
+        "min": 62.0,
+        "max": 276.0,
+        "mean": 145.06
+      },
+      "suhu_rata_c": {
+        "min": 24.95,
+        "max": 29.0,
+        "mean": 27.43
+      },
+      "tekanan_udara_mb": {
+        "min": 1011.21,
+        "max": 1013.09,
+        "mean": 1012.32
+      },
+      "penyinaran_matahari_pct": {
+        "min": 51.0,
+        "max": 67.4,
+        "mean": 54.66
+      }
+    },
+    "KALIMANTAN TENGAH|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 539.7,
+        "max": 4508.0,
+        "mean": 2682.53
+      },
+      "hari_hujan": {
+        "min": 62.0,
+        "max": 276.0,
+        "mean": 145.06
+      },
+      "suhu_rata_c": {
+        "min": 24.95,
+        "max": 29.0,
+        "mean": 27.43
+      },
+      "tekanan_udara_mb": {
+        "min": 1011.21,
+        "max": 1013.09,
+        "mean": 1012.32
+      },
+      "penyinaran_matahari_pct": {
+        "min": 51.0,
+        "max": 67.4,
+        "mean": 54.66
+      }
+    },
+    "KALIMANTAN TENGAH|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 539.7,
+        "max": 4508.0,
+        "mean": 2682.53
+      },
+      "hari_hujan": {
+        "min": 62.0,
+        "max": 276.0,
+        "mean": 145.06
+      },
+      "suhu_rata_c": {
+        "min": 24.95,
+        "max": 29.0,
+        "mean": 27.43
+      },
+      "tekanan_udara_mb": {
+        "min": 1011.21,
+        "max": 1013.09,
+        "mean": 1012.32
+      },
+      "penyinaran_matahari_pct": {
+        "min": 51.0,
+        "max": 67.4,
+        "mean": 54.66
+      }
+    },
+    "KALIMANTAN TENGAH|Padi": {
+      "curah_hujan_mm": {
+        "min": 539.7,
+        "max": 4508.0,
+        "mean": 2682.53
+      },
+      "hari_hujan": {
+        "min": 62.0,
+        "max": 276.0,
+        "mean": 145.06
+      },
+      "suhu_rata_c": {
+        "min": 24.95,
+        "max": 29.0,
+        "mean": 27.43
+      },
+      "tekanan_udara_mb": {
+        "min": 1011.21,
+        "max": 1013.09,
+        "mean": 1012.32
+      },
+      "penyinaran_matahari_pct": {
+        "min": 51.0,
+        "max": 67.4,
+        "mean": 54.66
+      }
+    },
+    "KALIMANTAN TENGAH|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 539.7,
+        "max": 4508.0,
+        "mean": 2682.53
+      },
+      "hari_hujan": {
+        "min": 62.0,
+        "max": 276.0,
+        "mean": 145.06
+      },
+      "suhu_rata_c": {
+        "min": 24.95,
+        "max": 29.0,
+        "mean": 27.43
+      },
+      "tekanan_udara_mb": {
+        "min": 1011.21,
+        "max": 1013.09,
+        "mean": 1012.32
+      },
+      "penyinaran_matahari_pct": {
+        "min": 51.0,
+        "max": 67.4,
+        "mean": 54.66
+      }
+    },
+    "KALIMANTAN TENGAH|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 539.7,
+        "max": 4508.0,
+        "mean": 2682.53
+      },
+      "hari_hujan": {
+        "min": 62.0,
+        "max": 276.0,
+        "mean": 145.06
+      },
+      "suhu_rata_c": {
+        "min": 24.95,
+        "max": 29.0,
+        "mean": 27.43
+      },
+      "tekanan_udara_mb": {
+        "min": 1011.21,
+        "max": 1013.09,
+        "mean": 1012.32
+      },
+      "penyinaran_matahari_pct": {
+        "min": 51.0,
+        "max": 67.4,
+        "mean": 54.66
+      }
+    },
+    "KALIMANTAN TIMUR|Jagung": {
+      "curah_hujan_mm": {
+        "min": 1848.7,
+        "max": 2990.0,
+        "mean": 2440.63
+      },
+      "hari_hujan": {
+        "min": 146.0,
+        "max": 261.0,
+        "mean": 234.88
+      },
+      "suhu_rata_c": {
+        "min": 26.7,
+        "max": 29.43,
+        "mean": 28.0
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.6,
+        "max": 1012.9,
+        "mean": 1010.99
+      },
+      "penyinaran_matahari_pct": {
+        "min": 38.8,
+        "max": 46.97,
+        "mean": 43.94
+      }
+    },
+    "KALIMANTAN TIMUR|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 1848.7,
+        "max": 2990.0,
+        "mean": 2440.63
+      },
+      "hari_hujan": {
+        "min": 146.0,
+        "max": 261.0,
+        "mean": 234.88
+      },
+      "suhu_rata_c": {
+        "min": 26.7,
+        "max": 29.43,
+        "mean": 28.0
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.6,
+        "max": 1012.9,
+        "mean": 1010.99
+      },
+      "penyinaran_matahari_pct": {
+        "min": 38.8,
+        "max": 46.97,
+        "mean": 43.94
+      }
+    },
+    "KALIMANTAN TIMUR|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 1848.7,
+        "max": 2990.0,
+        "mean": 2440.63
+      },
+      "hari_hujan": {
+        "min": 146.0,
+        "max": 261.0,
+        "mean": 234.88
+      },
+      "suhu_rata_c": {
+        "min": 26.7,
+        "max": 29.43,
+        "mean": 28.0
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.6,
+        "max": 1012.9,
+        "mean": 1010.99
+      },
+      "penyinaran_matahari_pct": {
+        "min": 38.8,
+        "max": 46.97,
+        "mean": 43.94
+      }
+    },
+    "KALIMANTAN TIMUR|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 1848.7,
+        "max": 2990.0,
+        "mean": 2440.63
+      },
+      "hari_hujan": {
+        "min": 146.0,
+        "max": 261.0,
+        "mean": 234.88
+      },
+      "suhu_rata_c": {
+        "min": 26.7,
+        "max": 29.43,
+        "mean": 28.0
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.6,
+        "max": 1012.9,
+        "mean": 1010.99
+      },
+      "penyinaran_matahari_pct": {
+        "min": 38.8,
+        "max": 46.97,
+        "mean": 43.94
+      }
+    },
+    "KALIMANTAN TIMUR|Padi": {
+      "curah_hujan_mm": {
+        "min": 1848.7,
+        "max": 2990.0,
+        "mean": 2440.63
+      },
+      "hari_hujan": {
+        "min": 146.0,
+        "max": 261.0,
+        "mean": 234.88
+      },
+      "suhu_rata_c": {
+        "min": 26.7,
+        "max": 29.43,
+        "mean": 28.0
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.6,
+        "max": 1012.9,
+        "mean": 1010.99
+      },
+      "penyinaran_matahari_pct": {
+        "min": 38.8,
+        "max": 46.97,
+        "mean": 43.94
+      }
+    },
+    "KALIMANTAN TIMUR|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 1848.7,
+        "max": 2990.0,
+        "mean": 2440.63
+      },
+      "hari_hujan": {
+        "min": 146.0,
+        "max": 261.0,
+        "mean": 234.88
+      },
+      "suhu_rata_c": {
+        "min": 26.7,
+        "max": 29.43,
+        "mean": 28.0
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.6,
+        "max": 1012.9,
+        "mean": 1010.99
+      },
+      "penyinaran_matahari_pct": {
+        "min": 38.8,
+        "max": 46.97,
+        "mean": 43.94
+      }
+    },
+    "KALIMANTAN TIMUR|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 1848.7,
+        "max": 2990.0,
+        "mean": 2440.63
+      },
+      "hari_hujan": {
+        "min": 146.0,
+        "max": 261.0,
+        "mean": 234.88
+      },
+      "suhu_rata_c": {
+        "min": 26.7,
+        "max": 29.43,
+        "mean": 28.0
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.6,
+        "max": 1012.9,
+        "mean": 1010.99
+      },
+      "penyinaran_matahari_pct": {
+        "min": 38.8,
+        "max": 46.97,
+        "mean": 43.94
+      }
+    },
+    "KALIMANTAN UTARA|Jagung": {
+      "curah_hujan_mm": {
+        "min": 2311.5,
+        "max": 3154.0,
+        "mean": 3070.13
+      },
+      "hari_hujan": {
+        "min": 202.0,
+        "max": 248.0,
+        "mean": 243.19
+      },
+      "suhu_rata_c": {
+        "min": 27.4,
+        "max": 27.6,
+        "mean": 27.41
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.6,
+        "max": 1010.5,
+        "mean": 1009.77
+      },
+      "penyinaran_matahari_pct": {
+        "min": 51.0,
+        "max": 63.01,
+        "mean": 52.25
+      }
+    },
+    "KALIMANTAN UTARA|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 2311.5,
+        "max": 3154.0,
+        "mean": 3070.13
+      },
+      "hari_hujan": {
+        "min": 202.0,
+        "max": 248.0,
+        "mean": 243.19
+      },
+      "suhu_rata_c": {
+        "min": 27.4,
+        "max": 27.6,
+        "mean": 27.41
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.6,
+        "max": 1010.5,
+        "mean": 1009.77
+      },
+      "penyinaran_matahari_pct": {
+        "min": 51.0,
+        "max": 63.01,
+        "mean": 52.25
+      }
+    },
+    "KALIMANTAN UTARA|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 2311.5,
+        "max": 3154.0,
+        "mean": 3070.13
+      },
+      "hari_hujan": {
+        "min": 202.0,
+        "max": 248.0,
+        "mean": 243.19
+      },
+      "suhu_rata_c": {
+        "min": 27.4,
+        "max": 27.6,
+        "mean": 27.41
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.6,
+        "max": 1010.5,
+        "mean": 1009.77
+      },
+      "penyinaran_matahari_pct": {
+        "min": 51.0,
+        "max": 63.01,
+        "mean": 52.25
+      }
+    },
+    "KALIMANTAN UTARA|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 2311.5,
+        "max": 3154.0,
+        "mean": 3070.13
+      },
+      "hari_hujan": {
+        "min": 202.0,
+        "max": 248.0,
+        "mean": 243.19
+      },
+      "suhu_rata_c": {
+        "min": 27.4,
+        "max": 27.6,
+        "mean": 27.41
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.6,
+        "max": 1010.5,
+        "mean": 1009.77
+      },
+      "penyinaran_matahari_pct": {
+        "min": 51.0,
+        "max": 63.01,
+        "mean": 52.25
+      }
+    },
+    "KALIMANTAN UTARA|Padi": {
+      "curah_hujan_mm": {
+        "min": 2311.5,
+        "max": 3154.0,
+        "mean": 3070.13
+      },
+      "hari_hujan": {
+        "min": 202.0,
+        "max": 248.0,
+        "mean": 243.19
+      },
+      "suhu_rata_c": {
+        "min": 27.4,
+        "max": 27.6,
+        "mean": 27.41
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.6,
+        "max": 1010.5,
+        "mean": 1009.77
+      },
+      "penyinaran_matahari_pct": {
+        "min": 51.0,
+        "max": 63.01,
+        "mean": 52.25
+      }
+    },
+    "KALIMANTAN UTARA|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 2311.5,
+        "max": 3154.0,
+        "mean": 3070.13
+      },
+      "hari_hujan": {
+        "min": 202.0,
+        "max": 248.0,
+        "mean": 243.19
+      },
+      "suhu_rata_c": {
+        "min": 27.4,
+        "max": 27.6,
+        "mean": 27.41
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.6,
+        "max": 1010.5,
+        "mean": 1009.77
+      },
+      "penyinaran_matahari_pct": {
+        "min": 51.0,
+        "max": 63.01,
+        "mean": 52.25
+      }
+    },
+    "KALIMANTAN UTARA|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 2311.5,
+        "max": 3154.0,
+        "mean": 3070.13
+      },
+      "hari_hujan": {
+        "min": 202.0,
+        "max": 248.0,
+        "mean": 243.19
+      },
+      "suhu_rata_c": {
+        "min": 27.4,
+        "max": 27.6,
+        "mean": 27.41
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.6,
+        "max": 1010.5,
+        "mean": 1009.77
+      },
+      "penyinaran_matahari_pct": {
+        "min": 51.0,
+        "max": 63.01,
+        "mean": 52.25
+      }
+    },
+    "KEPULAUAN BANGKA BELITUNG|Jagung": {
+      "curah_hujan_mm": {
+        "min": 1172.3,
+        "max": 3444.0,
+        "mean": 2332.49
+      },
+      "hari_hujan": {
+        "min": 91.0,
+        "max": 260.0,
+        "mean": 158.19
+      },
+      "suhu_rata_c": {
+        "min": 26.4,
+        "max": 29.37,
+        "mean": 27.51
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.13,
+        "max": 1011.4,
+        "mean": 1010.03
+      },
+      "penyinaran_matahari_pct": {
+        "min": 44.4,
+        "max": 59.57,
+        "mean": 49.73
+      }
+    },
+    "KEPULAUAN BANGKA BELITUNG|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 1172.3,
+        "max": 3444.0,
+        "mean": 2332.49
+      },
+      "hari_hujan": {
+        "min": 91.0,
+        "max": 260.0,
+        "mean": 158.19
+      },
+      "suhu_rata_c": {
+        "min": 26.4,
+        "max": 29.37,
+        "mean": 27.51
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.13,
+        "max": 1011.4,
+        "mean": 1010.03
+      },
+      "penyinaran_matahari_pct": {
+        "min": 44.4,
+        "max": 59.57,
+        "mean": 49.73
+      }
+    },
+    "KEPULAUAN BANGKA BELITUNG|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 1172.3,
+        "max": 3444.0,
+        "mean": 2332.49
+      },
+      "hari_hujan": {
+        "min": 91.0,
+        "max": 260.0,
+        "mean": 158.19
+      },
+      "suhu_rata_c": {
+        "min": 26.4,
+        "max": 29.37,
+        "mean": 27.51
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.13,
+        "max": 1011.4,
+        "mean": 1010.03
+      },
+      "penyinaran_matahari_pct": {
+        "min": 44.4,
+        "max": 59.57,
+        "mean": 49.73
+      }
+    },
+    "KEPULAUAN BANGKA BELITUNG|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 1172.3,
+        "max": 3444.0,
+        "mean": 2332.49
+      },
+      "hari_hujan": {
+        "min": 91.0,
+        "max": 260.0,
+        "mean": 158.19
+      },
+      "suhu_rata_c": {
+        "min": 26.4,
+        "max": 29.37,
+        "mean": 27.51
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.13,
+        "max": 1011.4,
+        "mean": 1010.03
+      },
+      "penyinaran_matahari_pct": {
+        "min": 44.4,
+        "max": 59.57,
+        "mean": 49.73
+      }
+    },
+    "KEPULAUAN BANGKA BELITUNG|Padi": {
+      "curah_hujan_mm": {
+        "min": 1172.3,
+        "max": 3444.0,
+        "mean": 2332.49
+      },
+      "hari_hujan": {
+        "min": 91.0,
+        "max": 260.0,
+        "mean": 158.19
+      },
+      "suhu_rata_c": {
+        "min": 26.4,
+        "max": 29.37,
+        "mean": 27.51
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.13,
+        "max": 1011.4,
+        "mean": 1010.03
+      },
+      "penyinaran_matahari_pct": {
+        "min": 44.4,
+        "max": 59.57,
+        "mean": 49.73
+      }
+    },
+    "KEPULAUAN BANGKA BELITUNG|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 1172.3,
+        "max": 3444.0,
+        "mean": 2332.49
+      },
+      "hari_hujan": {
+        "min": 91.0,
+        "max": 260.0,
+        "mean": 158.19
+      },
+      "suhu_rata_c": {
+        "min": 26.4,
+        "max": 29.37,
+        "mean": 27.51
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.13,
+        "max": 1011.4,
+        "mean": 1010.03
+      },
+      "penyinaran_matahari_pct": {
+        "min": 44.4,
+        "max": 59.57,
+        "mean": 49.73
+      }
+    },
+    "KEPULAUAN BANGKA BELITUNG|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 1172.3,
+        "max": 3444.0,
+        "mean": 2332.49
+      },
+      "hari_hujan": {
+        "min": 91.0,
+        "max": 260.0,
+        "mean": 158.19
+      },
+      "suhu_rata_c": {
+        "min": 26.4,
+        "max": 29.37,
+        "mean": 27.51
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.13,
+        "max": 1011.4,
+        "mean": 1010.03
+      },
+      "penyinaran_matahari_pct": {
+        "min": 44.4,
+        "max": 59.57,
+        "mean": 49.73
+      }
+    },
+    "KEPULAUAN RIAU|Jagung": {
+      "curah_hujan_mm": {
+        "min": 491.2,
+        "max": 3972.7,
+        "mean": 3022.79
+      },
+      "hari_hujan": {
+        "min": 25.0,
+        "max": 227.0,
+        "mean": 123.69
+      },
+      "suhu_rata_c": {
+        "min": 25.35,
+        "max": 28.09,
+        "mean": 27.04
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.65,
+        "max": 1011.4,
+        "mean": 1010.69
+      },
+      "penyinaran_matahari_pct": {
+        "min": 39.9,
+        "max": 69.95,
+        "mean": 48.75
+      }
+    },
+    "KEPULAUAN RIAU|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 491.2,
+        "max": 3972.7,
+        "mean": 3022.79
+      },
+      "hari_hujan": {
+        "min": 25.0,
+        "max": 227.0,
+        "mean": 123.69
+      },
+      "suhu_rata_c": {
+        "min": 25.35,
+        "max": 28.09,
+        "mean": 27.04
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.65,
+        "max": 1011.4,
+        "mean": 1010.69
+      },
+      "penyinaran_matahari_pct": {
+        "min": 39.9,
+        "max": 69.95,
+        "mean": 48.75
+      }
+    },
+    "KEPULAUAN RIAU|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 491.2,
+        "max": 3972.7,
+        "mean": 3022.79
+      },
+      "hari_hujan": {
+        "min": 25.0,
+        "max": 227.0,
+        "mean": 123.69
+      },
+      "suhu_rata_c": {
+        "min": 25.35,
+        "max": 28.09,
+        "mean": 27.04
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.65,
+        "max": 1011.4,
+        "mean": 1010.69
+      },
+      "penyinaran_matahari_pct": {
+        "min": 39.9,
+        "max": 69.95,
+        "mean": 48.75
+      }
+    },
+    "KEPULAUAN RIAU|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 491.2,
+        "max": 3972.7,
+        "mean": 3022.79
+      },
+      "hari_hujan": {
+        "min": 25.0,
+        "max": 227.0,
+        "mean": 123.69
+      },
+      "suhu_rata_c": {
+        "min": 25.35,
+        "max": 28.09,
+        "mean": 27.04
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.65,
+        "max": 1011.4,
+        "mean": 1010.69
+      },
+      "penyinaran_matahari_pct": {
+        "min": 39.9,
+        "max": 69.95,
+        "mean": 48.75
+      }
+    },
+    "KEPULAUAN RIAU|Padi": {
+      "curah_hujan_mm": {
+        "min": 491.2,
+        "max": 3972.7,
+        "mean": 3022.79
+      },
+      "hari_hujan": {
+        "min": 25.0,
+        "max": 227.0,
+        "mean": 123.69
+      },
+      "suhu_rata_c": {
+        "min": 25.35,
+        "max": 28.09,
+        "mean": 27.04
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.65,
+        "max": 1011.4,
+        "mean": 1010.69
+      },
+      "penyinaran_matahari_pct": {
+        "min": 39.9,
+        "max": 69.95,
+        "mean": 48.75
+      }
+    },
+    "KEPULAUAN RIAU|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 491.2,
+        "max": 3972.7,
+        "mean": 3022.79
+      },
+      "hari_hujan": {
+        "min": 25.0,
+        "max": 227.0,
+        "mean": 123.69
+      },
+      "suhu_rata_c": {
+        "min": 25.35,
+        "max": 28.09,
+        "mean": 27.04
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.65,
+        "max": 1011.4,
+        "mean": 1010.69
+      },
+      "penyinaran_matahari_pct": {
+        "min": 39.9,
+        "max": 69.95,
+        "mean": 48.75
+      }
+    },
+    "KEPULAUAN RIAU|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 491.2,
+        "max": 3972.7,
+        "mean": 3022.79
+      },
+      "hari_hujan": {
+        "min": 25.0,
+        "max": 227.0,
+        "mean": 123.69
+      },
+      "suhu_rata_c": {
+        "min": 25.35,
+        "max": 28.09,
+        "mean": 27.04
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.65,
+        "max": 1011.4,
+        "mean": 1010.69
+      },
+      "penyinaran_matahari_pct": {
+        "min": 39.9,
+        "max": 69.95,
+        "mean": 48.75
+      }
+    },
+    "LAMPUNG|Jagung": {
+      "curah_hujan_mm": {
+        "min": 560.3,
+        "max": 2710.0,
+        "mean": 1720.68
+      },
+      "hari_hujan": {
+        "min": 54.0,
+        "max": 198.0,
+        "mean": 113.94
+      },
+      "suhu_rata_c": {
+        "min": 25.8,
+        "max": 29.67,
+        "mean": 27.28
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.4,
+        "max": 1012.1,
+        "mean": 1011.0
+      },
+      "penyinaran_matahari_pct": {
+        "min": 50.6,
+        "max": 69.2,
+        "mean": 64.19
+      }
+    },
+    "LAMPUNG|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 560.3,
+        "max": 2710.0,
+        "mean": 1720.68
+      },
+      "hari_hujan": {
+        "min": 54.0,
+        "max": 198.0,
+        "mean": 113.94
+      },
+      "suhu_rata_c": {
+        "min": 25.8,
+        "max": 29.67,
+        "mean": 27.28
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.4,
+        "max": 1012.1,
+        "mean": 1011.0
+      },
+      "penyinaran_matahari_pct": {
+        "min": 50.6,
+        "max": 69.2,
+        "mean": 64.19
+      }
+    },
+    "LAMPUNG|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 560.3,
+        "max": 2710.0,
+        "mean": 1720.68
+      },
+      "hari_hujan": {
+        "min": 54.0,
+        "max": 198.0,
+        "mean": 113.94
+      },
+      "suhu_rata_c": {
+        "min": 25.8,
+        "max": 29.67,
+        "mean": 27.28
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.4,
+        "max": 1012.1,
+        "mean": 1011.0
+      },
+      "penyinaran_matahari_pct": {
+        "min": 50.6,
+        "max": 69.2,
+        "mean": 64.19
+      }
+    },
+    "LAMPUNG|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 560.3,
+        "max": 2710.0,
+        "mean": 1720.68
+      },
+      "hari_hujan": {
+        "min": 54.0,
+        "max": 198.0,
+        "mean": 113.94
+      },
+      "suhu_rata_c": {
+        "min": 25.8,
+        "max": 29.67,
+        "mean": 27.28
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.4,
+        "max": 1012.1,
+        "mean": 1011.0
+      },
+      "penyinaran_matahari_pct": {
+        "min": 50.6,
+        "max": 69.2,
+        "mean": 64.19
+      }
+    },
+    "LAMPUNG|Padi": {
+      "curah_hujan_mm": {
+        "min": 560.3,
+        "max": 2710.0,
+        "mean": 1720.68
+      },
+      "hari_hujan": {
+        "min": 54.0,
+        "max": 198.0,
+        "mean": 113.94
+      },
+      "suhu_rata_c": {
+        "min": 25.8,
+        "max": 29.67,
+        "mean": 27.28
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.4,
+        "max": 1012.1,
+        "mean": 1011.0
+      },
+      "penyinaran_matahari_pct": {
+        "min": 50.6,
+        "max": 69.2,
+        "mean": 64.19
+      }
+    },
+    "LAMPUNG|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 560.3,
+        "max": 2710.0,
+        "mean": 1720.68
+      },
+      "hari_hujan": {
+        "min": 54.0,
+        "max": 198.0,
+        "mean": 113.94
+      },
+      "suhu_rata_c": {
+        "min": 25.8,
+        "max": 29.67,
+        "mean": 27.28
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.4,
+        "max": 1012.1,
+        "mean": 1011.0
+      },
+      "penyinaran_matahari_pct": {
+        "min": 50.6,
+        "max": 69.2,
+        "mean": 64.19
+      }
+    },
+    "LAMPUNG|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 560.3,
+        "max": 2710.0,
+        "mean": 1720.68
+      },
+      "hari_hujan": {
+        "min": 54.0,
+        "max": 198.0,
+        "mean": 113.94
+      },
+      "suhu_rata_c": {
+        "min": 25.8,
+        "max": 29.67,
+        "mean": 27.28
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.4,
+        "max": 1012.1,
+        "mean": 1011.0
+      },
+      "penyinaran_matahari_pct": {
+        "min": 50.6,
+        "max": 69.2,
+        "mean": 64.19
+      }
+    },
+    "MALUKU|Jagung": {
+      "curah_hujan_mm": {
+        "min": 202.0,
+        "max": 4614.74,
+        "mean": 2772.95
+      },
+      "hari_hujan": {
+        "min": 117.0,
+        "max": 273.0,
+        "mean": 180.22
+      },
+      "suhu_rata_c": {
+        "min": 25.72,
+        "max": 29.13,
+        "mean": 27.05
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.2,
+        "max": 1013.09,
+        "mean": 1010.32
+      },
+      "penyinaran_matahari_pct": {
+        "min": 46.4,
+        "max": 66.52,
+        "mean": 56.68
+      }
+    },
+    "MALUKU|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 202.0,
+        "max": 4614.74,
+        "mean": 2772.95
+      },
+      "hari_hujan": {
+        "min": 117.0,
+        "max": 273.0,
+        "mean": 180.22
+      },
+      "suhu_rata_c": {
+        "min": 25.72,
+        "max": 29.13,
+        "mean": 27.05
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.2,
+        "max": 1013.09,
+        "mean": 1010.32
+      },
+      "penyinaran_matahari_pct": {
+        "min": 46.4,
+        "max": 66.52,
+        "mean": 56.68
+      }
+    },
+    "MALUKU|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 202.0,
+        "max": 4614.74,
+        "mean": 2772.95
+      },
+      "hari_hujan": {
+        "min": 117.0,
+        "max": 273.0,
+        "mean": 180.22
+      },
+      "suhu_rata_c": {
+        "min": 25.72,
+        "max": 29.13,
+        "mean": 27.05
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.2,
+        "max": 1013.09,
+        "mean": 1010.32
+      },
+      "penyinaran_matahari_pct": {
+        "min": 46.4,
+        "max": 66.52,
+        "mean": 56.68
+      }
+    },
+    "MALUKU|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 202.0,
+        "max": 4614.74,
+        "mean": 2772.95
+      },
+      "hari_hujan": {
+        "min": 117.0,
+        "max": 273.0,
+        "mean": 180.22
+      },
+      "suhu_rata_c": {
+        "min": 25.72,
+        "max": 29.13,
+        "mean": 27.05
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.2,
+        "max": 1013.09,
+        "mean": 1010.32
+      },
+      "penyinaran_matahari_pct": {
+        "min": 46.4,
+        "max": 66.52,
+        "mean": 56.68
+      }
+    },
+    "MALUKU|Padi": {
+      "curah_hujan_mm": {
+        "min": 202.0,
+        "max": 4614.74,
+        "mean": 2772.95
+      },
+      "hari_hujan": {
+        "min": 117.0,
+        "max": 273.0,
+        "mean": 180.22
+      },
+      "suhu_rata_c": {
+        "min": 25.72,
+        "max": 29.13,
+        "mean": 27.05
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.2,
+        "max": 1013.09,
+        "mean": 1010.32
+      },
+      "penyinaran_matahari_pct": {
+        "min": 46.4,
+        "max": 66.52,
+        "mean": 56.68
+      }
+    },
+    "MALUKU|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 202.0,
+        "max": 4614.74,
+        "mean": 2772.95
+      },
+      "hari_hujan": {
+        "min": 117.0,
+        "max": 273.0,
+        "mean": 180.22
+      },
+      "suhu_rata_c": {
+        "min": 25.72,
+        "max": 29.13,
+        "mean": 27.05
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.2,
+        "max": 1013.09,
+        "mean": 1010.32
+      },
+      "penyinaran_matahari_pct": {
+        "min": 46.4,
+        "max": 66.52,
+        "mean": 56.68
+      }
+    },
+    "MALUKU|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 202.0,
+        "max": 4614.74,
+        "mean": 2772.95
+      },
+      "hari_hujan": {
+        "min": 117.0,
+        "max": 273.0,
+        "mean": 180.22
+      },
+      "suhu_rata_c": {
+        "min": 25.72,
+        "max": 29.13,
+        "mean": 27.05
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.2,
+        "max": 1013.09,
+        "mean": 1010.32
+      },
+      "penyinaran_matahari_pct": {
+        "min": 46.4,
+        "max": 66.52,
+        "mean": 56.68
+      }
+    },
+    "MALUKU UTARA|Jagung": {
+      "curah_hujan_mm": {
+        "min": 913.4,
+        "max": 2962.0,
+        "mean": 2094.62
+      },
+      "hari_hujan": {
+        "min": 75.0,
+        "max": 255.0,
+        "mean": 150.69
+      },
+      "suhu_rata_c": {
+        "min": 26.6,
+        "max": 28.7,
+        "mean": 27.39
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.69,
+        "max": 1013.0,
+        "mean": 1010.63
+      },
+      "penyinaran_matahari_pct": {
+        "min": 49.8,
+        "max": 84.07,
+        "mean": 61.58
+      }
+    },
+    "MALUKU UTARA|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 913.4,
+        "max": 2962.0,
+        "mean": 2094.62
+      },
+      "hari_hujan": {
+        "min": 75.0,
+        "max": 255.0,
+        "mean": 150.69
+      },
+      "suhu_rata_c": {
+        "min": 26.6,
+        "max": 28.7,
+        "mean": 27.39
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.69,
+        "max": 1013.0,
+        "mean": 1010.63
+      },
+      "penyinaran_matahari_pct": {
+        "min": 49.8,
+        "max": 84.07,
+        "mean": 61.58
+      }
+    },
+    "MALUKU UTARA|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 913.4,
+        "max": 2962.0,
+        "mean": 2094.62
+      },
+      "hari_hujan": {
+        "min": 75.0,
+        "max": 255.0,
+        "mean": 150.69
+      },
+      "suhu_rata_c": {
+        "min": 26.6,
+        "max": 28.7,
+        "mean": 27.39
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.69,
+        "max": 1013.0,
+        "mean": 1010.63
+      },
+      "penyinaran_matahari_pct": {
+        "min": 49.8,
+        "max": 84.07,
+        "mean": 61.58
+      }
+    },
+    "MALUKU UTARA|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 913.4,
+        "max": 2962.0,
+        "mean": 2094.62
+      },
+      "hari_hujan": {
+        "min": 75.0,
+        "max": 255.0,
+        "mean": 150.69
+      },
+      "suhu_rata_c": {
+        "min": 26.6,
+        "max": 28.7,
+        "mean": 27.39
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.69,
+        "max": 1013.0,
+        "mean": 1010.63
+      },
+      "penyinaran_matahari_pct": {
+        "min": 49.8,
+        "max": 84.07,
+        "mean": 61.58
+      }
+    },
+    "MALUKU UTARA|Padi": {
+      "curah_hujan_mm": {
+        "min": 913.4,
+        "max": 2962.0,
+        "mean": 2094.62
+      },
+      "hari_hujan": {
+        "min": 75.0,
+        "max": 255.0,
+        "mean": 150.69
+      },
+      "suhu_rata_c": {
+        "min": 26.6,
+        "max": 28.7,
+        "mean": 27.39
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.69,
+        "max": 1013.0,
+        "mean": 1010.63
+      },
+      "penyinaran_matahari_pct": {
+        "min": 49.8,
+        "max": 84.07,
+        "mean": 61.58
+      }
+    },
+    "MALUKU UTARA|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 913.4,
+        "max": 2962.0,
+        "mean": 2094.62
+      },
+      "hari_hujan": {
+        "min": 75.0,
+        "max": 255.0,
+        "mean": 150.69
+      },
+      "suhu_rata_c": {
+        "min": 26.6,
+        "max": 28.7,
+        "mean": 27.39
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.69,
+        "max": 1013.0,
+        "mean": 1010.63
+      },
+      "penyinaran_matahari_pct": {
+        "min": 49.8,
+        "max": 84.07,
+        "mean": 61.58
+      }
+    },
+    "MALUKU UTARA|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 913.4,
+        "max": 2962.0,
+        "mean": 2094.62
+      },
+      "hari_hujan": {
+        "min": 75.0,
+        "max": 255.0,
+        "mean": 150.69
+      },
+      "suhu_rata_c": {
+        "min": 26.6,
+        "max": 28.7,
+        "mean": 27.39
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.69,
+        "max": 1013.0,
+        "mean": 1010.63
+      },
+      "penyinaran_matahari_pct": {
+        "min": 49.8,
+        "max": 84.07,
+        "mean": 61.58
+      }
+    },
+    "NUSA TENGGARA BARAT|Jagung": {
+      "curah_hujan_mm": {
+        "min": 104.7,
+        "max": 2643.0,
+        "mean": 1502.8
+      },
+      "hari_hujan": {
+        "min": 25.0,
+        "max": 220.0,
+        "mean": 100.09
+      },
+      "suhu_rata_c": {
+        "min": 25.8,
+        "max": 30.09,
+        "mean": 27.55
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1013.09,
+        "mean": 1010.3
+      },
+      "penyinaran_matahari_pct": {
+        "min": 63.9,
+        "max": 84.99,
+        "mean": 71.76
+      }
+    },
+    "NUSA TENGGARA BARAT|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 104.7,
+        "max": 2643.0,
+        "mean": 1502.8
+      },
+      "hari_hujan": {
+        "min": 25.0,
+        "max": 220.0,
+        "mean": 100.09
+      },
+      "suhu_rata_c": {
+        "min": 25.8,
+        "max": 30.09,
+        "mean": 27.55
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1013.09,
+        "mean": 1010.3
+      },
+      "penyinaran_matahari_pct": {
+        "min": 63.9,
+        "max": 84.99,
+        "mean": 71.76
+      }
+    },
+    "NUSA TENGGARA BARAT|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 104.7,
+        "max": 2643.0,
+        "mean": 1502.8
+      },
+      "hari_hujan": {
+        "min": 25.0,
+        "max": 220.0,
+        "mean": 100.09
+      },
+      "suhu_rata_c": {
+        "min": 25.8,
+        "max": 30.09,
+        "mean": 27.55
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1013.09,
+        "mean": 1010.3
+      },
+      "penyinaran_matahari_pct": {
+        "min": 63.9,
+        "max": 84.99,
+        "mean": 71.76
+      }
+    },
+    "NUSA TENGGARA BARAT|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 104.7,
+        "max": 2643.0,
+        "mean": 1502.8
+      },
+      "hari_hujan": {
+        "min": 25.0,
+        "max": 220.0,
+        "mean": 100.09
+      },
+      "suhu_rata_c": {
+        "min": 25.8,
+        "max": 30.09,
+        "mean": 27.55
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1013.09,
+        "mean": 1010.3
+      },
+      "penyinaran_matahari_pct": {
+        "min": 63.9,
+        "max": 84.99,
+        "mean": 71.76
+      }
+    },
+    "NUSA TENGGARA BARAT|Padi": {
+      "curah_hujan_mm": {
+        "min": 104.7,
+        "max": 2643.0,
+        "mean": 1502.8
+      },
+      "hari_hujan": {
+        "min": 25.0,
+        "max": 220.0,
+        "mean": 100.09
+      },
+      "suhu_rata_c": {
+        "min": 25.8,
+        "max": 30.09,
+        "mean": 27.55
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1013.09,
+        "mean": 1010.3
+      },
+      "penyinaran_matahari_pct": {
+        "min": 63.9,
+        "max": 84.99,
+        "mean": 71.76
+      }
+    },
+    "NUSA TENGGARA BARAT|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 104.7,
+        "max": 2643.0,
+        "mean": 1502.8
+      },
+      "hari_hujan": {
+        "min": 25.0,
+        "max": 220.0,
+        "mean": 100.09
+      },
+      "suhu_rata_c": {
+        "min": 25.8,
+        "max": 30.09,
+        "mean": 27.55
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1013.09,
+        "mean": 1010.3
+      },
+      "penyinaran_matahari_pct": {
+        "min": 63.9,
+        "max": 84.99,
+        "mean": 71.76
+      }
+    },
+    "NUSA TENGGARA BARAT|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 104.7,
+        "max": 2643.0,
+        "mean": 1502.8
+      },
+      "hari_hujan": {
+        "min": 25.0,
+        "max": 220.0,
+        "mean": 100.09
+      },
+      "suhu_rata_c": {
+        "min": 25.8,
+        "max": 30.09,
+        "mean": 27.55
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1013.09,
+        "mean": 1010.3
+      },
+      "penyinaran_matahari_pct": {
+        "min": 63.9,
+        "max": 84.99,
+        "mean": 71.76
+      }
+    },
+    "NUSA TENGGARA TIMUR|Jagung": {
+      "curah_hujan_mm": {
+        "min": 476.3,
+        "max": 3077.8,
+        "mean": 1517.13
+      },
+      "hari_hujan": {
+        "min": 82.0,
+        "max": 140.0,
+        "mean": 106.94
+      },
+      "suhu_rata_c": {
+        "min": 27.0,
+        "max": 29.13,
+        "mean": 27.58
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.1,
+        "max": 1011.0,
+        "mean": 1009.98
+      },
+      "penyinaran_matahari_pct": {
+        "min": 69.8,
+        "max": 84.0,
+        "mean": 78.7
+      }
+    },
+    "NUSA TENGGARA TIMUR|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 476.3,
+        "max": 3077.8,
+        "mean": 1517.13
+      },
+      "hari_hujan": {
+        "min": 82.0,
+        "max": 140.0,
+        "mean": 106.94
+      },
+      "suhu_rata_c": {
+        "min": 27.0,
+        "max": 29.13,
+        "mean": 27.58
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.1,
+        "max": 1011.0,
+        "mean": 1009.98
+      },
+      "penyinaran_matahari_pct": {
+        "min": 69.8,
+        "max": 84.0,
+        "mean": 78.7
+      }
+    },
+    "NUSA TENGGARA TIMUR|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 476.3,
+        "max": 3077.8,
+        "mean": 1517.13
+      },
+      "hari_hujan": {
+        "min": 82.0,
+        "max": 140.0,
+        "mean": 106.94
+      },
+      "suhu_rata_c": {
+        "min": 27.0,
+        "max": 29.13,
+        "mean": 27.58
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.1,
+        "max": 1011.0,
+        "mean": 1009.98
+      },
+      "penyinaran_matahari_pct": {
+        "min": 69.8,
+        "max": 84.0,
+        "mean": 78.7
+      }
+    },
+    "NUSA TENGGARA TIMUR|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 476.3,
+        "max": 3077.8,
+        "mean": 1517.13
+      },
+      "hari_hujan": {
+        "min": 82.0,
+        "max": 140.0,
+        "mean": 106.94
+      },
+      "suhu_rata_c": {
+        "min": 27.0,
+        "max": 29.13,
+        "mean": 27.58
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.1,
+        "max": 1011.0,
+        "mean": 1009.98
+      },
+      "penyinaran_matahari_pct": {
+        "min": 69.8,
+        "max": 84.0,
+        "mean": 78.7
+      }
+    },
+    "NUSA TENGGARA TIMUR|Padi": {
+      "curah_hujan_mm": {
+        "min": 476.3,
+        "max": 3077.8,
+        "mean": 1517.13
+      },
+      "hari_hujan": {
+        "min": 82.0,
+        "max": 140.0,
+        "mean": 106.94
+      },
+      "suhu_rata_c": {
+        "min": 27.0,
+        "max": 29.13,
+        "mean": 27.58
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.1,
+        "max": 1011.0,
+        "mean": 1009.98
+      },
+      "penyinaran_matahari_pct": {
+        "min": 69.8,
+        "max": 84.0,
+        "mean": 78.7
+      }
+    },
+    "NUSA TENGGARA TIMUR|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 476.3,
+        "max": 3077.8,
+        "mean": 1517.13
+      },
+      "hari_hujan": {
+        "min": 82.0,
+        "max": 140.0,
+        "mean": 106.94
+      },
+      "suhu_rata_c": {
+        "min": 27.0,
+        "max": 29.13,
+        "mean": 27.58
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.1,
+        "max": 1011.0,
+        "mean": 1009.98
+      },
+      "penyinaran_matahari_pct": {
+        "min": 69.8,
+        "max": 84.0,
+        "mean": 78.7
+      }
+    },
+    "NUSA TENGGARA TIMUR|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 476.3,
+        "max": 3077.8,
+        "mean": 1517.13
+      },
+      "hari_hujan": {
+        "min": 82.0,
+        "max": 140.0,
+        "mean": 106.94
+      },
+      "suhu_rata_c": {
+        "min": 27.0,
+        "max": 29.13,
+        "mean": 27.58
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.1,
+        "max": 1011.0,
+        "mean": 1009.98
+      },
+      "penyinaran_matahari_pct": {
+        "min": 69.8,
+        "max": 84.0,
+        "mean": 78.7
+      }
+    },
+    "PAPUA|Jagung": {
+      "curah_hujan_mm": {
+        "min": 708.4,
+        "max": 4033.0,
+        "mean": 1963.54
+      },
+      "hari_hujan": {
+        "min": 25.0,
+        "max": 251.0,
+        "mean": 125.62
+      },
+      "suhu_rata_c": {
+        "min": 27.0,
+        "max": 28.49,
+        "mean": 27.68
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.6,
+        "max": 1011.1,
+        "mean": 1008.85
+      },
+      "penyinaran_matahari_pct": {
+        "min": 43.4,
+        "max": 64.47,
+        "mean": 55.06
+      }
+    },
+    "PAPUA|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 708.4,
+        "max": 4033.0,
+        "mean": 1963.54
+      },
+      "hari_hujan": {
+        "min": 25.0,
+        "max": 251.0,
+        "mean": 125.62
+      },
+      "suhu_rata_c": {
+        "min": 27.0,
+        "max": 28.49,
+        "mean": 27.68
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.6,
+        "max": 1011.1,
+        "mean": 1008.85
+      },
+      "penyinaran_matahari_pct": {
+        "min": 43.4,
+        "max": 64.47,
+        "mean": 55.06
+      }
+    },
+    "PAPUA|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 708.4,
+        "max": 4033.0,
+        "mean": 1963.54
+      },
+      "hari_hujan": {
+        "min": 25.0,
+        "max": 251.0,
+        "mean": 125.62
+      },
+      "suhu_rata_c": {
+        "min": 27.0,
+        "max": 28.49,
+        "mean": 27.68
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.6,
+        "max": 1011.1,
+        "mean": 1008.85
+      },
+      "penyinaran_matahari_pct": {
+        "min": 43.4,
+        "max": 64.47,
+        "mean": 55.06
+      }
+    },
+    "PAPUA|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 708.4,
+        "max": 4033.0,
+        "mean": 1963.54
+      },
+      "hari_hujan": {
+        "min": 25.0,
+        "max": 251.0,
+        "mean": 125.62
+      },
+      "suhu_rata_c": {
+        "min": 27.0,
+        "max": 28.49,
+        "mean": 27.68
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.6,
+        "max": 1011.1,
+        "mean": 1008.85
+      },
+      "penyinaran_matahari_pct": {
+        "min": 43.4,
+        "max": 64.47,
+        "mean": 55.06
+      }
+    },
+    "PAPUA|Padi": {
+      "curah_hujan_mm": {
+        "min": 708.4,
+        "max": 4033.0,
+        "mean": 1963.54
+      },
+      "hari_hujan": {
+        "min": 25.0,
+        "max": 251.0,
+        "mean": 125.62
+      },
+      "suhu_rata_c": {
+        "min": 27.0,
+        "max": 28.49,
+        "mean": 27.68
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.6,
+        "max": 1011.1,
+        "mean": 1008.85
+      },
+      "penyinaran_matahari_pct": {
+        "min": 43.4,
+        "max": 64.47,
+        "mean": 55.06
+      }
+    },
+    "PAPUA|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 708.4,
+        "max": 4033.0,
+        "mean": 1963.54
+      },
+      "hari_hujan": {
+        "min": 25.0,
+        "max": 251.0,
+        "mean": 125.62
+      },
+      "suhu_rata_c": {
+        "min": 27.0,
+        "max": 28.49,
+        "mean": 27.68
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.6,
+        "max": 1011.1,
+        "mean": 1008.85
+      },
+      "penyinaran_matahari_pct": {
+        "min": 43.4,
+        "max": 64.47,
+        "mean": 55.06
+      }
+    },
+    "PAPUA|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 708.4,
+        "max": 4033.0,
+        "mean": 1963.54
+      },
+      "hari_hujan": {
+        "min": 25.0,
+        "max": 251.0,
+        "mean": 125.62
+      },
+      "suhu_rata_c": {
+        "min": 27.0,
+        "max": 28.49,
+        "mean": 27.68
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.6,
+        "max": 1011.1,
+        "mean": 1008.85
+      },
+      "penyinaran_matahari_pct": {
+        "min": 43.4,
+        "max": 64.47,
+        "mean": 55.06
+      }
+    },
+    "PAPUA BARAT|Jagung": {
+      "curah_hujan_mm": {
+        "min": 45.1,
+        "max": 3419.1,
+        "mean": 2022.53
+      },
+      "hari_hujan": {
+        "min": 18.0,
+        "max": 256.0,
+        "mean": 133.44
+      },
+      "suhu_rata_c": {
+        "min": 27.1,
+        "max": 28.25,
+        "mean": 27.62
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1011.5,
+        "mean": 1009.03
+      },
+      "penyinaran_matahari_pct": {
+        "min": 35.0,
+        "max": 61.8,
+        "mean": 44.96
+      }
+    },
+    "PAPUA BARAT|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 45.1,
+        "max": 3419.1,
+        "mean": 2022.53
+      },
+      "hari_hujan": {
+        "min": 18.0,
+        "max": 256.0,
+        "mean": 133.44
+      },
+      "suhu_rata_c": {
+        "min": 27.1,
+        "max": 28.25,
+        "mean": 27.62
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1011.5,
+        "mean": 1009.03
+      },
+      "penyinaran_matahari_pct": {
+        "min": 35.0,
+        "max": 61.8,
+        "mean": 44.96
+      }
+    },
+    "PAPUA BARAT|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 45.1,
+        "max": 3419.1,
+        "mean": 2022.53
+      },
+      "hari_hujan": {
+        "min": 18.0,
+        "max": 256.0,
+        "mean": 133.44
+      },
+      "suhu_rata_c": {
+        "min": 27.1,
+        "max": 28.25,
+        "mean": 27.62
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1011.5,
+        "mean": 1009.03
+      },
+      "penyinaran_matahari_pct": {
+        "min": 35.0,
+        "max": 61.8,
+        "mean": 44.96
+      }
+    },
+    "PAPUA BARAT|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 45.1,
+        "max": 3419.1,
+        "mean": 2022.53
+      },
+      "hari_hujan": {
+        "min": 18.0,
+        "max": 256.0,
+        "mean": 133.44
+      },
+      "suhu_rata_c": {
+        "min": 27.1,
+        "max": 28.25,
+        "mean": 27.62
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1011.5,
+        "mean": 1009.03
+      },
+      "penyinaran_matahari_pct": {
+        "min": 35.0,
+        "max": 61.8,
+        "mean": 44.96
+      }
+    },
+    "PAPUA BARAT|Padi": {
+      "curah_hujan_mm": {
+        "min": 45.1,
+        "max": 3419.1,
+        "mean": 2022.53
+      },
+      "hari_hujan": {
+        "min": 18.0,
+        "max": 256.0,
+        "mean": 133.44
+      },
+      "suhu_rata_c": {
+        "min": 27.1,
+        "max": 28.25,
+        "mean": 27.62
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1011.5,
+        "mean": 1009.03
+      },
+      "penyinaran_matahari_pct": {
+        "min": 35.0,
+        "max": 61.8,
+        "mean": 44.96
+      }
+    },
+    "PAPUA BARAT|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 45.1,
+        "max": 3419.1,
+        "mean": 2022.53
+      },
+      "hari_hujan": {
+        "min": 18.0,
+        "max": 256.0,
+        "mean": 133.44
+      },
+      "suhu_rata_c": {
+        "min": 27.1,
+        "max": 28.25,
+        "mean": 27.62
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1011.5,
+        "mean": 1009.03
+      },
+      "penyinaran_matahari_pct": {
+        "min": 35.0,
+        "max": 61.8,
+        "mean": 44.96
+      }
+    },
+    "PAPUA BARAT|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 45.1,
+        "max": 3419.1,
+        "mean": 2022.53
+      },
+      "hari_hujan": {
+        "min": 18.0,
+        "max": 256.0,
+        "mean": 133.44
+      },
+      "suhu_rata_c": {
+        "min": 27.1,
+        "max": 28.25,
+        "mean": 27.62
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1011.5,
+        "mean": 1009.03
+      },
+      "penyinaran_matahari_pct": {
+        "min": 35.0,
+        "max": 61.8,
+        "mean": 44.96
+      }
+    },
+    "RIAU|Jagung": {
+      "curah_hujan_mm": {
+        "min": 537.6,
+        "max": 3822.8,
+        "mean": 2613.26
+      },
+      "hari_hujan": {
+        "min": 33.0,
+        "max": 235.0,
+        "mean": 127.38
+      },
+      "suhu_rata_c": {
+        "min": 26.0,
+        "max": 29.85,
+        "mean": 27.93
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1011.36,
+        "mean": 1009.38
+      },
+      "penyinaran_matahari_pct": {
+        "min": 40.8,
+        "max": 53.6,
+        "mean": 47.48
+      }
+    },
+    "RIAU|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 537.6,
+        "max": 3822.8,
+        "mean": 2613.26
+      },
+      "hari_hujan": {
+        "min": 33.0,
+        "max": 235.0,
+        "mean": 127.38
+      },
+      "suhu_rata_c": {
+        "min": 26.0,
+        "max": 29.85,
+        "mean": 27.93
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1011.36,
+        "mean": 1009.38
+      },
+      "penyinaran_matahari_pct": {
+        "min": 40.8,
+        "max": 53.6,
+        "mean": 47.48
+      }
+    },
+    "RIAU|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 537.6,
+        "max": 3822.8,
+        "mean": 2613.26
+      },
+      "hari_hujan": {
+        "min": 33.0,
+        "max": 235.0,
+        "mean": 127.38
+      },
+      "suhu_rata_c": {
+        "min": 26.0,
+        "max": 29.85,
+        "mean": 27.93
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1011.36,
+        "mean": 1009.38
+      },
+      "penyinaran_matahari_pct": {
+        "min": 40.8,
+        "max": 53.6,
+        "mean": 47.48
+      }
+    },
+    "RIAU|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 537.6,
+        "max": 3822.8,
+        "mean": 2613.26
+      },
+      "hari_hujan": {
+        "min": 33.0,
+        "max": 235.0,
+        "mean": 127.38
+      },
+      "suhu_rata_c": {
+        "min": 26.0,
+        "max": 29.85,
+        "mean": 27.93
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1011.36,
+        "mean": 1009.38
+      },
+      "penyinaran_matahari_pct": {
+        "min": 40.8,
+        "max": 53.6,
+        "mean": 47.48
+      }
+    },
+    "RIAU|Padi": {
+      "curah_hujan_mm": {
+        "min": 537.6,
+        "max": 3822.8,
+        "mean": 2613.26
+      },
+      "hari_hujan": {
+        "min": 33.0,
+        "max": 235.0,
+        "mean": 127.38
+      },
+      "suhu_rata_c": {
+        "min": 26.0,
+        "max": 29.85,
+        "mean": 27.93
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1011.36,
+        "mean": 1009.38
+      },
+      "penyinaran_matahari_pct": {
+        "min": 40.8,
+        "max": 53.6,
+        "mean": 47.48
+      }
+    },
+    "RIAU|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 537.6,
+        "max": 3822.8,
+        "mean": 2613.26
+      },
+      "hari_hujan": {
+        "min": 33.0,
+        "max": 235.0,
+        "mean": 127.38
+      },
+      "suhu_rata_c": {
+        "min": 26.0,
+        "max": 29.85,
+        "mean": 27.93
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1011.36,
+        "mean": 1009.38
+      },
+      "penyinaran_matahari_pct": {
+        "min": 40.8,
+        "max": 53.6,
+        "mean": 47.48
+      }
+    },
+    "RIAU|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 537.6,
+        "max": 3822.8,
+        "mean": 2613.26
+      },
+      "hari_hujan": {
+        "min": 33.0,
+        "max": 235.0,
+        "mean": 127.38
+      },
+      "suhu_rata_c": {
+        "min": 26.0,
+        "max": 29.85,
+        "mean": 27.93
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1011.36,
+        "mean": 1009.38
+      },
+      "penyinaran_matahari_pct": {
+        "min": 40.8,
+        "max": 53.6,
+        "mean": 47.48
+      }
+    },
+    "SULAWESI BARAT|Jagung": {
+      "curah_hujan_mm": {
+        "min": 1087.0,
+        "max": 2559.0,
+        "mean": 1699.32
+      },
+      "hari_hujan": {
+        "min": 93.0,
+        "max": 250.0,
+        "mean": 187.31
+      },
+      "suhu_rata_c": {
+        "min": 27.1,
+        "max": 29.46,
+        "mean": 28.23
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1012.5,
+        "mean": 1009.93
+      },
+      "penyinaran_matahari_pct": {
+        "min": 59.8,
+        "max": 78.0,
+        "mean": 71.94
+      }
+    },
+    "SULAWESI BARAT|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 1087.0,
+        "max": 2559.0,
+        "mean": 1699.32
+      },
+      "hari_hujan": {
+        "min": 93.0,
+        "max": 250.0,
+        "mean": 187.31
+      },
+      "suhu_rata_c": {
+        "min": 27.1,
+        "max": 29.46,
+        "mean": 28.23
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1012.5,
+        "mean": 1009.93
+      },
+      "penyinaran_matahari_pct": {
+        "min": 59.8,
+        "max": 78.0,
+        "mean": 71.94
+      }
+    },
+    "SULAWESI BARAT|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 1087.0,
+        "max": 2559.0,
+        "mean": 1699.32
+      },
+      "hari_hujan": {
+        "min": 93.0,
+        "max": 250.0,
+        "mean": 187.31
+      },
+      "suhu_rata_c": {
+        "min": 27.1,
+        "max": 29.46,
+        "mean": 28.23
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1012.5,
+        "mean": 1009.93
+      },
+      "penyinaran_matahari_pct": {
+        "min": 59.8,
+        "max": 78.0,
+        "mean": 71.94
+      }
+    },
+    "SULAWESI BARAT|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 1087.0,
+        "max": 2559.0,
+        "mean": 1699.32
+      },
+      "hari_hujan": {
+        "min": 93.0,
+        "max": 250.0,
+        "mean": 187.31
+      },
+      "suhu_rata_c": {
+        "min": 27.1,
+        "max": 29.46,
+        "mean": 28.23
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1012.5,
+        "mean": 1009.93
+      },
+      "penyinaran_matahari_pct": {
+        "min": 59.8,
+        "max": 78.0,
+        "mean": 71.94
+      }
+    },
+    "SULAWESI BARAT|Padi": {
+      "curah_hujan_mm": {
+        "min": 1087.0,
+        "max": 2559.0,
+        "mean": 1699.32
+      },
+      "hari_hujan": {
+        "min": 93.0,
+        "max": 250.0,
+        "mean": 187.31
+      },
+      "suhu_rata_c": {
+        "min": 27.1,
+        "max": 29.46,
+        "mean": 28.23
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1012.5,
+        "mean": 1009.93
+      },
+      "penyinaran_matahari_pct": {
+        "min": 59.8,
+        "max": 78.0,
+        "mean": 71.94
+      }
+    },
+    "SULAWESI BARAT|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 1087.0,
+        "max": 2559.0,
+        "mean": 1699.32
+      },
+      "hari_hujan": {
+        "min": 93.0,
+        "max": 250.0,
+        "mean": 187.31
+      },
+      "suhu_rata_c": {
+        "min": 27.1,
+        "max": 29.46,
+        "mean": 28.23
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1012.5,
+        "mean": 1009.93
+      },
+      "penyinaran_matahari_pct": {
+        "min": 59.8,
+        "max": 78.0,
+        "mean": 71.94
+      }
+    },
+    "SULAWESI BARAT|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 1087.0,
+        "max": 2559.0,
+        "mean": 1699.32
+      },
+      "hari_hujan": {
+        "min": 93.0,
+        "max": 250.0,
+        "mean": 187.31
+      },
+      "suhu_rata_c": {
+        "min": 27.1,
+        "max": 29.46,
+        "mean": 28.23
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1012.5,
+        "mean": 1009.93
+      },
+      "penyinaran_matahari_pct": {
+        "min": 59.8,
+        "max": 78.0,
+        "mean": 71.94
+      }
+    },
+    "SULAWESI SELATAN|Jagung": {
+      "curah_hujan_mm": {
+        "min": 2195.0,
+        "max": 3973.0,
+        "mean": 2813.33
+      },
+      "hari_hujan": {
+        "min": 88.0,
+        "max": 223.0,
+        "mean": 144.94
+      },
+      "suhu_rata_c": {
+        "min": 26.8,
+        "max": 29.35,
+        "mean": 27.48
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.62,
+        "max": 1013.09,
+        "mean": 1010.88
+      },
+      "penyinaran_matahari_pct": {
+        "min": 56.0,
+        "max": 71.8,
+        "mean": 66.95
+      }
+    },
+    "SULAWESI SELATAN|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 2195.0,
+        "max": 3973.0,
+        "mean": 2813.33
+      },
+      "hari_hujan": {
+        "min": 88.0,
+        "max": 223.0,
+        "mean": 144.94
+      },
+      "suhu_rata_c": {
+        "min": 26.8,
+        "max": 29.35,
+        "mean": 27.48
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.62,
+        "max": 1013.09,
+        "mean": 1010.88
+      },
+      "penyinaran_matahari_pct": {
+        "min": 56.0,
+        "max": 71.8,
+        "mean": 66.95
+      }
+    },
+    "SULAWESI SELATAN|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 2195.0,
+        "max": 3973.0,
+        "mean": 2813.33
+      },
+      "hari_hujan": {
+        "min": 88.0,
+        "max": 223.0,
+        "mean": 144.94
+      },
+      "suhu_rata_c": {
+        "min": 26.8,
+        "max": 29.35,
+        "mean": 27.48
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.62,
+        "max": 1013.09,
+        "mean": 1010.88
+      },
+      "penyinaran_matahari_pct": {
+        "min": 56.0,
+        "max": 71.8,
+        "mean": 66.95
+      }
+    },
+    "SULAWESI SELATAN|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 2195.0,
+        "max": 3973.0,
+        "mean": 2813.33
+      },
+      "hari_hujan": {
+        "min": 88.0,
+        "max": 223.0,
+        "mean": 144.94
+      },
+      "suhu_rata_c": {
+        "min": 26.8,
+        "max": 29.35,
+        "mean": 27.48
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.62,
+        "max": 1013.09,
+        "mean": 1010.88
+      },
+      "penyinaran_matahari_pct": {
+        "min": 56.0,
+        "max": 71.8,
+        "mean": 66.95
+      }
+    },
+    "SULAWESI SELATAN|Padi": {
+      "curah_hujan_mm": {
+        "min": 2195.0,
+        "max": 3973.0,
+        "mean": 2813.33
+      },
+      "hari_hujan": {
+        "min": 88.0,
+        "max": 223.0,
+        "mean": 144.94
+      },
+      "suhu_rata_c": {
+        "min": 26.8,
+        "max": 29.35,
+        "mean": 27.48
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.62,
+        "max": 1013.09,
+        "mean": 1010.88
+      },
+      "penyinaran_matahari_pct": {
+        "min": 56.0,
+        "max": 71.8,
+        "mean": 66.95
+      }
+    },
+    "SULAWESI SELATAN|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 2195.0,
+        "max": 3973.0,
+        "mean": 2813.33
+      },
+      "hari_hujan": {
+        "min": 88.0,
+        "max": 223.0,
+        "mean": 144.94
+      },
+      "suhu_rata_c": {
+        "min": 26.8,
+        "max": 29.35,
+        "mean": 27.48
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.62,
+        "max": 1013.09,
+        "mean": 1010.88
+      },
+      "penyinaran_matahari_pct": {
+        "min": 56.0,
+        "max": 71.8,
+        "mean": 66.95
+      }
+    },
+    "SULAWESI SELATAN|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 2195.0,
+        "max": 3973.0,
+        "mean": 2813.33
+      },
+      "hari_hujan": {
+        "min": 88.0,
+        "max": 223.0,
+        "mean": 144.94
+      },
+      "suhu_rata_c": {
+        "min": 26.8,
+        "max": 29.35,
+        "mean": 27.48
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.62,
+        "max": 1013.09,
+        "mean": 1010.88
+      },
+      "penyinaran_matahari_pct": {
+        "min": 56.0,
+        "max": 71.8,
+        "mean": 66.95
+      }
+    },
+    "SULAWESI TENGAH|Jagung": {
+      "curah_hujan_mm": {
+        "min": 460.9,
+        "max": 1178.0,
+        "mean": 872.87
+      },
+      "hari_hujan": {
+        "min": 68.0,
+        "max": 238.0,
+        "mean": 159.62
+      },
+      "suhu_rata_c": {
+        "min": 25.2,
+        "max": 29.62,
+        "mean": 27.73
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.9,
+        "max": 1011.9,
+        "mean": 1010.7
+      },
+      "penyinaran_matahari_pct": {
+        "min": 54.3,
+        "max": 79.12,
+        "mean": 63.11
+      }
+    },
+    "SULAWESI TENGAH|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 460.9,
+        "max": 1178.0,
+        "mean": 872.87
+      },
+      "hari_hujan": {
+        "min": 68.0,
+        "max": 238.0,
+        "mean": 159.62
+      },
+      "suhu_rata_c": {
+        "min": 25.2,
+        "max": 29.62,
+        "mean": 27.73
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.9,
+        "max": 1011.9,
+        "mean": 1010.7
+      },
+      "penyinaran_matahari_pct": {
+        "min": 54.3,
+        "max": 79.12,
+        "mean": 63.11
+      }
+    },
+    "SULAWESI TENGAH|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 460.9,
+        "max": 1178.0,
+        "mean": 872.87
+      },
+      "hari_hujan": {
+        "min": 68.0,
+        "max": 238.0,
+        "mean": 159.62
+      },
+      "suhu_rata_c": {
+        "min": 25.2,
+        "max": 29.62,
+        "mean": 27.73
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.9,
+        "max": 1011.9,
+        "mean": 1010.7
+      },
+      "penyinaran_matahari_pct": {
+        "min": 54.3,
+        "max": 79.12,
+        "mean": 63.11
+      }
+    },
+    "SULAWESI TENGAH|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 460.9,
+        "max": 1178.0,
+        "mean": 872.87
+      },
+      "hari_hujan": {
+        "min": 68.0,
+        "max": 238.0,
+        "mean": 159.62
+      },
+      "suhu_rata_c": {
+        "min": 25.2,
+        "max": 29.62,
+        "mean": 27.73
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.9,
+        "max": 1011.9,
+        "mean": 1010.7
+      },
+      "penyinaran_matahari_pct": {
+        "min": 54.3,
+        "max": 79.12,
+        "mean": 63.11
+      }
+    },
+    "SULAWESI TENGAH|Padi": {
+      "curah_hujan_mm": {
+        "min": 460.9,
+        "max": 1178.0,
+        "mean": 872.87
+      },
+      "hari_hujan": {
+        "min": 68.0,
+        "max": 238.0,
+        "mean": 159.62
+      },
+      "suhu_rata_c": {
+        "min": 25.2,
+        "max": 29.62,
+        "mean": 27.73
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.9,
+        "max": 1011.9,
+        "mean": 1010.7
+      },
+      "penyinaran_matahari_pct": {
+        "min": 54.3,
+        "max": 79.12,
+        "mean": 63.11
+      }
+    },
+    "SULAWESI TENGAH|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 460.9,
+        "max": 1178.0,
+        "mean": 872.87
+      },
+      "hari_hujan": {
+        "min": 68.0,
+        "max": 238.0,
+        "mean": 159.62
+      },
+      "suhu_rata_c": {
+        "min": 25.2,
+        "max": 29.62,
+        "mean": 27.73
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.9,
+        "max": 1011.9,
+        "mean": 1010.7
+      },
+      "penyinaran_matahari_pct": {
+        "min": 54.3,
+        "max": 79.12,
+        "mean": 63.11
+      }
+    },
+    "SULAWESI TENGAH|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 460.9,
+        "max": 1178.0,
+        "mean": 872.87
+      },
+      "hari_hujan": {
+        "min": 68.0,
+        "max": 238.0,
+        "mean": 159.62
+      },
+      "suhu_rata_c": {
+        "min": 25.2,
+        "max": 29.62,
+        "mean": 27.73
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.9,
+        "max": 1011.9,
+        "mean": 1010.7
+      },
+      "penyinaran_matahari_pct": {
+        "min": 54.3,
+        "max": 79.12,
+        "mean": 63.11
+      }
+    },
+    "SULAWESI TENGGARA|Jagung": {
+      "curah_hujan_mm": {
+        "min": 1.5,
+        "max": 3465.8,
+        "mean": 1921.69
+      },
+      "hari_hujan": {
+        "min": 2.0,
+        "max": 258.0,
+        "mean": 106.47
+      },
+      "suhu_rata_c": {
+        "min": 25.7,
+        "max": 28.39,
+        "mean": 27.12
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.0,
+        "max": 1013.09,
+        "mean": 1010.75
+      },
+      "penyinaran_matahari_pct": {
+        "min": 43.6,
+        "max": 85.0,
+        "mean": 68.37
+      }
+    },
+    "SULAWESI TENGGARA|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 1.5,
+        "max": 3465.8,
+        "mean": 1921.69
+      },
+      "hari_hujan": {
+        "min": 2.0,
+        "max": 258.0,
+        "mean": 106.47
+      },
+      "suhu_rata_c": {
+        "min": 25.7,
+        "max": 28.39,
+        "mean": 27.12
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.0,
+        "max": 1013.09,
+        "mean": 1010.75
+      },
+      "penyinaran_matahari_pct": {
+        "min": 43.6,
+        "max": 85.0,
+        "mean": 68.37
+      }
+    },
+    "SULAWESI TENGGARA|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 1.5,
+        "max": 3465.8,
+        "mean": 1921.69
+      },
+      "hari_hujan": {
+        "min": 2.0,
+        "max": 258.0,
+        "mean": 106.47
+      },
+      "suhu_rata_c": {
+        "min": 25.7,
+        "max": 28.39,
+        "mean": 27.12
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.0,
+        "max": 1013.09,
+        "mean": 1010.75
+      },
+      "penyinaran_matahari_pct": {
+        "min": 43.6,
+        "max": 85.0,
+        "mean": 68.37
+      }
+    },
+    "SULAWESI TENGGARA|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 1.5,
+        "max": 3465.8,
+        "mean": 1921.69
+      },
+      "hari_hujan": {
+        "min": 2.0,
+        "max": 258.0,
+        "mean": 106.47
+      },
+      "suhu_rata_c": {
+        "min": 25.7,
+        "max": 28.39,
+        "mean": 27.12
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.0,
+        "max": 1013.09,
+        "mean": 1010.75
+      },
+      "penyinaran_matahari_pct": {
+        "min": 43.6,
+        "max": 85.0,
+        "mean": 68.37
+      }
+    },
+    "SULAWESI TENGGARA|Padi": {
+      "curah_hujan_mm": {
+        "min": 1.5,
+        "max": 3465.8,
+        "mean": 1921.69
+      },
+      "hari_hujan": {
+        "min": 2.0,
+        "max": 258.0,
+        "mean": 106.47
+      },
+      "suhu_rata_c": {
+        "min": 25.7,
+        "max": 28.39,
+        "mean": 27.12
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.0,
+        "max": 1013.09,
+        "mean": 1010.75
+      },
+      "penyinaran_matahari_pct": {
+        "min": 43.6,
+        "max": 85.0,
+        "mean": 68.37
+      }
+    },
+    "SULAWESI TENGGARA|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 1.5,
+        "max": 3465.8,
+        "mean": 1921.69
+      },
+      "hari_hujan": {
+        "min": 2.0,
+        "max": 258.0,
+        "mean": 106.47
+      },
+      "suhu_rata_c": {
+        "min": 25.7,
+        "max": 28.39,
+        "mean": 27.12
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.0,
+        "max": 1013.09,
+        "mean": 1010.75
+      },
+      "penyinaran_matahari_pct": {
+        "min": 43.6,
+        "max": 85.0,
+        "mean": 68.37
+      }
+    },
+    "SULAWESI TENGGARA|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 1.5,
+        "max": 3465.8,
+        "mean": 1921.69
+      },
+      "hari_hujan": {
+        "min": 2.0,
+        "max": 258.0,
+        "mean": 106.47
+      },
+      "suhu_rata_c": {
+        "min": 25.7,
+        "max": 28.39,
+        "mean": 27.12
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.0,
+        "max": 1013.09,
+        "mean": 1010.75
+      },
+      "penyinaran_matahari_pct": {
+        "min": 43.6,
+        "max": 85.0,
+        "mean": 68.37
+      }
+    },
+    "SULAWESI UTARA|Jagung": {
+      "curah_hujan_mm": {
+        "min": 1014.0,
+        "max": 3786.0,
+        "mean": 2949.48
+      },
+      "hari_hujan": {
+        "min": 127.0,
+        "max": 291.0,
+        "mean": 219.69
+      },
+      "suhu_rata_c": {
+        "min": 26.0,
+        "max": 28.8,
+        "mean": 26.9
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1012.3,
+        "mean": 1009.48
+      },
+      "penyinaran_matahari_pct": {
+        "min": 39.5,
+        "max": 67.53,
+        "mean": 50.2
+      }
+    },
+    "SULAWESI UTARA|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 1014.0,
+        "max": 3786.0,
+        "mean": 2949.48
+      },
+      "hari_hujan": {
+        "min": 127.0,
+        "max": 291.0,
+        "mean": 219.69
+      },
+      "suhu_rata_c": {
+        "min": 26.0,
+        "max": 28.8,
+        "mean": 26.9
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1012.3,
+        "mean": 1009.48
+      },
+      "penyinaran_matahari_pct": {
+        "min": 39.5,
+        "max": 67.53,
+        "mean": 50.2
+      }
+    },
+    "SULAWESI UTARA|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 1014.0,
+        "max": 3786.0,
+        "mean": 2949.48
+      },
+      "hari_hujan": {
+        "min": 127.0,
+        "max": 291.0,
+        "mean": 219.69
+      },
+      "suhu_rata_c": {
+        "min": 26.0,
+        "max": 28.8,
+        "mean": 26.9
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1012.3,
+        "mean": 1009.48
+      },
+      "penyinaran_matahari_pct": {
+        "min": 39.5,
+        "max": 67.53,
+        "mean": 50.2
+      }
+    },
+    "SULAWESI UTARA|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 1014.0,
+        "max": 3786.0,
+        "mean": 2949.48
+      },
+      "hari_hujan": {
+        "min": 127.0,
+        "max": 291.0,
+        "mean": 219.69
+      },
+      "suhu_rata_c": {
+        "min": 26.0,
+        "max": 28.8,
+        "mean": 26.9
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1012.3,
+        "mean": 1009.48
+      },
+      "penyinaran_matahari_pct": {
+        "min": 39.5,
+        "max": 67.53,
+        "mean": 50.2
+      }
+    },
+    "SULAWESI UTARA|Padi": {
+      "curah_hujan_mm": {
+        "min": 1014.0,
+        "max": 3786.0,
+        "mean": 2949.48
+      },
+      "hari_hujan": {
+        "min": 127.0,
+        "max": 291.0,
+        "mean": 219.69
+      },
+      "suhu_rata_c": {
+        "min": 26.0,
+        "max": 28.8,
+        "mean": 26.9
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1012.3,
+        "mean": 1009.48
+      },
+      "penyinaran_matahari_pct": {
+        "min": 39.5,
+        "max": 67.53,
+        "mean": 50.2
+      }
+    },
+    "SULAWESI UTARA|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 1014.0,
+        "max": 3786.0,
+        "mean": 2949.48
+      },
+      "hari_hujan": {
+        "min": 127.0,
+        "max": 291.0,
+        "mean": 219.69
+      },
+      "suhu_rata_c": {
+        "min": 26.0,
+        "max": 28.8,
+        "mean": 26.9
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1012.3,
+        "mean": 1009.48
+      },
+      "penyinaran_matahari_pct": {
+        "min": 39.5,
+        "max": 67.53,
+        "mean": 50.2
+      }
+    },
+    "SULAWESI UTARA|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 1014.0,
+        "max": 3786.0,
+        "mean": 2949.48
+      },
+      "hari_hujan": {
+        "min": 127.0,
+        "max": 291.0,
+        "mean": 219.69
+      },
+      "suhu_rata_c": {
+        "min": 26.0,
+        "max": 28.8,
+        "mean": 26.9
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1012.3,
+        "mean": 1009.48
+      },
+      "penyinaran_matahari_pct": {
+        "min": 39.5,
+        "max": 67.53,
+        "mean": 50.2
+      }
+    },
+    "SUMATERA BARAT|Jagung": {
+      "curah_hujan_mm": {
+        "min": 776.0,
+        "max": 4614.74,
+        "mean": 3641.93
+      },
+      "hari_hujan": {
+        "min": 40.0,
+        "max": 232.0,
+        "mean": 138.22
+      },
+      "suhu_rata_c": {
+        "min": 25.1,
+        "max": 29.17,
+        "mean": 26.42
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1010.9,
+        "mean": 1008.81
+      },
+      "penyinaran_matahari_pct": {
+        "min": 32.8,
+        "max": 59.56,
+        "mean": 48.16
+      }
+    },
+    "SUMATERA BARAT|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 776.0,
+        "max": 4614.74,
+        "mean": 3641.93
+      },
+      "hari_hujan": {
+        "min": 40.0,
+        "max": 232.0,
+        "mean": 138.22
+      },
+      "suhu_rata_c": {
+        "min": 25.1,
+        "max": 29.17,
+        "mean": 26.42
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1010.9,
+        "mean": 1008.81
+      },
+      "penyinaran_matahari_pct": {
+        "min": 32.8,
+        "max": 59.56,
+        "mean": 48.16
+      }
+    },
+    "SUMATERA BARAT|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 776.0,
+        "max": 4614.74,
+        "mean": 3641.93
+      },
+      "hari_hujan": {
+        "min": 40.0,
+        "max": 232.0,
+        "mean": 138.22
+      },
+      "suhu_rata_c": {
+        "min": 25.1,
+        "max": 29.17,
+        "mean": 26.42
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1010.9,
+        "mean": 1008.81
+      },
+      "penyinaran_matahari_pct": {
+        "min": 32.8,
+        "max": 59.56,
+        "mean": 48.16
+      }
+    },
+    "SUMATERA BARAT|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 776.0,
+        "max": 4614.74,
+        "mean": 3641.93
+      },
+      "hari_hujan": {
+        "min": 40.0,
+        "max": 232.0,
+        "mean": 138.22
+      },
+      "suhu_rata_c": {
+        "min": 25.1,
+        "max": 29.17,
+        "mean": 26.42
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1010.9,
+        "mean": 1008.81
+      },
+      "penyinaran_matahari_pct": {
+        "min": 32.8,
+        "max": 59.56,
+        "mean": 48.16
+      }
+    },
+    "SUMATERA BARAT|Padi": {
+      "curah_hujan_mm": {
+        "min": 776.0,
+        "max": 4614.74,
+        "mean": 3641.93
+      },
+      "hari_hujan": {
+        "min": 40.0,
+        "max": 232.0,
+        "mean": 138.22
+      },
+      "suhu_rata_c": {
+        "min": 25.1,
+        "max": 29.17,
+        "mean": 26.42
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1010.9,
+        "mean": 1008.81
+      },
+      "penyinaran_matahari_pct": {
+        "min": 32.8,
+        "max": 59.56,
+        "mean": 48.16
+      }
+    },
+    "SUMATERA BARAT|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 776.0,
+        "max": 4614.74,
+        "mean": 3641.93
+      },
+      "hari_hujan": {
+        "min": 40.0,
+        "max": 232.0,
+        "mean": 138.22
+      },
+      "suhu_rata_c": {
+        "min": 25.1,
+        "max": 29.17,
+        "mean": 26.42
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1010.9,
+        "mean": 1008.81
+      },
+      "penyinaran_matahari_pct": {
+        "min": 32.8,
+        "max": 59.56,
+        "mean": 48.16
+      }
+    },
+    "SUMATERA BARAT|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 776.0,
+        "max": 4614.74,
+        "mean": 3641.93
+      },
+      "hari_hujan": {
+        "min": 40.0,
+        "max": 232.0,
+        "mean": 138.22
+      },
+      "suhu_rata_c": {
+        "min": 25.1,
+        "max": 29.17,
+        "mean": 26.42
+      },
+      "tekanan_udara_mb": {
+        "min": 1007.25,
+        "max": 1010.9,
+        "mean": 1008.81
+      },
+      "penyinaran_matahari_pct": {
+        "min": 32.8,
+        "max": 59.56,
+        "mean": 48.16
+      }
+    },
+    "SUMATERA SELATAN|Jagung": {
+      "curah_hujan_mm": {
+        "min": 1356.9,
+        "max": 3409.2,
+        "mean": 2385.17
+      },
+      "hari_hujan": {
+        "min": 93.0,
+        "max": 238.0,
+        "mean": 154.84
+      },
+      "suhu_rata_c": {
+        "min": 24.95,
+        "max": 29.64,
+        "mean": 27.61
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.4,
+        "max": 1013.09,
+        "mean": 1010.62
+      },
+      "penyinaran_matahari_pct": {
+        "min": 45.3,
+        "max": 58.0,
+        "mean": 53.74
+      }
+    },
+    "SUMATERA SELATAN|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 1356.9,
+        "max": 3409.2,
+        "mean": 2385.17
+      },
+      "hari_hujan": {
+        "min": 93.0,
+        "max": 238.0,
+        "mean": 154.84
+      },
+      "suhu_rata_c": {
+        "min": 24.95,
+        "max": 29.64,
+        "mean": 27.61
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.4,
+        "max": 1013.09,
+        "mean": 1010.62
+      },
+      "penyinaran_matahari_pct": {
+        "min": 45.3,
+        "max": 58.0,
+        "mean": 53.74
+      }
+    },
+    "SUMATERA SELATAN|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 1356.9,
+        "max": 3409.2,
+        "mean": 2385.17
+      },
+      "hari_hujan": {
+        "min": 93.0,
+        "max": 238.0,
+        "mean": 154.84
+      },
+      "suhu_rata_c": {
+        "min": 24.95,
+        "max": 29.64,
+        "mean": 27.61
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.4,
+        "max": 1013.09,
+        "mean": 1010.62
+      },
+      "penyinaran_matahari_pct": {
+        "min": 45.3,
+        "max": 58.0,
+        "mean": 53.74
+      }
+    },
+    "SUMATERA SELATAN|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 1356.9,
+        "max": 3409.2,
+        "mean": 2385.17
+      },
+      "hari_hujan": {
+        "min": 93.0,
+        "max": 238.0,
+        "mean": 154.84
+      },
+      "suhu_rata_c": {
+        "min": 24.95,
+        "max": 29.64,
+        "mean": 27.61
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.4,
+        "max": 1013.09,
+        "mean": 1010.62
+      },
+      "penyinaran_matahari_pct": {
+        "min": 45.3,
+        "max": 58.0,
+        "mean": 53.74
+      }
+    },
+    "SUMATERA SELATAN|Padi": {
+      "curah_hujan_mm": {
+        "min": 1356.9,
+        "max": 3409.2,
+        "mean": 2385.17
+      },
+      "hari_hujan": {
+        "min": 93.0,
+        "max": 238.0,
+        "mean": 154.84
+      },
+      "suhu_rata_c": {
+        "min": 24.95,
+        "max": 29.64,
+        "mean": 27.61
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.4,
+        "max": 1013.09,
+        "mean": 1010.62
+      },
+      "penyinaran_matahari_pct": {
+        "min": 45.3,
+        "max": 58.0,
+        "mean": 53.74
+      }
+    },
+    "SUMATERA SELATAN|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 1356.9,
+        "max": 3409.2,
+        "mean": 2385.17
+      },
+      "hari_hujan": {
+        "min": 93.0,
+        "max": 238.0,
+        "mean": 154.84
+      },
+      "suhu_rata_c": {
+        "min": 24.95,
+        "max": 29.64,
+        "mean": 27.61
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.4,
+        "max": 1013.09,
+        "mean": 1010.62
+      },
+      "penyinaran_matahari_pct": {
+        "min": 45.3,
+        "max": 58.0,
+        "mean": 53.74
+      }
+    },
+    "SUMATERA SELATAN|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 1356.9,
+        "max": 3409.2,
+        "mean": 2385.17
+      },
+      "hari_hujan": {
+        "min": 93.0,
+        "max": 238.0,
+        "mean": 154.84
+      },
+      "suhu_rata_c": {
+        "min": 24.95,
+        "max": 29.64,
+        "mean": 27.61
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.4,
+        "max": 1013.09,
+        "mean": 1010.62
+      },
+      "penyinaran_matahari_pct": {
+        "min": 45.3,
+        "max": 58.0,
+        "mean": 53.74
+      }
+    },
+    "SUMATERA UTARA|Jagung": {
+      "curah_hujan_mm": {
+        "min": 222.5,
+        "max": 3595.3,
+        "mean": 2071.72
+      },
+      "hari_hujan": {
+        "min": 19.0,
+        "max": 233.0,
+        "mean": 124.34
+      },
+      "suhu_rata_c": {
+        "min": 26.9,
+        "max": 29.59,
+        "mean": 27.79
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.4,
+        "max": 1011.8,
+        "mean": 1010.51
+      },
+      "penyinaran_matahari_pct": {
+        "min": 25.68,
+        "max": 51.86,
+        "mean": 36.51
+      }
+    },
+    "SUMATERA UTARA|Kacang_Hijau": {
+      "curah_hujan_mm": {
+        "min": 222.5,
+        "max": 3595.3,
+        "mean": 2071.72
+      },
+      "hari_hujan": {
+        "min": 19.0,
+        "max": 233.0,
+        "mean": 124.34
+      },
+      "suhu_rata_c": {
+        "min": 26.9,
+        "max": 29.59,
+        "mean": 27.79
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.4,
+        "max": 1011.8,
+        "mean": 1010.51
+      },
+      "penyinaran_matahari_pct": {
+        "min": 25.68,
+        "max": 51.86,
+        "mean": 36.51
+      }
+    },
+    "SUMATERA UTARA|Kacang_Tanah": {
+      "curah_hujan_mm": {
+        "min": 222.5,
+        "max": 3595.3,
+        "mean": 2071.72
+      },
+      "hari_hujan": {
+        "min": 19.0,
+        "max": 233.0,
+        "mean": 124.34
+      },
+      "suhu_rata_c": {
+        "min": 26.9,
+        "max": 29.59,
+        "mean": 27.79
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.4,
+        "max": 1011.8,
+        "mean": 1010.51
+      },
+      "penyinaran_matahari_pct": {
+        "min": 25.68,
+        "max": 51.86,
+        "mean": 36.51
+      }
+    },
+    "SUMATERA UTARA|Kedelai": {
+      "curah_hujan_mm": {
+        "min": 222.5,
+        "max": 3595.3,
+        "mean": 2071.72
+      },
+      "hari_hujan": {
+        "min": 19.0,
+        "max": 233.0,
+        "mean": 124.34
+      },
+      "suhu_rata_c": {
+        "min": 26.9,
+        "max": 29.59,
+        "mean": 27.79
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.4,
+        "max": 1011.8,
+        "mean": 1010.51
+      },
+      "penyinaran_matahari_pct": {
+        "min": 25.68,
+        "max": 51.86,
+        "mean": 36.51
+      }
+    },
+    "SUMATERA UTARA|Padi": {
+      "curah_hujan_mm": {
+        "min": 222.5,
+        "max": 3595.3,
+        "mean": 2071.72
+      },
+      "hari_hujan": {
+        "min": 19.0,
+        "max": 233.0,
+        "mean": 124.34
+      },
+      "suhu_rata_c": {
+        "min": 26.9,
+        "max": 29.59,
+        "mean": 27.79
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.4,
+        "max": 1011.8,
+        "mean": 1010.51
+      },
+      "penyinaran_matahari_pct": {
+        "min": 25.68,
+        "max": 51.86,
+        "mean": 36.51
+      }
+    },
+    "SUMATERA UTARA|Ubi_Jalar": {
+      "curah_hujan_mm": {
+        "min": 222.5,
+        "max": 3595.3,
+        "mean": 2071.72
+      },
+      "hari_hujan": {
+        "min": 19.0,
+        "max": 233.0,
+        "mean": 124.34
+      },
+      "suhu_rata_c": {
+        "min": 26.9,
+        "max": 29.59,
+        "mean": 27.79
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.4,
+        "max": 1011.8,
+        "mean": 1010.51
+      },
+      "penyinaran_matahari_pct": {
+        "min": 25.68,
+        "max": 51.86,
+        "mean": 36.51
+      }
+    },
+    "SUMATERA UTARA|Ubi_Kayu": {
+      "curah_hujan_mm": {
+        "min": 222.5,
+        "max": 3595.3,
+        "mean": 2071.72
+      },
+      "hari_hujan": {
+        "min": 19.0,
+        "max": 233.0,
+        "mean": 124.34
+      },
+      "suhu_rata_c": {
+        "min": 26.9,
+        "max": 29.59,
+        "mean": 27.79
+      },
+      "tekanan_udara_mb": {
+        "min": 1009.4,
+        "max": 1011.8,
+        "mean": 1010.51
+      },
+      "penyinaran_matahari_pct": {
+        "min": 25.68,
+        "max": 51.86,
+        "mean": 36.51
+      }
+    }
   }
 }

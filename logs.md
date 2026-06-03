@@ -1,50 +1,32 @@
 # Development Logs
 
-## [2026-05-21] — Project Initialization
+## [2026-05-21] — Project Initialization (CropSense AI — ARCHIVED)
 
-### Phase 1: EDA
-- Dataset: `yield_df.csv` — 28,242 rows × 8 columns
-- 101 countries, 10 crop types, Year 1990–2013
-- No missing values
-- Target: `hg/ha_yield` (right-skewed, log-transform recommended)
-- Key finding: `pesticides_tonnes` has highest correlation with yield
+### Phase 1–4: Setup & Initial Build
+- Dataset: `yield_df.csv` — 28,242 rows, 101 countries, 10 crops, 1990–2013
+- Model: XGBoost + linear trend hybrid, R²=0.9401
+- Stack: FastAPI + React + Vite + TailwindCSS + Gemini LLM
+- **Catatan: Versi ini berbasis data global (bukan Indonesia). Diarsipkan.**
 
-### Phase 2: Project Setup
-- Initialized Git repo at project root
-- Updated `.gitignore` for Python/data-science project
-- Pushed initial commit to GitHub
+---
 
-### Phase 3: Backend Setup (In Progress)
-- Tech stack: FastAPI + XGBoost + Gemini LLM
-- ML model: XGBoost Regressor (chosen for tabular regression with temporal feature)
-- Created `requirements.txt`, `.env.example`
-- Training script: `backend/train.py`
-- Model saved to: `backend/models/xgboost_yield_model.pkl`
+## [2026-06-03] — Full Overhaul: PanenAI (Data BPS Indonesia)
 
-### Phase 4: Frontend Setup ✅ COMPLETED
-- Tech stack: React + Vite + TailwindCSS
-- Theme: Green agricultural
-- Components: Header, PredictForm, PredictionResult, ChatPanel
-- react-markdown + @tailwindcss/typography for AI response rendering
-- Vite proxy configured for /api → http://localhost:8000
+### Overview
+Proyek dirombak total dari "CropSense AI" (global) → "PanenAI" (Indonesia per provinsi).
+Dataset baru: `prediksi_hasil_panen_2000-2015.csv` (BPS + BMKG Indonesia).
 
-### Integration Test ✅ PASSED
-- Backend: FastAPI on port 8000
-  - GET  /api/meta     → 200 OK (area/item classes + model metrics)
-  - POST /api/predict  → 200 OK (Albania/Maize/2010 → 50,710.99 hg/ha)
-  - POST /api/chat     → Gemini (requires API key in .env)
-- Frontend: Vite dev server on port 5173
-  - Build: ✅ 651ms, 0 errors
+### Dataset Baru
+- 3,808 baris | 9 kolom | 0 null values
+- 34 Provinsi Indonesia
+- 7 Jenis Tanaman: Jagung, Kacang_Hijau, Kacang_Tanah, Kedelai, Padi, Ubi_Jalar, Ubi_Kayu
+- Tahun: 2000–2015
+- Fitur: Curah_Hujan_mm, Hari_Hujan, Suhu_Rata_C, Tekanan_Udara_mb, Penyinaran_Matahari_pct
+- Target: Produksi (ton/tahun)
 
-### How to Run
-```bash
-# Backend
-cd backend
-.\.ai_venv\Scripts\Activate.ps1
-uvicorn main:app --host 0.0.0.0 --port 8000 --reload
-
-# Frontend (new terminal)
-cd frontend
-npm run dev
-```
-
+### Architecture Decisions
+- Model: Hybrid Linear Trend per (Provinsi, Jenis_Tanaman) + XGBoost residuals
+- Output unit: ton/tahun (Produksi total provinsi), bukan hg/ha
+- Kalkulator: referensi 7 juta ha total lahan Indonesia
+- UI: Redesign total — tab-based (Prediksi | Kalkulator | Chatbot), tema hijau/amber
+- Branding baru: "PanenAI — Prediksi Cerdas Hasil Panen Indonesia"

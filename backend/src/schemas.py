@@ -3,27 +3,29 @@ from typing import Optional, List
 
 
 class PredictRequest(BaseModel):
-    area: str = Field(..., example="Albania")
-    item: str = Field(..., example="Maize")
-    year: int = Field(..., ge=1990, le=2100, example=2024)
-    rainfall_mm: float = Field(..., ge=0, example=1485.0)
-    pesticides_tonnes: float = Field(..., ge=0, example=121.0)
-    avg_temp: float = Field(..., example=16.37)
+    provinsi: str = Field(..., example="JAWA BARAT")
+    jenis_tanaman: str = Field(..., example="Padi")
+    tahun: int = Field(..., ge=2000, le=2100, example=2025)
+    curah_hujan_mm: float = Field(..., ge=0, example=1974.7)
+    hari_hujan: int = Field(..., ge=0, le=366, example=61)
+    suhu_rata_c: float = Field(..., example=27.18)
+    tekanan_udara_mb: float = Field(..., example=1010.16)
+    penyinaran_matahari_pct: float = Field(..., ge=0, le=100, example=54.4)
 
 
 class PredictResponse(BaseModel):
-    predicted_yield_hg_ha: float
-    predicted_yield_tonnes_ha: float
-    area: str
-    item: str
-    year: int
+    predicted_produksi_ton: float
+    provinsi: str
+    jenis_tanaman: str
+    tahun: int
     model_r2: float
     crop_failure: bool = False
     outlier_features: List[str] = []
+    ai_reasoning: Optional[str] = None
 
 
 class ChatMessage(BaseModel):
-    role: str          # "user" or "model"
+    role: str
     content: str
 
 
@@ -38,6 +40,7 @@ class ChatResponse(BaseModel):
 
 
 class MetaResponse(BaseModel):
-    area_classes: List[str]
-    item_classes: List[str]
+    provinsi_classes: List[str]
+    tanaman_classes: List[str]
     metrics: dict
+    feature_ranges: Optional[dict] = None

@@ -8,9 +8,9 @@ from src.chat_router import router as chat_router
 load_dotenv()
 
 app = FastAPI(
-    title="CropSense API",
-    description="Crop Yield Prediction API powered by XGBoost + Gemini LLM",
-    version="1.0.0",
+    title="PanenAI API",
+    description="Prediksi Hasil Panen Indonesia — XGBoost + Gemini LLM (Data BPS & BMKG)",
+    version="2.0.0",
 )
 
 _default_origins = "http://localhost:5173,http://127.0.0.1:5173"
@@ -34,7 +34,7 @@ app.include_router(chat_router)
 
 @app.get("/", tags=["Health"])
 def root():
-    return {"status": "ok", "message": "CropSense API is running"}
+    return {"status": "ok", "message": "PanenAI API is running"}
 
 
 @app.get("/health", tags=["Health"])

@@ -4,129 +4,88 @@ import joblib
 import numpy as np
 import pandas as pd
 
-BASE_DIR   = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MODEL_DIR  = os.path.join(BASE_DIR, "models")
+BASE_DIR  = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+MODEL_DIR = os.path.join(BASE_DIR, "models")
 
-# Load once on startup
 _model        = joblib.load(os.path.join(MODEL_DIR, "xgboost_yield_model.pkl"))
-_le_area      = joblib.load(os.path.join(MODEL_DIR, "le_area.pkl"))
-_le_item      = joblib.load(os.path.join(MODEL_DIR, "le_item.pkl"))
+_le_prov      = joblib.load(os.path.join(MODEL_DIR, "le_area.pkl"))
+_le_tan       = joblib.load(os.path.join(MODEL_DIR, "le_item.pkl"))
 _trend_params = joblib.load(os.path.join(MODEL_DIR, "trend_params.pkl"))
 _global_trend = joblib.load(os.path.join(MODEL_DIR, "global_trend.pkl"))
+_bounds       = joblib.load(os.path.join(MODEL_DIR, "feature_bounds.pkl"))
 
-with open(os.path.join(MODEL_DIR, "model_meta.json"), "r") as f:
+with open(os.path.join(MODEL_DIR, "model_meta.json"), "r", encoding="utf-8") as f:
     _meta = json.load(f)
 
-# ── Per-(area, item) IQR-based outlier bounds ─────────────────────────────────
-_FEATS = ["rainfall_mm", "pesticides_tonnes", "avg_temp"]
+_FEATS = ["curah_hujan_mm", "hari_hujan", "suhu_rata_c",
+          "tekanan_udara_mb", "penyinaran_matahari_pct"]
 _FEAT_LABELS = {
-    "rainfall_mm"       : "Rainfall",
-    "pesticides_tonnes" : "Pesticides",
-    "avg_temp"          : "Temperature",
+    "curah_hujan_mm"          : "Curah Hujan",
+    "hari_hujan"              : "Hari Hujan",
+    "suhu_rata_c"             : "Suhu Rata-rata",
+    "tekanan_udara_mb"        : "Tekanan Udara",
+    "penyinaran_matahari_pct" : "Penyinaran Matahari",
 }
 
 
-def _compute_bounds() -> dict:
-    df = pd.read_csv(os.path.join(BASE_DIR, "data", "yield_df.csv"))
-    df = df.drop(columns=[c for c in df.columns if "Unnamed" in c])
-    df.columns = ["area", "item", "year", "yield_hg_ha",
-                  "rainfall_mm", "pesticides_tonnes", "avg_temp"]
-    df = df.dropna()
+def predict_produksi(provinsi: str, jenis_tanaman: str, tahun: int,
+                     curah_hujan_mm: float, hari_hujan: int,
+                     suhu_rata_c: float, tekanan_udara_mb: float,
+                     penyinaran_matahari_pct: float) -> dict:
+    known_prov = _le_prov.classes_.tolist()
+    known_tan  = _le_tan.classes_.tolist()
 
-    # Item-level fallback (used when a group has too few rows)
-    item_fb: dict = {}
-    for itm, grp in df.groupby("item"):
-        item_fb[itm] = {}
-        for feat in _FEATS:
-            v = grp[feat].dropna()
-            q1, q3 = v.quantile(0.25), v.quantile(0.75)
-            iqr = q3 - q1
-            item_fb[itm][feat] = (float(q1 - 1.5 * iqr), float(q3 + 1.5 * iqr))
+    if provinsi not in known_prov:
+        raise ValueError(f"Provinsi tidak dikenal: '{provinsi}'.")
+    if jenis_tanaman not in known_tan:
+        raise ValueError(f"Jenis tanaman tidak dikenal: '{jenis_tanaman}'.")
 
-    bounds: dict = {}
-    for (area, itm), grp in df.groupby(["area", "item"]):
-        bounds[(area, itm)] = {}
-        for feat in _FEATS:
-            v = grp[feat].dropna()
-            if len(v) >= 8:
-                q1, q3 = v.quantile(0.25), v.quantile(0.75)
-                iqr = q3 - q1
-                if iqr == 0:
-                    # Constant feature in this group — use ±30% relative tolerance
-                    center = float(q1)
-                    if center > 0:
-                        lo, hi = center * 0.70, center * 1.30
-                    elif center < 0:
-                        lo, hi = center * 1.30, center * 0.70
-                    else:
-                        lo, hi = -float("inf"), float("inf")
-                else:
-                    lo, hi = float(q1 - 1.5 * iqr), float(q3 + 1.5 * iqr)
-            elif itm in item_fb:
-                lo, hi = item_fb[itm][feat]
-            else:
-                lo, hi = -float("inf"), float("inf")
-            bounds[(area, itm)][feat] = (lo, hi)
-
-    return bounds
-
-
-_bounds = _compute_bounds()
-
-
-def predict_yield(area: str, item: str, year: int,
-                  rainfall_mm: float, pesticides_tonnes: float,
-                  avg_temp: float) -> dict:
-    """Run inference and return predicted yield with outlier detection."""
-    known_areas = _le_area.classes_.tolist()
-    known_items = _le_item.classes_.tolist()
-
-    if area not in known_areas:
-        raise ValueError(f"Unknown area: '{area}'. Must be one of the trained areas.")
-    if item not in known_items:
-        raise ValueError(f"Unknown item: '{item}'. Must be one of the trained crops.")
-
-    # ── Outlier / crop-failure check ──────────────────────────────────────────
+    # Outlier check
+    key_str = f"{provinsi}|{jenis_tanaman}"
     outlier_features: list = []
-    key = (area, item)
-    if key in _bounds:
+    if key_str in _bounds:
         checks = {
-            "rainfall_mm"       : rainfall_mm,
-            "pesticides_tonnes" : pesticides_tonnes,
-            "avg_temp"          : avg_temp,
+            "curah_hujan_mm"          : curah_hujan_mm,
+            "hari_hujan"              : float(hari_hujan),
+            "suhu_rata_c"             : suhu_rata_c,
+            "tekanan_udara_mb"        : tekanan_udara_mb,
+            "penyinaran_matahari_pct" : penyinaran_matahari_pct,
         }
         for feat, val in checks.items():
-            lo, hi = _bounds[key][feat]
+            lo, hi = _bounds[key_str][feat]
             if val < lo or val > hi:
                 outlier_features.append(_FEAT_LABELS[feat])
 
-    area_enc = _le_area.transform([area])[0]
-    item_enc = _le_item.transform([item])[0]
+    prov_enc = _le_prov.transform([provinsi])[0]
+    tan_enc  = _le_tan.transform([jenis_tanaman])[0]
 
-    # ── Hybrid prediction: linear trend(year) + XGBoost residual(climate) ────
-    key = (area, item)
+    key = (provinsi, jenis_tanaman)
     if key in _trend_params:
         intercept, slope = _trend_params[key]
     else:
         intercept = _global_trend["intercept"]
         slope     = _global_trend["slope"]
 
-    trend_val = intercept + slope * year
+    trend_val = intercept + slope * tahun
 
-    # XGBoost features: no year (temporal trend is handled by linear component)
-    X = np.array([[area_enc, item_enc, rainfall_mm, pesticides_tonnes, avg_temp]])
+    X = np.array([[prov_enc, tan_enc, curah_hujan_mm, float(hari_hujan),
+                   suhu_rata_c, tekanan_udara_mb, penyinaran_matahari_pct]])
     residual  = _model.predict(X)[0]
     log_pred  = trend_val + residual
-    yield_val = float(max(0.0, np.expm1(log_pred)))
+    produksi  = float(max(0.0, np.expm1(log_pred)))
 
     return {
-        "predicted_yield_hg_ha"    : round(yield_val, 2),
-        "predicted_yield_tonnes_ha": round(yield_val / 10000, 4),
-        "model_r2"                 : _meta["metrics"]["R2"],
-        "crop_failure"             : len(outlier_features) > 0,
-        "outlier_features"         : outlier_features,
+        "predicted_produksi_ton": round(produksi, 2),
+        "model_r2":               _meta["metrics"]["R2"],
+        "crop_failure":           len(outlier_features) > 0,
+        "outlier_features":       outlier_features,
     }
 
 
 def get_meta() -> dict:
-    return _meta
+    return {
+        "provinsi_classes": _meta["provinsi_classes"],
+        "tanaman_classes":  _meta["tanaman_classes"],
+        "metrics":          _meta["metrics"],
+        "feature_ranges":   _meta.get("feature_ranges", {}),
+    }
