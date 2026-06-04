@@ -6,7 +6,7 @@ from google.genai import types
 load_dotenv(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".env"))
 
 _api_key    = os.getenv("GEMINI_API_KEY", "")
-_model_name = os.getenv("GEMINI_MODEL", "gemini-2.0-flash")
+_model_name = os.getenv("GEMINI_MODEL", "gemini-3-flash-preview")
 
 _REASONING_SYSTEM_PROMPT = """
 Kamu adalah konsultan pertanian ahli untuk PanenAI, sebuah sistem prediksi hasil panen Indonesia.
