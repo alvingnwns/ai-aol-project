@@ -60,7 +60,7 @@ function RangeHint({ field, ranges }) {
   const r = ranges[field]
   if (!r) return null
   return (
-    <span className="text-[#6EE7B7] text-xs">
+    <span className="text-[#4A8C5C] text-xs">
       Historis: {r.min.toLocaleString('id')}–{r.max.toLocaleString('id')} (rata-rata {r.mean.toLocaleString('id')})
     </span>
   )
@@ -125,22 +125,22 @@ export default function PredictForm({ onPrediction }) {
   const rangeKey = `${form.provinsi}|${form.jenis_tanaman}`
   const currentRanges = meta?.feature_ranges?.[rangeKey] ?? null
 
-  const inputCls = 'w-full bg-[#0D1F1B] border border-[#1D3830] text-[#F0FDF4] rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#38A169] focus:border-transparent placeholder-[#2D5447]'
-  const selectCls = 'w-full bg-[#0D1F1B] border border-[#1D3830] text-[#F0FDF4] rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#38A169] cursor-pointer'
-  const labelCls = 'block text-[#94A3A0] text-xs font-semibold uppercase tracking-wider mb-1'
-  const descCls = 'text-[#4A7065] text-xs mt-0.5 leading-relaxed'
+  const inputCls = 'w-full bg-[#FAFDF9] border border-[#C8DDD0] text-[#1C3A28] rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4A8C5C] focus:border-[#4A8C5C] focus:bg-white placeholder-[#A8C0A0] transition-colors'
+  const selectCls = 'w-full bg-[#FAFDF9] border border-[#C8DDD0] text-[#1C3A28] rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4A8C5C] focus:border-[#4A8C5C] cursor-pointer transition-colors'
+  const labelCls = 'block text-[#2A5C38] text-xs font-bold uppercase tracking-wider mb-1'
+  const descCls = 'text-[#7A9A84] text-xs mt-0.5 leading-relaxed'
 
   return (
-    <div className="bg-[#142421] border border-[#1D3830] rounded-2xl p-5 card-glow">
+    <div className="bg-white border border-[#D8E8CE] border-l-4 border-l-[#3D8050] rounded-2xl p-5 card-glow">
       <div className="flex items-center gap-2 mb-5">
-        <div className="bg-[#38A169]/20 rounded-lg p-1.5">
-          <TrendingUp className="w-4 h-4 text-[#38A169]" />
+        <div className="bg-[#3D8050] rounded-lg p-1.5 shadow-sm">
+          <TrendingUp className="w-4 h-4 text-white" />
         </div>
-        <h2 className="text-[#F0FDF4] font-semibold text-sm">Input Data Prediksi</h2>
+        <h2 className="text-[#1C3A28] font-bold text-sm">Input Data Prediksi</h2>
       </div>
 
       {error && (
-        <div className="bg-red-950/40 border border-red-700/60 text-red-300 text-xs rounded-lg p-3 mb-4">
+        <div className="bg-red-50 border border-red-200 text-red-700 text-xs rounded-lg p-3 mb-4">
           {error}
         </div>
       )}
@@ -157,7 +157,7 @@ export default function PredictForm({ onPrediction }) {
               ))}
             </select>
           ) : (
-            <div className="h-9 bg-[#1D3830]/40 rounded-lg animate-pulse" />
+            <div className="h-9 bg-[#EEF5EB] rounded-lg animate-pulse" />
           )}
           <p className={descCls}>Pilih provinsi lokasi lahan pertanian.</p>
         </div>
@@ -172,7 +172,7 @@ export default function PredictForm({ onPrediction }) {
               ))}
             </select>
           ) : (
-            <div className="h-9 bg-[#1D3830]/40 rounded-lg animate-pulse" />
+            <div className="h-9 bg-[#EEF5EB] rounded-lg animate-pulse" />
           )}
           <p className={descCls}>Kualitas produksi sesuai standar BPS.</p>
         </div>
@@ -193,19 +193,19 @@ export default function PredictForm({ onPrediction }) {
           <p className={descCls}>Tahun yang ingin diprediksi hasilnya. Data historis: 2000–2015.</p>
         </div>
 
-        <div className="border-t border-[#1D3830] pt-4">
-          <div className="flex items-center gap-1.5 mb-3">
-            <Info className="w-3.5 h-3.5 text-[#6EE7B7]" />
-            <span className="text-[#6EE7B7] text-xs font-medium">Data Iklim & Cuaca</span>
+        <div className="border-t border-[#D8E8CE] pt-4">
+          <div className="flex items-center gap-1.5 mb-3 bg-[#EAF4E6] rounded-lg px-3 py-2">
+            <Info className="w-3.5 h-3.5 text-[#3D8050]" />
+            <span className="text-[#2A5C38] text-xs font-bold">Data Iklim & Cuaca</span>
             {currentRanges && (
-              <span className="ml-auto text-[#4A7065] text-xs">rentang historis ditampilkan</span>
+              <span className="ml-auto text-[#5A8A6A] text-xs">rentang historis ditampilkan</span>
             )}
           </div>
 
           {Object.entries(FIELD_META).map(([field, meta_]) => (
             <div key={field} className="mb-3">
               <div className="flex items-center justify-between mb-1">
-                <label className={labelCls}>{meta_.label} <span className="text-[#4A7065] normal-case font-normal">({meta_.unit})</span></label>
+                <label className={labelCls}>{meta_.label} <span className="text-[#7A9A84] normal-case font-normal">({meta_.unit})</span></label>
                 <RangeHint field={field} ranges={currentRanges} />
               </div>
               <input
@@ -228,7 +228,7 @@ export default function PredictForm({ onPrediction }) {
         <button
           type="submit"
           disabled={loading || !meta}
-          className="w-full bg-[#38A169] hover:bg-[#2F855A] disabled:bg-[#1D3830] disabled:text-[#2D5447] text-white font-semibold py-2.5 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 text-sm shadow-lg shadow-[#38A169]/20 mt-2"
+          className="w-full bg-[#3D8050] hover:bg-[#2A5C38] disabled:bg-[#D8E8CE] disabled:text-[#9AB8A2] text-white font-semibold py-2.5 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 text-sm shadow-md shadow-[#3D8050]/20 mt-2"
         >
           {loading ? (
             <>
@@ -244,7 +244,7 @@ export default function PredictForm({ onPrediction }) {
         </button>
 
         {loading && (
-          <p className="text-[#4A7065] text-xs text-center">
+          <p className="text-[#6B8A74] text-xs text-center">
             Menganalisis data dengan AI... Mohon tunggu ~10–15 detik.
           </p>
         )}

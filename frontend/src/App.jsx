@@ -22,7 +22,7 @@ function App() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-[#0D1F1B] flex flex-col">
+    <div className="min-h-screen bg-[#EFF6EC] flex flex-col">
       <Header
         onNewSession={handleNewSession}
         activeTab={activeTab}
@@ -64,8 +64,8 @@ function App() {
         )}
       </main>
 
-      <footer className="text-center text-[#2D5447] text-xs py-4 border-t border-[#1D3830]">
-        PanenAI © 2026 · XGBoost Model (R² 0.9887) · Gemini AI · Data BPS & BMKG Indonesia
+      <footer className="text-center text-[#5A8A6A] text-xs py-4 border-t-2 border-[#C8DDD0] bg-white">
+        CropSense © 2026 · XGBoost Model (R² 0.9887) · Gemini AI · Data BPS & BMKG Indonesia
       </footer>
     </div>
   )

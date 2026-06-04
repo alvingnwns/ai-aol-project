@@ -25,10 +25,10 @@ const CROP_LABELS = {
 
 function StatCard({ label, value, unit, accent }) {
   return (
-    <div className={`bg-[#0D1F1B] border rounded-xl p-4 text-center ${accent ? 'border-[#38A169]/60' : 'border-[#1D3830]'}`}>
-      <p className="text-[#4A7065] text-xs uppercase tracking-wider mb-1">{label}</p>
-      <p className={`text-2xl font-bold ${accent ? 'text-[#6EE7B7]' : 'text-[#F0FDF4]'}`}>{value}</p>
-      {unit && <p className="text-[#4A7065] text-xs mt-0.5">{unit}</p>}
+    <div className={`bg-white border rounded-xl p-4 text-center ${accent ? 'border-[#3D8050]/50 bg-[#EAF4E6]' : 'border-[#D8E8CE]'}`}>
+      <p className="text-[#5A8A6A] text-xs uppercase tracking-wider mb-1 font-semibold">{label}</p>
+      <p className={`text-2xl font-bold ${accent ? 'text-[#2A5C38]' : 'text-[#1C3A28]'}`}>{value}</p>
+      {unit && <p className="text-[#8A9E84] text-xs mt-0.5">{unit}</p>}
     </div>
   )
 }
@@ -38,11 +38,11 @@ export default function Calculator({ prediction }) {
 
   if (!prediction) {
     return (
-      <div className="bg-[#142421] border border-[#1D3830] rounded-2xl p-10 text-center card-glow">
-        <CalculatorIcon className="w-10 h-10 text-[#2D5447] mx-auto mb-4" />
-        <h3 className="text-[#F0FDF4] font-semibold mb-2">Kalkulator Hasil Panen</h3>
-        <p className="text-[#4A7065] text-sm">
-          Lakukan prediksi di tab <strong className="text-[#6EE7B7]">Prediksi Panen</strong> terlebih dahulu,
+      <div className="bg-white border border-[#D8E8CE] border-l-4 border-l-[#3D8050] rounded-2xl p-10 text-center card-glow">
+        <CalculatorIcon className="w-10 h-10 text-[#A8C8A0] mx-auto mb-4" />
+        <h3 className="text-[#1C3A28] font-semibold mb-2">Kalkulator Hasil Panen</h3>
+        <p className="text-[#6B8A74] text-sm">
+          Lakukan prediksi di tab <strong className="text-[#2A5C38]">Prediksi Panen</strong> terlebih dahulu,
           kemudian kembali ke sini untuk menghitung hasil berdasarkan luas lahan Anda.
         </p>
       </div>
@@ -67,26 +67,26 @@ export default function Calculator({ prediction }) {
   }
 
   return (
-    <div className="bg-[#142421] border border-[#1D3830] rounded-2xl p-6 card-glow animate-fade-in">
+    <div className="bg-white border border-[#D8E8CE] border-l-4 border-l-[#3D8050] rounded-2xl p-6 card-glow animate-fade-in">
       <div className="flex items-center gap-2 mb-6">
-        <div className="bg-[#38A169]/20 rounded-lg p-1.5">
-          <CalculatorIcon className="w-4 h-4 text-[#38A169]" />
+        <div className="bg-[#3D8050] rounded-lg p-1.5 shadow-sm">
+          <CalculatorIcon className="w-4 h-4 text-white" />
         </div>
-        <h2 className="text-[#F0FDF4] font-semibold text-sm">Kalkulator Hasil Panen</h2>
+        <h2 className="text-[#1C3A28] font-bold text-sm">Kalkulator Hasil Panen</h2>
       </div>
 
       {/* Context */}
-      <div className="bg-[#0D1F1B] border border-[#1D3830] rounded-xl p-4 mb-6">
-        <p className="text-[#4A7065] text-xs uppercase tracking-wider mb-2">Berdasarkan Prediksi</p>
+      <div className="bg-[#F4F9F2] border border-[#D8E8CE] rounded-xl p-4 mb-6">
+        <p className="text-[#7A9A84] text-xs uppercase tracking-wider mb-2">Berdasarkan Prediksi</p>
         <div className="flex flex-wrap gap-2">
-          <span className="flex items-center gap-1 text-[#94A3A0] text-xs">
-            <MapPin className="w-3 h-3 text-[#38A169]" /> {provinsi}
+          <span className="flex items-center gap-1 text-[#4A6A54] text-xs">
+            <MapPin className="w-3 h-3 text-[#3D8050]" /> {provinsi}
           </span>
-          <span className="flex items-center gap-1 text-[#94A3A0] text-xs">
-            <Leaf className="w-3 h-3 text-[#38A169]" /> {CROP_LABELS[jenis_tanaman] ?? jenis_tanaman}
+          <span className="flex items-center gap-1 text-[#4A6A54] text-xs">
+            <Leaf className="w-3 h-3 text-[#3D8050]" /> {CROP_LABELS[jenis_tanaman] ?? jenis_tanaman}
           </span>
-          <span className="flex items-center gap-1 text-[#94A3A0] text-xs">
-            <TrendingUp className="w-3 h-3 text-[#38A169]" />
+          <span className="flex items-center gap-1 text-[#4A6A54] text-xs">
+            <TrendingUp className="w-3 h-3 text-[#3D8050]" />
             {fmt(predicted_produksi_ton)} ton/tahun (ref. {fmt(REFERENCE_LAHAN_HA / 1_000_000)} jt ha)
           </span>
         </div>
@@ -94,7 +94,7 @@ export default function Calculator({ prediction }) {
 
       {/* Input */}
       <div className="mb-6">
-        <label className="block text-[#94A3A0] text-xs font-semibold uppercase tracking-wider mb-1">
+        <label className="block text-[#3D5E48] text-xs font-semibold uppercase tracking-wider mb-1">
           Luas Lahan Anda (Hektare)
         </label>
         <input
@@ -104,9 +104,9 @@ export default function Calculator({ prediction }) {
           min="0.01"
           step="0.01"
           placeholder="mis. 5000"
-          className="w-full bg-[#0D1F1B] border border-[#1D3830] text-[#F0FDF4] rounded-xl px-4 py-3 text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-[#38A169] placeholder-[#2D5447]"
+          className="w-full bg-white border border-[#C8DDD0] text-[#1C3A28] rounded-xl px-4 py-3 text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-[#4A8C5C] placeholder-[#A8C0A0]"
         />
-        <p className="text-[#4A7065] text-xs mt-1">
+        <p className="text-[#7A9A84] text-xs mt-1">
           Masukkan luas lahan untuk menghitung estimasi produksi. Referensi total: {fmt(REFERENCE_LAHAN_HA / 1_000_000)} juta ha.
         </p>
       </div>
@@ -141,17 +141,17 @@ export default function Calculator({ prediction }) {
             />
           </div>
 
-          <div className="bg-[#1B4332]/30 border border-[#38A169]/20 rounded-xl p-3 mt-2">
-            <p className="text-[#6EE7B7] text-xs font-medium mb-0.5">Cara Perhitungan</p>
-            <p className="text-[#4A7065] text-xs leading-relaxed">
-              Produksi = {fmt(predicted_produksi_ton)} ton × ({fmt(ha)} ha ÷ {fmt(REFERENCE_LAHAN_HA / 1_000_000)} jt ha) = <strong className="text-[#94A3A0]">{fmt(produksi_ton, 2)} ton</strong>.
+          <div className="bg-[#EAF4E6] border border-[#C2DEBA] rounded-xl p-3 mt-2">
+            <p className="text-[#2A5C38] text-xs font-medium mb-0.5">Cara Perhitungan</p>
+            <p className="text-[#5A7A64] text-xs leading-relaxed">
+              Produksi = {fmt(predicted_produksi_ton)} ton × ({fmt(ha)} ha ÷ {fmt(REFERENCE_LAHAN_HA / 1_000_000)} jt ha) = <strong className="text-[#1C3A28]">{fmt(produksi_ton, 2)} ton</strong>.
               Estimasi pendapatan menggunakan harga referensi pasar, bukan harga resmi.
             </p>
           </div>
         </div>
       ) : (
-        <div className="border border-dashed border-[#1D3830] rounded-xl p-6 text-center">
-          <p className="text-[#4A7065] text-sm">Masukkan luas lahan di atas untuk melihat hasil perhitungan.</p>
+        <div className="border border-dashed border-[#D8E8CE] rounded-xl p-6 text-center">
+          <p className="text-[#7A9A84] text-sm">Masukkan luas lahan di atas untuk melihat hasil perhitungan.</p>
         </div>
       )}
     </div>
