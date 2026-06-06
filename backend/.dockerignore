@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.pyo
+ai_venv/
+venv/
+.env
+data/
+notebooks/
+.git
+.gitignore
+README.md
+train.py
+.env.example
